@@ -1,0 +1,18 @@
+//
+//  FMPhotoCell.m
+//  05_DIYUI
+//
+//  Created by Windy on 2016/11/22.
+//  Copyright © 2016年 Windy. All rights reserved.
+//
+
+#import "FMPhotoCell.h"
+
+@implementation FMPhotoCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+}
+
+@end

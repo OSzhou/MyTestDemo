@@ -1,0 +1,18 @@
+//
+//  DIYUI.pch
+//  05_DIYUI
+//
+//  Created by Windy on 2016/11/22.
+//  Copyright © 2016年 Windy. All rights reserved.
+//
+
+#ifndef DIYUI_pch
+#define DIYUI_pch
+
+#ifdef DEBUG
+#define FMLog(frmt, ...) NSLog((@"%s 第%d行" frmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define FMLog(...) 
+#endif
+
+#endif /* DIYUI_pch */

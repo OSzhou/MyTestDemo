@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FMPhotoCell">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="199"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="202" height="199"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d53-PV-ZFd">
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="199"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="d53-PV-ZFd" secondAttribute="bottom" id="R2e-Rx-Q2g"/>
+                <constraint firstItem="d53-PV-ZFd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ryh-PH-3Il"/>
+                <constraint firstAttribute="trailing" secondItem="d53-PV-ZFd" secondAttribute="trailing" id="dar-Rd-k52"/>
+                <constraint firstItem="d53-PV-ZFd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lac-fO-V7c"/>
+            </constraints>
+            <size key="customSize" width="202" height="199"/>
+            <connections>
+                <outlet property="imageView" destination="d53-PV-ZFd" id="MX5-lj-g9T"/>
+            </connections>
+            <point key="canvasLocation" x="216" y="228.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
