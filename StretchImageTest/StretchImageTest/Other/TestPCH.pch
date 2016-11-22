@@ -1,0 +1,14 @@
+//
+//  TestPCH.pch
+//  StretchImageTest
+//
+//  Created by Windy on 2016/11/7.
+//  Copyright © 2016年 Windy. All rights reserved.
+//
+
+#ifndef TestPCH_pch
+#define TestPCH_pch
+
+#import "Constant.h"
+
+#endif /* TestPCH_pch */
