@@ -18,6 +18,9 @@
 		E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12851DE42D3C00A2C9A5 /* FMPhotoCell.m */; };
 		E5DA12881DE42D3C00A2C9A5 /* FMPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DA12861DE42D3C00A2C9A5 /* FMPhotoCell.xib */; };
 		E5DA128F1DE436E100A2C9A5 /* FMLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA128E1DE436E100A2C9A5 /* FMLineLayout.m */; };
+		E5DA12951DE44F9800A2C9A5 /* FMGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12941DE44F9800A2C9A5 /* FMGridLayout.m */; };
+		E5DA12981DE52C3500A2C9A5 /* FMCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12971DE52C3500A2C9A5 /* FMCircleLayout.m */; };
+		E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,7 @@
 		E5DA12521DE4274A00A2C9A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5DA12531DE4274A00A2C9A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E5DA12551DE4274A00A2C9A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E5DA12561DE4274A00A2C9A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E5DA12561DE4274A00A2C9A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		E5DA12591DE4274A00A2C9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5DA125B1DE4274A00A2C9A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DA125E1DE4274A00A2C9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +63,12 @@
 		E5DA128C1DE432A300A2C9A5 /* DIYUI.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIYUI.pch; sourceTree = "<group>"; };
 		E5DA128D1DE436E100A2C9A5 /* FMLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMLineLayout.h; sourceTree = "<group>"; };
 		E5DA128E1DE436E100A2C9A5 /* FMLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMLineLayout.m; sourceTree = "<group>"; };
+		E5DA12931DE44F9800A2C9A5 /* FMGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMGridLayout.h; sourceTree = "<group>"; };
+		E5DA12941DE44F9800A2C9A5 /* FMGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMGridLayout.m; sourceTree = "<group>"; };
+		E5DA12961DE52C3500A2C9A5 /* FMCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCircleLayout.h; sourceTree = "<group>"; };
+		E5DA12971DE52C3500A2C9A5 /* FMCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCircleLayout.m; sourceTree = "<group>"; };
+		E5DA12991DE54ABD00A2C9A5 /* FMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMWaterflowLayout.h; sourceTree = "<group>"; };
+		E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMWaterflowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +176,12 @@
 			children = (
 				E5DA128D1DE436E100A2C9A5 /* FMLineLayout.h */,
 				E5DA128E1DE436E100A2C9A5 /* FMLineLayout.m */,
+				E5DA12931DE44F9800A2C9A5 /* FMGridLayout.h */,
+				E5DA12941DE44F9800A2C9A5 /* FMGridLayout.m */,
+				E5DA12961DE52C3500A2C9A5 /* FMCircleLayout.h */,
+				E5DA12971DE52C3500A2C9A5 /* FMCircleLayout.m */,
+				E5DA12991DE54ABD00A2C9A5 /* FMWaterflowLayout.h */,
+				E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -312,8 +327,11 @@
 			files = (
 				E5DA12571DE4274A00A2C9A5 /* ViewController.m in Sources */,
 				E5DA128F1DE436E100A2C9A5 /* FMLineLayout.m in Sources */,
+				E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */,
 				E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */,
 				E5DA12541DE4274A00A2C9A5 /* AppDelegate.m in Sources */,
+				E5DA12951DE44F9800A2C9A5 /* FMGridLayout.m in Sources */,
+				E5DA12981DE52C3500A2C9A5 /* FMCircleLayout.m in Sources */,
 				E5DA12511DE4274A00A2C9A5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = 05_DIYUI/Others/DIYUI.pch;
 				INFOPLIST_FILE = 05_DIYUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senyint.-5-DIYUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -473,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = 05_DIYUI/Others/DIYUI.pch;
 				INFOPLIST_FILE = 05_DIYUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senyint.-5-DIYUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -11,8 +11,8 @@
 @implementation FMPhotoCell
 
 - (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+    self.imageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.imageView.layer.borderWidth = 10;
 }
 
 @end
