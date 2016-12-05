@@ -48,9 +48,12 @@ static NSString *const FMPhotoCellID = @"photo";
 
 - (void)DIYUIWithLayout:(UICollectionViewLayout *)layout andFrame:(CGRect)frame {
 //    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//    layout.itemSize = CGSizeMake(100, 100);
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
+//    collectionView.contentInset = UIEdgeInsetsMake(100, 0, 100, 0);
+
     self.collectionView = collectionView;
     [self.view addSubview:collectionView];
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([FMPhotoCell class]) bundle:nil] forCellWithReuseIdentifier:FMPhotoCellID];
@@ -67,6 +70,10 @@ static NSString *const FMPhotoCellID = @"photo";
 }
  */
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@" --- %f", scrollView.contentOffset.y);
+}
+
 #pragma mark --- collectionView Delegate & DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 20;
@@ -77,9 +84,10 @@ static NSString *const FMPhotoCellID = @"photo";
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd", indexPath.item + 1]];
     return cell;
 }
-
+//#line 1000
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     FMLog(@" --- %zd", indexPath.item);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.baidu.com"]];
 }
 
 #pragma mark --- FMWaterflowLayoutDelegate
