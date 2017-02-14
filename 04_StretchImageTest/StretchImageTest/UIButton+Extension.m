@@ -48,6 +48,7 @@ static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
     SEL mySEL = @selector(cjr_sendAction:to:forEvent:);
     
     //这样也可以（但是注意顺序）
+    
     /******
      *
      *个人理解：
@@ -57,6 +58,7 @@ static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
      *还是获取系统自带方法的属性
      *
      ******/
+    
 //    class_replaceMethod(self, sysSEL, method_getImplementation(myMethod), method_getTypeEncoding(myMethod));//系统自动复制一份
 //    class_replaceMethod(self, mySEL, method_getImplementation(systemMethod), method_getTypeEncoding(systemMethod));
  

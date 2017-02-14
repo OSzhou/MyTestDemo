@@ -133,6 +133,7 @@
 
 - (instancetype)init {
     NSURLSessionConfiguration *defaultConfiguration = [self.class defaultURLSessionConfiguration];
+    
     AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:defaultConfiguration];
     sessionManager.responseSerializer = [AFImageResponseSerializer serializer];
 

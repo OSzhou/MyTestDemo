@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <FrameworkTest/FrameworkTest.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //测试静态库
+//    StaticTest *test = [[StaticTest alloc] init];
+//    [test print];
     return YES;
 }
 

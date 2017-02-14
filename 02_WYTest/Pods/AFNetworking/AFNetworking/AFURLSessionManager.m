@@ -34,7 +34,7 @@ static dispatch_queue_t url_session_manager_creation_queue() {
     dispatch_once(&onceToken, ^{
         af_url_session_manager_creation_queue = dispatch_queue_create("com.alamofire.networking.session.manager.creation", DISPATCH_QUEUE_SERIAL);
     });
-
+    
     return af_url_session_manager_creation_queue;
 }
 

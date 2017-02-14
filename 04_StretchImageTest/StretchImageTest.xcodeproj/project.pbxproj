@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E52BEF3C1DFE592D00CFBC4E /* testlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF3B1DFE592D00CFBC4E /* testlib.a */; };
 		E557A2421DCAE376003EB6B5 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E557A2411DCAE376003EB6B5 /* UIButton+Extension.m */; };
 		E55AAD101DBF4B6F00DF2384 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AAD0F1DBF4B6F00DF2384 /* Constant.m */; };
 		E589019F1DC08D0800497056 /* FMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E589019E1DC08D0800497056 /* FMTableView.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E52BEF3A1DFE4E2F00CFBC4E /* StaticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTest.h; sourceTree = "<group>"; };
+		E52BEF3B1DFE592D00CFBC4E /* testlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = testlib.a; sourceTree = "<group>"; };
 		E557A2401DCAE376003EB6B5 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Extension.h"; path = "../UIButton+Extension.h"; sourceTree = "<group>"; };
 		E557A2411DCAE376003EB6B5 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Extension.m"; path = "../UIButton+Extension.m"; sourceTree = "<group>"; };
 		E557A2461DD01BE4003EB6B5 /* TestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPCH.pch; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52BEF3C1DFE592D00CFBC4E /* testlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E52BEF361DFE4C8D00CFBC4E /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E52BEF3A1DFE4E2F00CFBC4E /* StaticTest.h */,
+				E52BEF3B1DFE592D00CFBC4E /* testlib.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		E557A2441DD01BB3003EB6B5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		E5D536E11DBEFB7500E459A3 /* StretchImageTest */ = {
 			isa = PBXGroup;
 			children = (
+				E52BEF361DFE4C8D00CFBC4E /* lib */,
 				E5C9E9631DE3DFE900749919 /* Transitioning */,
 				E557A2441DD01BB3003EB6B5 /* Category */,
 				E557A2451DD01BB3003EB6B5 /* Other */,
@@ -502,6 +516,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = StretchImageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StretchImageTest/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = senyint.StretchImageTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -514,6 +532,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = StretchImageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StretchImageTest/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = senyint.StretchImageTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

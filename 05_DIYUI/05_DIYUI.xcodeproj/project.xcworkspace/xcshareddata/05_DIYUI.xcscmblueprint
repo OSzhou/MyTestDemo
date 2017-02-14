@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E8A2968C27EF6FCE050ACA6E1ACB7D73065F6F7F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "616534BC033E2FE4AADAE8778C937FAF3B28BE4B" : 9223372036854775807,
+    "E8A2968C27EF6FCE050ACA6E1ACB7D73065F6F7F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "039E4251-35CC-4FD6-A0BF-7BDE71B0CBE1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "616534BC033E2FE4AADAE8778C937FAF3B28BE4B" : "Work\/",
+    "E8A2968C27EF6FCE050ACA6E1ACB7D73065F6F7F" : "MyTestDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "05_DIYUI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "05_DIYUI\/05_DIYUI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "172.16.230.111:projects\/cyxy-live\/ios-app-dev",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "616534BC033E2FE4AADAE8778C937FAF3B28BE4B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OSzhou\/MyTestDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E8A2968C27EF6FCE050ACA6E1ACB7D73065F6F7F"
+    }
+  ]
+}
