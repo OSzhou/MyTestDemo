@@ -41,6 +41,8 @@
 		E5B9298D1E305CDB00FFCE10 /* XLPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B9296B1E305CDA00FFCE10 /* XLPhotoBrowser.m */; };
 		E5B9298E1E305CDB00FFCE10 /* XLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B9296E1E305CDA00FFCE10 /* XLProgressView.m */; };
 		E5B9298F1E305CDB00FFCE10 /* XLZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B929701E305CDA00FFCE10 /* XLZoomingScrollView.m */; };
+		E5CC36CF1E5C1C5A00417E5D /* FMTitleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */; };
+		E5CC36D21E5C216700417E5D /* FMTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC36D11E5C216700417E5D /* FMTitleLabel.m */; };
 		E5DA12511DE4274A00A2C9A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12501DE4274A00A2C9A5 /* main.m */; };
 		E5DA12541DE4274A00A2C9A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12531DE4274A00A2C9A5 /* AppDelegate.m */; };
 		E5DA12571DE4274A00A2C9A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12561DE4274A00A2C9A5 /* ViewController.m */; };
@@ -152,6 +154,10 @@
 		E5B9296E1E305CDA00FFCE10 /* XLProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLProgressView.m; sourceTree = "<group>"; };
 		E5B9296F1E305CDA00FFCE10 /* XLZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLZoomingScrollView.h; sourceTree = "<group>"; };
 		E5B929701E305CDA00FFCE10 /* XLZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLZoomingScrollView.m; sourceTree = "<group>"; };
+		E5CC36CD1E5C1C5A00417E5D /* FMTitleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTitleHeaderView.h; sourceTree = "<group>"; };
+		E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTitleHeaderView.m; sourceTree = "<group>"; };
+		E5CC36D01E5C216700417E5D /* FMTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTitleLabel.h; sourceTree = "<group>"; };
+		E5CC36D11E5C216700417E5D /* FMTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTitleLabel.m; sourceTree = "<group>"; };
 		E5DA124C1DE4274A00A2C9A5 /* 05_DIYUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 05_DIYUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DA12501DE4274A00A2C9A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5DA12521DE4274A00A2C9A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -318,6 +324,17 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		E5CC36C91E5C176000417E5D /* ScrollHeader */ = {
+			isa = PBXGroup;
+			children = (
+				E5CC36CD1E5C1C5A00417E5D /* FMTitleHeaderView.h */,
+				E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */,
+				E5CC36D01E5C216700417E5D /* FMTitleLabel.h */,
+				E5CC36D11E5C216700417E5D /* FMTitleLabel.m */,
+			);
+			path = ScrollHeader;
+			sourceTree = "<group>";
+		};
 		E5DA12431DE4274A00A2C9A5 = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +358,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				E5CC36C91E5C176000417E5D /* ScrollHeader */,
 				E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */,
 				E5DA128B1DE4328300A2C9A5 /* Others */,
 				E5DA12821DE42CE000A2C9A5 /* Cell */,
@@ -560,11 +578,13 @@
 				E5DA12571DE4274A00A2C9A5 /* ViewController.m in Sources */,
 				E5B929741E305CDB00FFCE10 /* FSActionSheetCell.m in Sources */,
 				E5B929841E305CDB00FFCE10 /* SDWebImageManager.m in Sources */,
+				E5CC36D21E5C216700417E5D /* FMTitleLabel.m in Sources */,
 				E5B929811E305CDB00FFCE10 /* SDWebImageDecoder.m in Sources */,
 				E5DA128F1DE436E100A2C9A5 /* FMLineLayout.m in Sources */,
 				E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */,
 				E5B929851E305CDB00FFCE10 /* SDWebImagePrefetcher.m in Sources */,
 				E5B9298B1E305CDB00FFCE10 /* UIImageView+WebCache.m in Sources */,
+				E5CC36CF1E5C1C5A00417E5D /* FMTitleHeaderView.m in Sources */,
 				E5B929731E305CDB00FFCE10 /* FSActionSheet.m in Sources */,
 				E5B9297A1E305CDB00FFCE10 /* TAAnimatedDotView.m in Sources */,
 				E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */,

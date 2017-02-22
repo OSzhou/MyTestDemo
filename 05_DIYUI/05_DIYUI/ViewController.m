@@ -13,6 +13,10 @@
 #import "FMCircleLayout.h"
 #import "FMWaterflowLayout.h"
 #import "XLPhotoBrowser.h"
+#import "FMTitleHeaderView.h"
+
+#define View_W [UIScreen mainScreen].bounds.size.width
+#define View_H [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, FMWaterflowLayoutDelegate>
 
@@ -30,26 +34,39 @@ static NSString *const FMPhotoCellID = @"photo";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    //<1>line
-//    FMLineLayout *layout = [[FMLineLayout alloc] init];
-//    layout.itemSize = CGSizeMake(100, 100);
+    /*
+    //<1>line
+    FMLineLayout *layout = [[FMLineLayout alloc] init];
+    layout.itemSize = CGSizeMake(100, 100);
+    CGFloat collection_w = self.view.frame.size.width;
+    CGFloat collection_h = 200;
+    CGRect frame =  CGRectMake(0, self.view.frame.size.height - 200, collection_w, collection_h);
+    //<2>
+//    FMGridLayout *layout = [[FMGridLayout alloc] init];
+//    CGRect frame = self.view.bounds;
+    //<3>
+//    FMCircleLayout *layout = [[FMCircleLayout alloc] init];
 //    CGFloat collection_w = self.view.frame.size.width;
 //    CGFloat collection_h = 200;
-//    CGRect frame =  CGRectMake(0, self.view.frame.size.height - 200, collection_w, collection_h);
-//    //<2>
-////    FMGridLayout *layout = [[FMGridLayout alloc] init];
-////    CGRect frame = self.view.bounds;
-//    //<3>
-////    FMCircleLayout *layout = [[FMCircleLayout alloc] init];
-////    CGFloat collection_w = self.view.frame.size.width;
-////    CGFloat collection_h = 200;
-////    CGRect frame =  CGRectMake(0, 150, collection_w, collection_h);
-//    //<4>
-////    FMWaterflowLayout *layout = [[FMWaterflowLayout alloc] init];
-////    layout.delegate = self;
-////    CGRect frame = self.view.bounds;
-//    
-//    [self DIYUIWithLayout:layout andFrame:frame];
+//    CGRect frame =  CGRectMake(0, 150, collection_w, collection_h);
+    //<4>
+//    FMWaterflowLayout *layout = [[FMWaterflowLayout alloc] init];
+//    layout.delegate = self;
+//    CGRect frame = self.view.bounds;
+    [self DIYUIWithLayout:layout andFrame:frame]; */
+//    [self autoResizingTest];
+//    [self photoBrowserTest];
+    [self scrollTitleViewTest];
+}
+
+- (void)scrollTitleViewTest {
+    FMTitleHeaderView *headView = [[FMTitleHeaderView alloc] initWithFrame:CGRectMake(0, 64, View_W, 50)];
+//    headView.fontSize = 10.f;
+    headView.titleArr = @[@"全部课程", @"政治", @"军事", @"明星八卦", @"体育", @"财富"];
+    [self.view addSubview:headView];
+}
+
+- (void)photoBrowserTest {
     self.images = [NSMutableArray array];
     for (int i = 1 ; i < 21 ; i++) {
         NSString *string = [NSString stringWithFormat:@"%zd",i];
@@ -62,7 +79,6 @@ static NSString *const FMPhotoCellID = @"photo";
     _browser.testBlock = ^{
         weakSelf.bottomView.hidden = !weakSelf.bottomView.hidden;
     };
-    [self autoResizingTest];
 }
 
 - (void)autoResizingTest {
