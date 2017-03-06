@@ -36,6 +36,7 @@
     [self.view addSubview:self.titleScrollView];
     [self.view addSubview:self.contentScrollView];
     [self setupTitle];
+    [self scrollViewDidEndScrollingAnimation:self.contentScrollView];
 }
 
 - (void)setupChildVC {

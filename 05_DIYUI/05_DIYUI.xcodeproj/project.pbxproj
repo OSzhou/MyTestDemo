@@ -41,6 +41,7 @@
 		E5B9298D1E305CDB00FFCE10 /* XLPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B9296B1E305CDA00FFCE10 /* XLPhotoBrowser.m */; };
 		E5B9298E1E305CDB00FFCE10 /* XLProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B9296E1E305CDA00FFCE10 /* XLProgressView.m */; };
 		E5B9298F1E305CDB00FFCE10 /* XLZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B929701E305CDA00FFCE10 /* XLZoomingScrollView.m */; };
+		E5CB24181E6CF1BC006B0045 /* FMVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB24171E6CF1BC006B0045 /* FMVerticalButton.m */; };
 		E5CC36CF1E5C1C5A00417E5D /* FMTitleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */; };
 		E5CC36D21E5C216700417E5D /* FMTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC36D11E5C216700417E5D /* FMTitleLabel.m */; };
 		E5DA12511DE4274A00A2C9A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12501DE4274A00A2C9A5 /* main.m */; };
@@ -154,6 +155,8 @@
 		E5B9296E1E305CDA00FFCE10 /* XLProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLProgressView.m; sourceTree = "<group>"; };
 		E5B9296F1E305CDA00FFCE10 /* XLZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLZoomingScrollView.h; sourceTree = "<group>"; };
 		E5B929701E305CDA00FFCE10 /* XLZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLZoomingScrollView.m; sourceTree = "<group>"; };
+		E5CB24161E6CF1BC006B0045 /* FMVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMVerticalButton.h; sourceTree = "<group>"; };
+		E5CB24171E6CF1BC006B0045 /* FMVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMVerticalButton.m; sourceTree = "<group>"; };
 		E5CC36CD1E5C1C5A00417E5D /* FMTitleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTitleHeaderView.h; sourceTree = "<group>"; };
 		E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTitleHeaderView.m; sourceTree = "<group>"; };
 		E5CC36D01E5C216700417E5D /* FMTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTitleLabel.h; sourceTree = "<group>"; };
@@ -324,6 +327,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		E5CB24151E6CF126006B0045 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				E5CB24161E6CF1BC006B0045 /* FMVerticalButton.h */,
+				E5CB24171E6CF1BC006B0045 /* FMVerticalButton.m */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
 		E5CC36C91E5C176000417E5D /* ScrollHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +370,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB24151E6CF126006B0045 /* CustomButton */,
 				E5CC36C91E5C176000417E5D /* ScrollHeader */,
 				E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */,
 				E5DA128B1DE4328300A2C9A5 /* Others */,
@@ -584,6 +597,7 @@
 				E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */,
 				E5B929851E305CDB00FFCE10 /* SDWebImagePrefetcher.m in Sources */,
 				E5B9298B1E305CDB00FFCE10 /* UIImageView+WebCache.m in Sources */,
+				E5CB24181E6CF1BC006B0045 /* FMVerticalButton.m in Sources */,
 				E5CC36CF1E5C1C5A00417E5D /* FMTitleHeaderView.m in Sources */,
 				E5B929731E305CDB00FFCE10 /* FSActionSheet.m in Sources */,
 				E5B9297A1E305CDB00FFCE10 /* TAAnimatedDotView.m in Sources */,

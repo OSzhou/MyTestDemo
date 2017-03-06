@@ -14,6 +14,7 @@
 #import "FMWaterflowLayout.h"
 #import "XLPhotoBrowser.h"
 #import "FMTitleHeaderView.h"
+#import "FMVerticalButton.h"
 
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
@@ -30,6 +31,7 @@
 
 @end
 static NSString *const FMPhotoCellID = @"photo";
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -53,10 +55,40 @@ static NSString *const FMPhotoCellID = @"photo";
 //    FMWaterflowLayout *layout = [[FMWaterflowLayout alloc] init];
 //    layout.delegate = self;
 //    CGRect frame = self.view.bounds;
-    [self DIYUIWithLayout:layout andFrame:frame]; */
+    [self DIYUIWithLayout:layout andFrame:frame]; 
+     */
 //    [self autoResizingTest];
 //    [self photoBrowserTest];
-    [self scrollTitleViewTest];
+//    [self scrollTitleViewTest];
+//    [self labelTest];
+    [self verticalButtonTest];
+}
+
+- (void)verticalButtonTest {
+    NSArray *titleArr = @[@"免费课程", @"畅销课程", @"全部课程", @"全部学院"];
+    NSArray *imageArr = @[@"add", @"Calendar", @"stomatologist", @"add"];
+    for (int i = 0; i < 4; i ++) {
+        FMVerticalButton *btn = [FMVerticalButton verticalButtonWithNormalImageName:imageArr[i]
+                                                                  selectedImageName:nil
+                                                                              title:titleArr[i]];
+        CGFloat edge = 12.5;
+        CGFloat margin = 45.f;
+        btn.frame = CGRectMake(edge + i * ((View_W - 2 * edge - margin * 3) / 4 + margin) , 64, (View_W - 2 * edge - margin * 3) / 4, 50);
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn];
+    }
+}
+
+- (void)btnClick:(UIButton *)sender {
+    NSLog(@"123456 --- %@", sender.currentTitle);
+}
+
+- (void)labelTest {
+    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 64, View_W, 300)];
+    testLabel.text = @"Time is a bird for ever on the wing!";
+    testLabel.numberOfLines = 0;
+    testLabel.font = [UIFont fontWithName:@"Zapfino" size:20];
+    [self.view addSubview:testLabel];
 }
 
 - (void)scrollTitleViewTest {
