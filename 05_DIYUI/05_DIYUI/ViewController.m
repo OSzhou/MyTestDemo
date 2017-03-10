@@ -15,6 +15,7 @@
 #import "XLPhotoBrowser.h"
 #import "FMTitleHeaderView.h"
 #import "FMVerticalButton.h"
+#import "FMCoreTextView.h"
 
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
@@ -61,7 +62,14 @@ static NSString *const FMPhotoCellID = @"photo";
 //    [self photoBrowserTest];
 //    [self scrollTitleViewTest];
 //    [self labelTest];
-    [self verticalButtonTest];
+//    [self verticalButtonTest];
+    [self coreTextTest];
+}
+
+- (void)coreTextTest {
+    FMCoreTextView *coreText = [[FMCoreTextView alloc] initWithFrame:CGRectMake(0, 0, View_W, View_H)];
+    coreText.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:coreText];
 }
 
 - (void)verticalButtonTest {
@@ -167,7 +175,8 @@ static NSString *const FMPhotoCellID = @"photo";
     return 20;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FMPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FMPhotoCellID forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd", indexPath.item + 1]];
     return cell;
@@ -180,7 +189,9 @@ static NSString *const FMPhotoCellID = @"photo";
 }
 
 #pragma mark --- FMWaterflowLayoutDelegate
-- (CGFloat)waterflowLayout:(FMWaterflowLayout *)waterflowLayout heightForItemAtIndex:(NSUInteger)index itemWidth:(CGFloat)itemWidth {
+- (CGFloat)waterflowLayout:(FMWaterflowLayout *)waterflowLayout
+      heightForItemAtIndex:(NSUInteger)index
+                 itemWidth:(CGFloat)itemWidth {
     return 50 + arc4random_uniform(100);
 }
 

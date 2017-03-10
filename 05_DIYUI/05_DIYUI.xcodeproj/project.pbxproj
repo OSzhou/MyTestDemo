@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */; };
 		E52BEF661DFE743D00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF671DFE760B00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF681DFE760B00CFBC4E /* FrameworkTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +93,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E50BE6AC1E728AB8004B0F33 /* FMCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCoreTextView.h; sourceTree = "<group>"; };
+		E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCoreTextView.m; sourceTree = "<group>"; };
 		E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkTest.framework; sourceTree = "<group>"; };
 		E5B9292E1E305CDA00FFCE10 /* UIImage+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XLExtension.h"; sourceTree = "<group>"; };
 		E5B9292F1E305CDA00FFCE10 /* UIImage+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XLExtension.m"; sourceTree = "<group>"; };
@@ -166,7 +169,7 @@
 		E5DA12521DE4274A00A2C9A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5DA12531DE4274A00A2C9A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E5DA12551DE4274A00A2C9A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E5DA12561DE4274A00A2C9A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		E5DA12561DE4274A00A2C9A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		E5DA12591DE4274A00A2C9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5DA125B1DE4274A00A2C9A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5DA125E1DE4274A00A2C9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -218,6 +221,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E50BE6AB1E728A91004B0F33 /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				E50BE6AC1E728AB8004B0F33 /* FMCoreTextView.h */,
+				E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */,
+			);
+			path = CoreText;
+			sourceTree = "<group>";
+		};
 		E5B9292D1E305CDA00FFCE10 /* XLPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +382,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				E50BE6AB1E728A91004B0F33 /* CoreText */,
 				E5CB24151E6CF126006B0045 /* CustomButton */,
 				E5CC36C91E5C176000417E5D /* ScrollHeader */,
 				E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */,
@@ -616,6 +629,7 @@
 				E5B9298E1E305CDB00FFCE10 /* XLProgressView.m in Sources */,
 				E5B929881E305CDB00FFCE10 /* UIImage+MultiFormat.m in Sources */,
 				E5B929861E305CDB00FFCE10 /* UIButton+WebCache.m in Sources */,
+				E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */,
 				E5DA12981DE52C3500A2C9A5 /* FMCircleLayout.m in Sources */,
 				E5B9297D1E305CDB00FFCE10 /* MKAnnotationView+WebCache.m in Sources */,
 				E5B929831E305CDB00FFCE10 /* SDWebImageDownloaderOperation.m in Sources */,
