@@ -79,13 +79,154 @@
     
 }
 
-
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [self characterAttribute];
+    //各种属性方法的测试
+//    [self characterAttribute];
+    [self coreTextFromNet];
 }
 
+- (void)coreTextFromNet {
+    /*** 一· 翻转画布（坐标系）***/
+    /*
+     coreText 起初是为OSX设计的，而OSX得坐标原点是左下角，y轴正方向朝上。iOS中坐标原点是左上角，
+     y轴正方向向下。
+     若不进行坐标转换，则文字从下开始，还是倒着的
+     */
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //设置字形的变换矩阵为不做图形变换
+    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+    //平移方法，将画布向上平移一个屏幕高
+    CGContextTranslateCTM(context, 0, self.bounds.size.height);
+    //缩放方法，x轴缩放系数为1，则不变，y轴缩放系数为-1，则相当于以x轴为轴旋转180度
+    CGContextScaleCTM(context, 1.0, -1.0);
+    
+    /*** 二.图片的代理设置 ***/
+    /*
+     事实上，图文混排就是在要插入图片的位置插入一个富文本类型的占位符。通过CTRUNDelegate设置图片
+     */
+    NSMutableAttributedString * attributeStr = [[NSMutableAttributedString alloc] initWithString:@"这里在测试图文混排，我是一个富文本"];
+    CTRunDelegateCallbacks callBacks;
+    //memset将已开辟内存空间 callbacks 的首 n 个字节的值设为值 0, 相当于对CTRunDelegateCallbacks内存空间初始化
+    memset(&callBacks,0,sizeof(CTRunDelegateCallbacks));
+    callBacks.version = kCTRunDelegateVersion1;
+    callBacks.getAscent = ascentCallBacks;
+    callBacks.getDescent = descentCallBacks;
+    callBacks.getWidth = widthCallBacks;
+    //创建一个图片尺寸的字典，初始化代理对象需要
+    NSDictionary * dicPic = @{@"height":@50,@"width":@50};
+    //创建代理
+    CTRunDelegateRef delegate = CTRunDelegateCreate(& callBacks, (__bridge void *)dicPic);
+    //创建空白字符
+    unichar placeHolder = 0xFFFC;
+    //已空白字符生成字符串
+    NSString * placeHolderStr = [NSString stringWithCharacters:&placeHolder length:1];
+    //用字符串初始化占位符的富文本
+    NSMutableAttributedString * placeHolderAttrStr = [[NSMutableAttributedString alloc] initWithString:placeHolderStr];
+    //给字符串中指定范围的字符串设置代理
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)placeHolderAttrStr, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
+    //释放（__bridge进行C与OC数据类型的转换，C为非ARC，需要手动管理）
+    CFRelease(delegate);
+    //将占位符插入原富文本
+    [attributeStr insertAttributedString:placeHolderAttrStr atIndex:12];
+    /*** 三.绘制 （包括两部分） ***/
+    /*
+     *1.绘制文本
+     */
+    //一个frame的工厂，负责生成frame
+    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attributeStr);
+    //创建绘制区域
+    CGMutablePathRef path = CGPathCreateMutable();
+    //添加绘制尺寸
+    CGPathAddRect(path, NULL, self.bounds);
+    NSInteger length = attributeStr.length;
+    //工厂根据绘制区域及富文本（可选范围，多次设置）设置frame
+    CTFrameRef frame = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, length), path, NULL);
+    //根据frame绘制文字
+    CTFrameDraw(frame, context);
+    /*
+     *1.绘制图片
+     */
+    UIImage * image = [UIImage imageNamed:@"add"];
+    //图片frame获取
+    CGRect imgFrm = [self calculateImageRectWithFrame:frame];
+    //绘制图片
+    CGContextDrawImage(context,imgFrm, image.CGImage);
+    
+    //底层内存都要自己管理，记得释放
+    CFRelease(frame);
+    CFRelease(path);
+    CFRelease(frameSetter);
+}
+
+static CGFloat ascentCallBacks(void * ref) {
+    return [(NSNumber *)[(__bridge NSDictionary *)ref valueForKey:@"height"] floatValue];
+}
+
+static CGFloat descentCallBacks(void * ref) {
+    return 0;
+}
+
+static CGFloat widthCallBacks(void * ref) {
+    return [(NSNumber *)[(__bridge NSDictionary *)ref valueForKey:@"width"] floatValue];
+}
+
+-(CGRect)calculateImageRectWithFrame:(CTFrameRef)frame {
+    //根据frame获取需要绘制的线的数组
+    NSArray * arrLines = (NSArray *)CTFrameGetLines(frame);
+    //获取线的数量
+    NSInteger count = [arrLines count];
+    //建立起点的数组（CGPoint类型为结构体，故用C语言数组）
+    CGPoint points[count];
+    //获取起点
+    CTFrameGetLineOrigins(frame, CFRangeMake(0, 0), points);
+    for (int i = 0; i < count; i ++) {//遍历数组
+        CTLineRef line = (__bridge CTLineRef)arrLines[i];
+        //获取对应line中的GlyphRun数组（GlyphRun:高效的字符绘制方案）
+        NSArray * arrGlyphRun = (NSArray *)CTLineGetGlyphRuns(line);
+        for (int j = 0; j < arrGlyphRun.count; j ++) {//遍历CTRun数组
+            //取出CTRun
+            CTRunRef run = (__bridge CTRunRef)arrGlyphRun[j];
+            //获取CTRun的属性
+            NSDictionary * attributes = (NSDictionary *)CTRunGetAttributes(run);
+            //获取代理
+            CTRunDelegateRef delegate = (__bridge CTRunDelegateRef)[attributes valueForKey:(id)kCTRunDelegateAttributeName];
+            if (delegate == nil) {//代理为空，跳过
+                continue;
+            }
+            //获取代理字典
+            NSDictionary * dic = CTRunDelegateGetRefCon(delegate);
+            if (![dic isKindOfClass:[NSDictionary class]]) {//为空，跳过
+                continue;
+            }
+            //获取一个点
+            CGPoint point = points[i];
+            CGFloat ascent;//获取上距
+            CGFloat descent;//获取下距
+            CGRect boundsRun;//创建一个frame
+            //获取宽
+            boundsRun.size.width = CTRunGetTypographicBounds(run, CFRangeMake(0, 0), &ascent, &descent, NULL);
+            //获取高
+            boundsRun.size.height = ascent + descent;
+            //获取x的偏移量
+            CGFloat xOffset = CTLineGetOffsetForStringIndex(line, CTRunGetStringRange(run).location, NULL);
+            //point是行起点位置，加上每个字的偏移量得到每个字的x
+#warning 这里的坐标系的原点，好像还是左下角
+            boundsRun.origin.x = point.x + xOffset;
+            //计算原点
+            boundsRun.origin.y = point.y - descent - 23;
+//            NSLog(@"123456 --- %f", point.y);
+            //获取绘制区域
+            CGPathRef path = CTFrameGetPath(frame);
+            //获取裁剪区域边框
+            CGRect colRect = CGPathGetBoundingBox(path);
+            CGRect imageBounds = CGRectOffset(boundsRun, colRect.origin.x, colRect.origin.y);
+            return imageBounds;
+        }
+    }
+    return CGRectZero;
+}
 
 @end
