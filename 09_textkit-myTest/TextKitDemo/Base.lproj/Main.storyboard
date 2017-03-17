@@ -160,11 +160,31 @@
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="EvJ-hk-6JO" kind="relationship" relationship="viewControllers" id="nLs-gM-RyL"/>
+                        <segue destination="RkM-L3-GTK" kind="relationship" relationship="viewControllers" id="Eet-DW-VJb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1364" y="-141"/>
+        </scene>
+        <!--Circle-->
+        <scene sceneID="KGN-K0-ySJ">
+            <objects>
+                <viewController id="RkM-L3-GTK" customClass="CircleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fKD-eM-juS"/>
+                        <viewControllerLayoutGuide type="bottom" id="fL3-JP-fJK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tjR-ed-pM7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Circle" image="first" id="6fj-aX-GcO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jp0-TH-dJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1567" y="659"/>
         </scene>
         <!--Second-->
         <scene sceneID="kUw-Xh-MaE">
