@@ -59,6 +59,8 @@
 		E5DA12951DE44F9800A2C9A5 /* FMGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12941DE44F9800A2C9A5 /* FMGridLayout.m */; };
 		E5DA12981DE52C3500A2C9A5 /* FMCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12971DE52C3500A2C9A5 /* FMCircleLayout.m */; };
 		E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */; };
+		E5EAA5521E7FD1EE00E870AF /* FMFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5511E7FD1EE00E870AF /* FMFilterViewController.m */; };
+		E5EAA5551E7FD21E00E870AF /* FMJDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5541E7FD21E00E870AF /* FMJDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +194,10 @@
 		E5DA12971DE52C3500A2C9A5 /* FMCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCircleLayout.m; sourceTree = "<group>"; };
 		E5DA12991DE54ABD00A2C9A5 /* FMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMWaterflowLayout.h; sourceTree = "<group>"; };
 		E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMWaterflowLayout.m; sourceTree = "<group>"; };
+		E5EAA5501E7FD1EE00E870AF /* FMFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFilterViewController.h; sourceTree = "<group>"; };
+		E5EAA5511E7FD1EE00E870AF /* FMFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFilterViewController.m; sourceTree = "<group>"; };
+		E5EAA5531E7FD21E00E870AF /* FMJDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMJDViewController.h; sourceTree = "<group>"; };
+		E5EAA5541E7FD21E00E870AF /* FMJDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMJDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +388,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				E5EAA54F1E7FD1BE00E870AF /* JDFilter */,
 				E50BE6AB1E728A91004B0F33 /* CoreText */,
 				E5CB24151E6CF126006B0045 /* CustomButton */,
 				E5CC36C91E5C176000417E5D /* ScrollHeader */,
@@ -460,6 +467,17 @@
 				E5DA128C1DE432A300A2C9A5 /* DIYUI.pch */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		E5EAA54F1E7FD1BE00E870AF /* JDFilter */ = {
+			isa = PBXGroup;
+			children = (
+				E5EAA5531E7FD21E00E870AF /* FMJDViewController.h */,
+				E5EAA5541E7FD21E00E870AF /* FMJDViewController.m */,
+				E5EAA5501E7FD1EE00E870AF /* FMFilterViewController.h */,
+				E5EAA5511E7FD1EE00E870AF /* FMFilterViewController.m */,
+			);
+			path = JDFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,10 +619,12 @@
 				E5B929791E305CDB00FFCE10 /* TAAbstractDotView.m in Sources */,
 				E5B9298A1E305CDB00FFCE10 /* UIImageView+HighlightedWebCache.m in Sources */,
 				E5B929721E305CDA00FFCE10 /* UIView+XLExtension.m in Sources */,
+				E5EAA5551E7FD21E00E870AF /* FMJDViewController.m in Sources */,
 				E5DA12571DE4274A00A2C9A5 /* ViewController.m in Sources */,
 				E5B929741E305CDB00FFCE10 /* FSActionSheetCell.m in Sources */,
 				E5B929841E305CDB00FFCE10 /* SDWebImageManager.m in Sources */,
 				E5CC36D21E5C216700417E5D /* FMTitleLabel.m in Sources */,
+				E5EAA5521E7FD1EE00E870AF /* FMFilterViewController.m in Sources */,
 				E5B929811E305CDB00FFCE10 /* SDWebImageDecoder.m in Sources */,
 				E5DA128F1DE436E100A2C9A5 /* FMLineLayout.m in Sources */,
 				E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */,

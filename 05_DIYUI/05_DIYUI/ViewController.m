@@ -16,6 +16,7 @@
 #import "FMTitleHeaderView.h"
 #import "FMVerticalButton.h"
 #import "FMCoreTextView.h"
+#import "FMJDViewController.h"
 
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
@@ -63,7 +64,17 @@ static NSString *const FMPhotoCellID = @"photo";
 //    [self scrollTitleViewTest];
 //    [self labelTest];
 //    [self verticalButtonTest];
-    [self coreTextTest];
+//    [self coreTextTest];
+    
+}
+- (IBAction)buttonClick:(UIButton *)sender {
+    [self JDFilterTest];
+}
+
+- (void)JDFilterTest {
+    FMJDViewController *jvc = [[FMJDViewController alloc] init];
+    jvc.leftSlideEnable = NO;
+    [self presentViewController:jvc animated:YES completion:nil];
 }
 
 - (void)coreTextTest {
