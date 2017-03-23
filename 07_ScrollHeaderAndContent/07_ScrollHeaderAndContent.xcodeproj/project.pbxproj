@@ -18,6 +18,18 @@
 		E527E6791E5D27470069D382 /* FMBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E527E6781E5D27470069D382 /* FMBasicViewController.m */; };
 		E527E67C1E5D28A60069D382 /* FMChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E527E67B1E5D28A60069D382 /* FMChildViewController.m */; };
 		E527E67F1E5D2CFC0069D382 /* FMTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E527E67E1E5D2CFC0069D382 /* FMTitleLabel.m */; };
+		E5EAA57A1E83CD7600E870AF /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5791E83CD7600E870AF /* PopoverView.m */; };
+		E5EAA5831E83CF6300E870AF /* ChannelUnitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA57D1E83CF6300E870AF /* ChannelUnitModel.m */; };
+		E5EAA5841E83CF6300E870AF /* LRLChannelEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA57F1E83CF6300E870AF /* LRLChannelEditController.m */; };
+		E5EAA5851E83CF6300E870AF /* LRLChannelEditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EAA5801E83CF6300E870AF /* LRLChannelEditController.xib */; };
+		E5EAA5861E83CF6300E870AF /* TouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5821E83CF6300E870AF /* TouchView.m */; };
+		E5EAA5891E83CFC900E870AF /* FMFirstSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5881E83CFC900E870AF /* FMFirstSortViewController.m */; };
+		E5EAA5911E83D53200E870AF /* YLDragSortTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5901E83D53200E870AF /* YLDragSortTool.m */; };
+		E5EAA5981E83D54000E870AF /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5931E83D54000E870AF /* UIView+Frame.m */; };
+		E5EAA5991E83D54000E870AF /* YLDargSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5951E83D54000E870AF /* YLDargSortCell.m */; };
+		E5EAA59A1E83D54000E870AF /* YLDragSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5971E83D54000E870AF /* YLDragSortViewController.m */; };
+		E5EAA5A01E83D55500E870AF /* FMDragSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA59D1E83D55500E870AF /* FMDragSortModel.m */; };
+		E5EAA5A11E83D55500E870AF /* FMHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA59F1E83D55500E870AF /* FMHeaderReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +72,31 @@
 		E527E67B1E5D28A60069D382 /* FMChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChildViewController.m; sourceTree = "<group>"; };
 		E527E67D1E5D2CFC0069D382 /* FMTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTitleLabel.h; sourceTree = "<group>"; };
 		E527E67E1E5D2CFC0069D382 /* FMTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTitleLabel.m; sourceTree = "<group>"; };
+		E5EAA5781E83CD7600E870AF /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		E5EAA5791E83CD7600E870AF /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		E5EAA57C1E83CF6300E870AF /* ChannelUnitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelUnitModel.h; sourceTree = "<group>"; };
+		E5EAA57D1E83CF6300E870AF /* ChannelUnitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelUnitModel.m; sourceTree = "<group>"; };
+		E5EAA57E1E83CF6300E870AF /* LRLChannelEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRLChannelEditController.h; sourceTree = "<group>"; };
+		E5EAA57F1E83CF6300E870AF /* LRLChannelEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRLChannelEditController.m; sourceTree = "<group>"; };
+		E5EAA5801E83CF6300E870AF /* LRLChannelEditController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LRLChannelEditController.xib; sourceTree = "<group>"; };
+		E5EAA5811E83CF6300E870AF /* TouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchView.h; sourceTree = "<group>"; };
+		E5EAA5821E83CF6300E870AF /* TouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchView.m; sourceTree = "<group>"; };
+		E5EAA5871E83CFC900E870AF /* FMFirstSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFirstSortViewController.h; sourceTree = "<group>"; };
+		E5EAA5881E83CFC900E870AF /* FMFirstSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFirstSortViewController.m; sourceTree = "<group>"; };
+		E5EAA58F1E83D53200E870AF /* YLDragSortTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLDragSortTool.h; sourceTree = "<group>"; };
+		E5EAA5901E83D53200E870AF /* YLDragSortTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLDragSortTool.m; sourceTree = "<group>"; };
+		E5EAA5921E83D54000E870AF /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E5EAA5931E83D54000E870AF /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		E5EAA5941E83D54000E870AF /* YLDargSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLDargSortCell.h; sourceTree = "<group>"; };
+		E5EAA5951E83D54000E870AF /* YLDargSortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLDargSortCell.m; sourceTree = "<group>"; };
+		E5EAA5961E83D54000E870AF /* YLDragSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLDragSortViewController.h; sourceTree = "<group>"; };
+		E5EAA5971E83D54000E870AF /* YLDragSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLDragSortViewController.m; sourceTree = "<group>"; };
+		E5EAA59B1E83D55500E870AF /* FMDrag.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDrag.pch; sourceTree = "<group>"; };
+		E5EAA59C1E83D55500E870AF /* FMDragSortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDragSortModel.h; sourceTree = "<group>"; };
+		E5EAA59D1E83D55500E870AF /* FMDragSortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDragSortModel.m; sourceTree = "<group>"; };
+		E5EAA59E1E83D55500E870AF /* FMHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHeaderReusableView.h; sourceTree = "<group>"; };
+		E5EAA59F1E83D55500E870AF /* FMHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHeaderReusableView.m; sourceTree = "<group>"; };
+		E5EAA5A21E83D59100E870AF /* YLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +147,9 @@
 		E527E6421E5D25DF0069D382 /* 07_ScrollHeaderAndContent */ = {
 			isa = PBXGroup;
 			children = (
+				E5EAA58A1E83D3F800E870AF /* FMDragSort */,
+				E5EAA57B1E83CF6300E870AF /* LRLChannelEdit */,
+				E5EAA5771E83CD7600E870AF /* PopoverView */,
 				E527E6761E5D26480069D382 /* ScrollH&C */,
 				E527E6461E5D25DF0069D382 /* AppDelegate.h */,
 				E527E6471E5D25DF0069D382 /* AppDelegate.m */,
@@ -161,6 +201,52 @@
 				E527E67E1E5D2CFC0069D382 /* FMTitleLabel.m */,
 			);
 			path = "ScrollH&C";
+			sourceTree = "<group>";
+		};
+		E5EAA5771E83CD7600E870AF /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				E5EAA5781E83CD7600E870AF /* PopoverView.h */,
+				E5EAA5791E83CD7600E870AF /* PopoverView.m */,
+			);
+			path = PopoverView;
+			sourceTree = "<group>";
+		};
+		E5EAA57B1E83CF6300E870AF /* LRLChannelEdit */ = {
+			isa = PBXGroup;
+			children = (
+				E5EAA57C1E83CF6300E870AF /* ChannelUnitModel.h */,
+				E5EAA57D1E83CF6300E870AF /* ChannelUnitModel.m */,
+				E5EAA57E1E83CF6300E870AF /* LRLChannelEditController.h */,
+				E5EAA57F1E83CF6300E870AF /* LRLChannelEditController.m */,
+				E5EAA5801E83CF6300E870AF /* LRLChannelEditController.xib */,
+				E5EAA5811E83CF6300E870AF /* TouchView.h */,
+				E5EAA5821E83CF6300E870AF /* TouchView.m */,
+				E5EAA5871E83CFC900E870AF /* FMFirstSortViewController.h */,
+				E5EAA5881E83CFC900E870AF /* FMFirstSortViewController.m */,
+			);
+			path = LRLChannelEdit;
+			sourceTree = "<group>";
+		};
+		E5EAA58A1E83D3F800E870AF /* FMDragSort */ = {
+			isa = PBXGroup;
+			children = (
+				E5EAA5A21E83D59100E870AF /* YLDefine.h */,
+				E5EAA59B1E83D55500E870AF /* FMDrag.pch */,
+				E5EAA59C1E83D55500E870AF /* FMDragSortModel.h */,
+				E5EAA59D1E83D55500E870AF /* FMDragSortModel.m */,
+				E5EAA59E1E83D55500E870AF /* FMHeaderReusableView.h */,
+				E5EAA59F1E83D55500E870AF /* FMHeaderReusableView.m */,
+				E5EAA58F1E83D53200E870AF /* YLDragSortTool.h */,
+				E5EAA5901E83D53200E870AF /* YLDragSortTool.m */,
+				E5EAA5921E83D54000E870AF /* UIView+Frame.h */,
+				E5EAA5931E83D54000E870AF /* UIView+Frame.m */,
+				E5EAA5941E83D54000E870AF /* YLDargSortCell.h */,
+				E5EAA5951E83D54000E870AF /* YLDargSortCell.m */,
+				E5EAA5961E83D54000E870AF /* YLDragSortViewController.h */,
+				E5EAA5971E83D54000E870AF /* YLDragSortViewController.m */,
+			);
+			path = FMDragSort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +357,7 @@
 			files = (
 				E527E6531E5D25DF0069D382 /* LaunchScreen.storyboard in Resources */,
 				E527E6501E5D25DF0069D382 /* Assets.xcassets in Resources */,
+				E5EAA5851E83CF6300E870AF /* LRLChannelEditController.xib in Resources */,
 				E527E64E1E5D25DF0069D382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,12 +383,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EAA5861E83CF6300E870AF /* TouchView.m in Sources */,
 				E527E64B1E5D25DF0069D382 /* ViewController.m in Sources */,
+				E5EAA5991E83D54000E870AF /* YLDargSortCell.m in Sources */,
+				E5EAA5A11E83D55500E870AF /* FMHeaderReusableView.m in Sources */,
 				E527E6481E5D25DF0069D382 /* AppDelegate.m in Sources */,
 				E527E67F1E5D2CFC0069D382 /* FMTitleLabel.m in Sources */,
+				E5EAA5911E83D53200E870AF /* YLDragSortTool.m in Sources */,
+				E5EAA5A01E83D55500E870AF /* FMDragSortModel.m in Sources */,
+				E5EAA5981E83D54000E870AF /* UIView+Frame.m in Sources */,
+				E5EAA59A1E83D54000E870AF /* YLDragSortViewController.m in Sources */,
+				E5EAA5841E83CF6300E870AF /* LRLChannelEditController.m in Sources */,
 				E527E6791E5D27470069D382 /* FMBasicViewController.m in Sources */,
+				E5EAA57A1E83CD7600E870AF /* PopoverView.m in Sources */,
 				E527E67C1E5D28A60069D382 /* FMChildViewController.m in Sources */,
 				E527E6451E5D25DF0069D382 /* main.m in Sources */,
+				E5EAA5891E83CFC900E870AF /* FMFirstSortViewController.m in Sources */,
+				E5EAA5831E83CF6300E870AF /* ChannelUnitModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +484,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = 07_ScrollHeaderAndContent/FMDragSort/FMDrag.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -432,6 +531,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = 07_ScrollHeaderAndContent/FMDragSort/FMDrag.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -533,6 +633,7 @@
 				E527E66F1E5D25DF0069D382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E527E6701E5D25DF0069D382 /* Build configuration list for PBXNativeTarget "07_ScrollHeaderAndContentTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +642,7 @@
 				E527E6721E5D25DF0069D382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E527E6731E5D25DF0069D382 /* Build configuration list for PBXNativeTarget "07_ScrollHeaderAndContentUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +651,7 @@
 				E527E6751E5D25DF0069D382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

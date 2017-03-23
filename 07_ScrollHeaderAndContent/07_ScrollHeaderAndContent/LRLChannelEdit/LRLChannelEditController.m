@@ -459,7 +459,8 @@
                     [self.topDataSource removeObject:self.placeHolderModel];
                 }
                 [self topTapAct:touchView.tap];
-                return;} else {
+                return;
+            } else {
                     [UIView animateWithDuration:0.5 animations:^{
                         touchView.center = _oldCenter;
                     }];
