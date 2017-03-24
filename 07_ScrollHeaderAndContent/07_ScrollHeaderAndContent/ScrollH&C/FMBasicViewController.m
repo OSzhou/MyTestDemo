@@ -225,7 +225,7 @@
 - (UIButton *)sortBtn {
     if (!_sortBtn) {
         _sortBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _sortBtn.frame = CGRectMake(self.view.frame.size.width - 20, 20, 20, 44);
+        _sortBtn.frame = CGRectMake(self.view.frame.size.width - 25, 20, 20, 44);
         _sortBtn.backgroundColor = [UIColor purpleColor];
         [_sortBtn setTitle:@"点" forState:UIControlStateNormal];
         [_sortBtn addTarget:self action:@selector(toSortView:) forControlEvents:UIControlEventTouchUpInside];
