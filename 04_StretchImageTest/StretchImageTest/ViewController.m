@@ -13,8 +13,11 @@
 #import "FMRuntimeTest.h"
 #import "PopoverViewController.h"
 #import "PopoverAnimator.h"
+#import "UIImage+Circle.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *circleImage;
+
 @property (nonatomic, strong) FMTableView *tv;
 /**  */
 @property (nonatomic, strong) PopoverAnimator *animator;
@@ -42,6 +45,13 @@
 //    [self justTwoCornerRadius];
 //    [self labelTest];
 //    [self runtimeTest];
+    [self circleImageTest];
+}
+
+- (void)circleImageTest {
+    UIImage *image = [UIImage circleImage:[UIImage imageNamed:@"阿狸头像"] withParam:30.0f borderWidth:60.0 borderColor:[UIColor purpleColor]];
+//    UIImage *image = [UIImage imageWithClipImage:[UIImage imageNamed:@"阿狸头像"] borderWidth:0 borderColor:nil];
+    self.circleImage.image = image;
 }
 
 - (void)popoverView {
@@ -101,6 +111,13 @@
 }
 
 - (void)justTwoCornerRadius {
+    
+    //view点阵化，增加流畅度(以下两行都是)
+    /*
+    [self.layer setShouldRasterize:YES];
+    [self.layer setRasterizationScale:[[UIScreen mainScreen] scale]];
+     */
+    
     UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(120, 10, 80, 80)];
     view2.backgroundColor = [UIColor redColor];
     

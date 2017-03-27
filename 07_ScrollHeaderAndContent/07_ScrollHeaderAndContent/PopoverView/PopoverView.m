@@ -196,13 +196,13 @@
     //popover框的x,y坐标
     CGFloat curX      = arrowCenterX-curWidth/2;
     CGFloat curY      = CGRectGetMaxY(triggerRect)+10;
-    // 如果箭头指向点距离屏幕左边加上5px不足curWidth的一半的话就重新设置curX
-    if (arrowCenterX+5<curWidth/2) {
+    // 如果箭头指向点距离屏幕左边不足curWidth的一半的话就重新设置curX
+    if (arrowCenterX<curWidth/2) {
         curX = curX+(curWidth/2-arrowCenterX)+5;
     }
-    // 如果箭头指向点距离屏幕右边减去5px不足curWidth的一半的话就重新设置curX
-    if ((SCREEN_W-arrowCenterX-5)<curWidth/2) {
-        curX = curX-(curWidth/2-(SCREEN_W-arrowCenterX-5));
+    // 如果箭头指向点距离屏幕右边不足curWidth的一半的话就重新设置curX
+    if ((SCREEN_W-arrowCenterX)<curWidth/2) {
+        curX = curX-(curWidth/2-(SCREEN_W-arrowCenterX)) - 5;
     }
     
     self.frame           = CGRectMake(curX, curY, curWidth, curHeight);

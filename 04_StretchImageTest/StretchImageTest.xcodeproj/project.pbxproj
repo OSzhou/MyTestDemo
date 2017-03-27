@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E52BEF3C1DFE592D00CFBC4E /* testlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF3B1DFE592D00CFBC4E /* testlib.a */; };
+		E53268771E88BA5D00DCEDED /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = E53268761E88BA5D00DCEDED /* UIImage+Circle.m */; };
 		E557A2421DCAE376003EB6B5 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E557A2411DCAE376003EB6B5 /* UIButton+Extension.m */; };
 		E55AAD101DBF4B6F00DF2384 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AAD0F1DBF4B6F00DF2384 /* Constant.m */; };
 		E589019F1DC08D0800497056 /* FMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E589019E1DC08D0800497056 /* FMTableView.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		E52BEF3A1DFE4E2F00CFBC4E /* StaticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticTest.h; sourceTree = "<group>"; };
 		E52BEF3B1DFE592D00CFBC4E /* testlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = testlib.a; sourceTree = "<group>"; };
+		E53268751E88BA5D00DCEDED /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
+		E53268761E88BA5D00DCEDED /* UIImage+Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
 		E557A2401DCAE376003EB6B5 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Extension.h"; path = "../UIButton+Extension.h"; sourceTree = "<group>"; };
 		E557A2411DCAE376003EB6B5 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Extension.m"; path = "../UIButton+Extension.m"; sourceTree = "<group>"; };
 		E557A2461DD01BE4003EB6B5 /* TestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPCH.pch; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 			children = (
 				E557A2401DCAE376003EB6B5 /* UIButton+Extension.h */,
 				E557A2411DCAE376003EB6B5 /* UIButton+Extension.m */,
+				E53268751E88BA5D00DCEDED /* UIImage+Circle.h */,
+				E53268761E88BA5D00DCEDED /* UIImage+Circle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				E5C9E9661DE3E8D800749919 /* PopoverAnimator.m in Sources */,
 				E5D536E71DBEFB7500E459A3 /* AppDelegate.m in Sources */,
 				E5D536E41DBEFB7500E459A3 /* main.m in Sources */,
+				E53268771E88BA5D00DCEDED /* UIImage+Circle.m in Sources */,
 				E589019F1DC08D0800497056 /* FMTableView.m in Sources */,
 				E5E377441DDC5F2600B34B01 /* FMRuntimeTest.m in Sources */,
 				E5C9E96D1DE3E9CF00749919 /* PopoverViewController.m in Sources */,
