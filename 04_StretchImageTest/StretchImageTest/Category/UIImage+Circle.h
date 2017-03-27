@@ -16,6 +16,9 @@
 /**
  * image: 图片 inset:距离imageView的内切距
  */
-+ (UIImage*)circleImage:(UIImage*)image withParam:(CGFloat)inset borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color;
-
++ (UIImage *)circleImage:(UIImage*)image withParam:(CGFloat)inset borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)color;
+/**
+ * 只给图片加边框
+ */
++ (UIImage *)createBorderImage:(UIImage *)img withBorderColor:(UIColor *)color WithWidth:(CGFloat)width;
 @end

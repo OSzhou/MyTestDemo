@@ -49,8 +49,10 @@
 }
 
 - (void)circleImageTest {
-    UIImage *image = [UIImage circleImage:[UIImage imageNamed:@"阿狸头像"] withParam:30.0f borderWidth:60.0 borderColor:[UIColor purpleColor]];
-//    UIImage *image = [UIImage imageWithClipImage:[UIImage imageNamed:@"阿狸头像"] borderWidth:0 borderColor:nil];
+//    UIImage *image = [UIImage circleImage:[UIImage imageNamed:@"阿狸头像"] withParam:30.0f borderWidth:60.0 borderColor:[UIColor purpleColor]];
+//    UIImage *img = [UIImage imageNamed:@"阿狸头像"];
+//    UIImage *image = [UIImage createBorderImage:img withBorderColor:[UIColor redColor] WithWidth:2.0f];
+    UIImage *image = [UIImage imageWithClipImage:[UIImage imageNamed:@"阿狸头像"] borderWidth:0 borderColor:nil];
     self.circleImage.image = image;
 }
 
