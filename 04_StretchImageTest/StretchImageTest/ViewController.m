@@ -52,6 +52,12 @@
 //    UIImage *image = [UIImage circleImage:[UIImage imageNamed:@"阿狸头像"] withParam:30.0f borderWidth:60.0 borderColor:[UIColor purpleColor]];
 //    UIImage *img = [UIImage imageNamed:@"阿狸头像"];
 //    UIImage *image = [UIImage createBorderImage:img withBorderColor:[UIColor redColor] WithWidth:2.0f];
+    NSMutableArray *arr = [NSMutableArray array];
+    [arr addObject:@"0"];
+    [arr addObject:@"1"];
+    [arr addObject:@"2"];
+    [arr insertObject:@"3" atIndex:2];
+    NSLog(@" --- %@ --- %zd", arr[3], arr.count);
     UIImage *image = [UIImage imageWithClipImage:[UIImage imageNamed:@"阿狸头像"] borderWidth:0 borderColor:nil];
     self.circleImage.image = image;
 }

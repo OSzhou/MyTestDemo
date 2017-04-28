@@ -89,4 +89,18 @@ static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
     [self cjr_sendAction:action to:target forEvent:event];//这里并不是循环调用，由于交换了两个方法，cjr_sendAction:to:forEvent:现在就是sendAction:to:forEvent:
 }
 
+/** 汉字URL转换 */
+/*
+ - (NSString *)URLEncodedString
+ {
+ NSString *encodedString = (NSString *)
+ CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+ (CFStringRef)self,
+ (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]",
+ NULL,
+ kCFStringEncodingUTF8);
+ return encodedString;
+ }
+ */
+
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E53054991EB2E3A800FFB1A3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E53054981EB2E3A800FFB1A3 /* Person.m */; };
 		FC83F4081C3BFA8700EC8003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC83F4071C3BFA8700EC8003 /* main.m */; };
 		FC83F40B1C3BFA8700EC8003 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC83F40A1C3BFA8700EC8003 /* AppDelegate.m */; };
 		FC83F40E1C3BFA8700EC8003 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC83F40D1C3BFA8700EC8003 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E53054971EB2E3A800FFB1A3 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E53054981EB2E3A800FFB1A3 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		FC83F4031C3BFA8700EC8003 /* ChannelEditDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelEditDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC83F4071C3BFA8700EC8003 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC83F4091C3BFA8700EC8003 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E53054961EB2E37800FFB1A3 /* isEqual */ = {
+			isa = PBXGroup;
+			children = (
+				E53054971EB2E3A800FFB1A3 /* Person.h */,
+				E53054981EB2E3A800FFB1A3 /* Person.m */,
+			);
+			path = isEqual;
+			sourceTree = "<group>";
+		};
 		FC83F3FA1C3BFA8600EC8003 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +81,7 @@
 		FC83F4051C3BFA8700EC8003 /* ChannelEditDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E53054961EB2E37800FFB1A3 /* isEqual */,
 				FC83F4091C3BFA8700EC8003 /* AppDelegate.h */,
 				FC83F40A1C3BFA8700EC8003 /* AppDelegate.m */,
 				FC83F41D1C3BFAAC00EC8003 /* LRLChannelEdit */,
@@ -178,6 +191,7 @@
 			files = (
 				FC83F4281C3BFC1C00EC8003 /* TouchView.m in Sources */,
 				FC83F40E1C3BFA8700EC8003 /* ViewController.m in Sources */,
+				E53054991EB2E3A800FFB1A3 /* Person.m in Sources */,
 				FC83F40B1C3BFA8700EC8003 /* AppDelegate.m in Sources */,
 				FC83F4211C3BFAAC00EC8003 /* LRLChannelEditController.m in Sources */,
 				FC83F4081C3BFA8700EC8003 /* main.m in Sources */,
@@ -332,6 +346,7 @@
 				FC83F41C1C3BFA8700EC8003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
