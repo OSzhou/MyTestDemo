@@ -10,9 +10,48 @@
 
 @implementation TKDAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *body = @"123abcDEF456";
+    NSString *keyString=@"1";
+    NSScanner *scanner=[NSScanner scannerWithString:body];
+    
+    [scanner setCaseSensitive:NO];
+    
+    BOOL b;
+    NSString *result = nil;
+    /*** 必须保证scanLocation有变动，不然会死循环 scanString：必须手动加scanLocation ***/
+    while (![scanner isAtEnd]){
+        b=[scanner scanUpToString:keyString intoString:nil];
+        [scanner scanUpToString:@"9" intoString:&result];
+        NSLog(@"123 --- %@ --- %@", body, result);
+//        b=[scanner scanString:keyString intoString:nil];
+//        [scanner scanString:@"456" intoString:&result];
+//        NSLog(@"123 --- %@ --- %@", body, result);
+
+//        if(b) {
+//            body=[body substringToIndex:[scanner scanLocation]-keyString.length];
+//            NSLog(@"123 --- %@", result);
+//            break;
+//        } else {
+//            scanner.scanLocation++;
+//        }
+    }/*
+    NSString *html = @"<p>fafasfsfsf</p><li>1455543545</li>";
+    NSScanner * scanner = [NSScanner scannerWithString:html];
+    NSString * text = nil;
+    while([scanner isAtEnd]==NO)
+    {
+        //找到标签的起始位置
+        [scanner scanUpToString:@"<" intoString:nil];
+        //找到标签的结束位置
+        [scanner scanUpToString:@">" intoString:&text];
+        //替换字符
+//        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>",text] withString:@""];
+        NSLog(@"123456 --- ");
+    }
+    */
     return YES;
 }
 							
