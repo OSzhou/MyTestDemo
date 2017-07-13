@@ -30,6 +30,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    int i = 0;
+    while (i++ < 5) {//打印5次（先判断再执行+1，最后执行语句）
+        NSLog(@"test111 --- %zd", i);
+        //1 2 3 4 5
+    }
+    int j = 0;
+    while (++j < 5) {//打印4次（先+1再执行判断，最后执行语句）
+        NSLog(@"test222 --- %zd", j);
+        //1 2 3 4
+    }
     /* _tv = [[FMTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _tv.alwaysBounceVertical = YES;
     _tv.delegate = self;
