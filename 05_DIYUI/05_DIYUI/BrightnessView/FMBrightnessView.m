@@ -77,10 +77,10 @@ static NSString *brightnessKey = @"brightness";
 - (void)createTips {
     
     self.tipArray = [NSMutableArray arrayWithCapacity:16];
-    
+    //17是所有小块间距之和
     CGFloat tipW = (self.longView.bounds.size.width - 17) / 16;
     CGFloat tipH = 5;
-    CGFloat tipY = 1;
+    CGFloat tipY = 1;//
     
     for (int i = 0; i < 16; i++) {
         CGFloat tipX          = i * (tipW + 1) + 1;
@@ -152,10 +152,10 @@ static NSString *brightnessKey = @"brightness";
 - (void)updateLongView:(CGFloat)sound {
     CGFloat stage = 1 / 16.0;
     NSInteger level = sound / stage;
-    
+                        //16
     for (int i = 0; i < self.tipArray.count; i++) {
         UIImageView *img = self.tipArray[i];
-        
+        //控制小块的显示和隐藏
         if (i <= level) {
             img.hidden = NO;
         } else {
@@ -172,7 +172,7 @@ static NSString *brightnessKey = @"brightness";
 
 - (void)dealloc {
     [[UIScreen mainScreen] removeObserver:self forKeyPath:brightnessKey];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)setIsStatusBarHidden:(BOOL)isStatusBarHidden {
