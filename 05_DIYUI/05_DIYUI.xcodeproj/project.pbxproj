@@ -45,6 +45,9 @@
 		E5CB24181E6CF1BC006B0045 /* FMVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CB24171E6CF1BC006B0045 /* FMVerticalButton.m */; };
 		E5CC36CF1E5C1C5A00417E5D /* FMTitleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */; };
 		E5CC36D21E5C216700417E5D /* FMTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CC36D11E5C216700417E5D /* FMTitleLabel.m */; };
+		E5D7EA8A1F21965000DA8133 /* FMBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D7EA891F21965000DA8133 /* FMBrightnessView.m */; };
+		E5D7EA8C1F21976800DA8133 /* FMSources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5D7EA8B1F21976800DA8133 /* FMSources.bundle */; };
+		E5D7EA8F1F2198BC00DA8133 /* UIApplication+FMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D7EA8E1F2198BC00DA8133 /* UIApplication+FMExtension.m */; };
 		E5DA12511DE4274A00A2C9A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12501DE4274A00A2C9A5 /* main.m */; };
 		E5DA12541DE4274A00A2C9A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12531DE4274A00A2C9A5 /* AppDelegate.m */; };
 		E5DA12571DE4274A00A2C9A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA12561DE4274A00A2C9A5 /* ViewController.m */; };
@@ -166,6 +169,11 @@
 		E5CC36CE1E5C1C5A00417E5D /* FMTitleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTitleHeaderView.m; sourceTree = "<group>"; };
 		E5CC36D01E5C216700417E5D /* FMTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTitleLabel.h; sourceTree = "<group>"; };
 		E5CC36D11E5C216700417E5D /* FMTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTitleLabel.m; sourceTree = "<group>"; };
+		E5D7EA881F21965000DA8133 /* FMBrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBrightnessView.h; sourceTree = "<group>"; };
+		E5D7EA891F21965000DA8133 /* FMBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBrightnessView.m; sourceTree = "<group>"; };
+		E5D7EA8B1F21976800DA8133 /* FMSources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FMSources.bundle; sourceTree = "<group>"; };
+		E5D7EA8D1F2198BC00DA8133 /* UIApplication+FMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+FMExtension.h"; sourceTree = "<group>"; };
+		E5D7EA8E1F2198BC00DA8133 /* UIApplication+FMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+FMExtension.m"; sourceTree = "<group>"; };
 		E5DA124C1DE4274A00A2C9A5 /* 05_DIYUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 05_DIYUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DA12501DE4274A00A2C9A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5DA12521DE4274A00A2C9A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -365,6 +373,18 @@
 			path = ScrollHeader;
 			sourceTree = "<group>";
 		};
+		E5D7EA871F2195FA00DA8133 /* BrightnessView */ = {
+			isa = PBXGroup;
+			children = (
+				E5D7EA8B1F21976800DA8133 /* FMSources.bundle */,
+				E5D7EA881F21965000DA8133 /* FMBrightnessView.h */,
+				E5D7EA891F21965000DA8133 /* FMBrightnessView.m */,
+				E5D7EA8D1F2198BC00DA8133 /* UIApplication+FMExtension.h */,
+				E5D7EA8E1F2198BC00DA8133 /* UIApplication+FMExtension.m */,
+			);
+			path = BrightnessView;
+			sourceTree = "<group>";
+		};
 		E5DA12431DE4274A00A2C9A5 = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +408,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				E5D7EA871F2195FA00DA8133 /* BrightnessView */,
 				E5EAA54F1E7FD1BE00E870AF /* JDFilter */,
 				E50BE6AB1E728A91004B0F33 /* CoreText */,
 				E5CB24151E6CF126006B0045 /* CustomButton */,
@@ -590,6 +611,7 @@
 				E5DA125A1DE4274A00A2C9A5 /* Main.storyboard in Resources */,
 				E5B929781E305CDB00FFCE10 /* FSActionSheet_cancel@3x.png in Resources */,
 				E5B929771E305CDB00FFCE10 /* FSActionSheet_cancel@2x.png in Resources */,
+				E5D7EA8C1F21976800DA8133 /* FMSources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +657,7 @@
 				E5B929731E305CDB00FFCE10 /* FSActionSheet.m in Sources */,
 				E5B9297A1E305CDB00FFCE10 /* TAAnimatedDotView.m in Sources */,
 				E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */,
+				E5D7EA8F1F2198BC00DA8133 /* UIApplication+FMExtension.m in Sources */,
 				E5B929871E305CDB00FFCE10 /* UIImage+GIF.m in Sources */,
 				E5B929891E305CDB00FFCE10 /* UIImage+WebP.m in Sources */,
 				E5B9297E1E305CDB00FFCE10 /* NSData+ImageContentType.m in Sources */,
@@ -642,6 +665,7 @@
 				E5B929711E305CDA00FFCE10 /* UIImage+XLExtension.m in Sources */,
 				E5B929761E305CDB00FFCE10 /* FSActionSheetItem.m in Sources */,
 				E5B9297F1E305CDB00FFCE10 /* SDImageCache.m in Sources */,
+				E5D7EA8A1F21965000DA8133 /* FMBrightnessView.m in Sources */,
 				E5B9298D1E305CDB00FFCE10 /* XLPhotoBrowser.m in Sources */,
 				E5B929821E305CDB00FFCE10 /* SDWebImageDownloader.m in Sources */,
 				E5DA12541DE4274A00A2C9A5 /* AppDelegate.m in Sources */,
