@@ -12,6 +12,8 @@
 		E53268861E8BA14600DCEDED /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E53268851E8BA14600DCEDED /* UIColor+Extension.m */; };
 		E557A2421DCAE376003EB6B5 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E557A2411DCAE376003EB6B5 /* UIButton+Extension.m */; };
 		E55AAD101DBF4B6F00DF2384 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AAD0F1DBF4B6F00DF2384 /* Constant.m */; };
+		E569963D1F3C368F002CA89C /* CEBaseInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E569963A1F3C368F002CA89C /* CEBaseInteractionController.m */; };
+		E569963E1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E569963C1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.m */; };
 		E589019F1DC08D0800497056 /* FMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E589019E1DC08D0800497056 /* FMTableView.m */; };
 		E5C9E9661DE3E8D800749919 /* PopoverAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C9E9651DE3E8D800749919 /* PopoverAnimator.m */; };
 		E5C9E9691DE3E98C00749919 /* PopoverPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C9E9681DE3E98C00749919 /* PopoverPresentViewController.m */; };
@@ -57,6 +59,10 @@
 		E557A2461DD01BE4003EB6B5 /* TestPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPCH.pch; sourceTree = "<group>"; };
 		E55AAD0E1DBF4B6F00DF2384 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = ../Constant.h; sourceTree = "<group>"; };
 		E55AAD0F1DBF4B6F00DF2384 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constant.m; path = ../Constant.m; sourceTree = "<group>"; };
+		E56996391F3C368F002CA89C /* CEBaseInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEBaseInteractionController.h; sourceTree = "<group>"; };
+		E569963A1F3C368F002CA89C /* CEBaseInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEBaseInteractionController.m; sourceTree = "<group>"; };
+		E569963B1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEHorizontalSwipeInteractionController.h; sourceTree = "<group>"; };
+		E569963C1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEHorizontalSwipeInteractionController.m; sourceTree = "<group>"; };
 		E589019D1DC08D0800497056 /* FMTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTableView.h; sourceTree = "<group>"; };
 		E589019E1DC08D0800497056 /* FMTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTableView.m; sourceTree = "<group>"; };
 		E5C9E9641DE3E8D800749919 /* PopoverAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverAnimator.h; sourceTree = "<group>"; };
@@ -165,6 +171,10 @@
 				E5C9E96A1DE3E9CF00749919 /* PopoverViewController.h */,
 				E5C9E96B1DE3E9CF00749919 /* PopoverViewController.m */,
 				E5C9E96C1DE3E9CF00749919 /* PopoverViewController.xib */,
+				E56996391F3C368F002CA89C /* CEBaseInteractionController.h */,
+				E569963A1F3C368F002CA89C /* CEBaseInteractionController.m */,
+				E569963B1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.h */,
+				E569963C1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.m */,
 			);
 			path = Transitioning;
 			sourceTree = "<group>";
@@ -303,6 +313,7 @@
 				TargetAttributes = {
 					E5D536DE1DBEFB7500E459A3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K2V53K5849;
 					};
 					E5D536F71DBEFB7500E459A3 = {
 						CreatedOnToolsVersion = 7.3;
@@ -374,9 +385,11 @@
 				E5D536E71DBEFB7500E459A3 /* AppDelegate.m in Sources */,
 				E5D536E41DBEFB7500E459A3 /* main.m in Sources */,
 				E53268771E88BA5D00DCEDED /* UIImage+Circle.m in Sources */,
+				E569963D1F3C368F002CA89C /* CEBaseInteractionController.m in Sources */,
 				E53268861E8BA14600DCEDED /* UIColor+Extension.m in Sources */,
 				E589019F1DC08D0800497056 /* FMTableView.m in Sources */,
 				E5E377441DDC5F2600B34B01 /* FMRuntimeTest.m in Sources */,
+				E569963E1F3C368F002CA89C /* CEHorizontalSwipeInteractionController.m in Sources */,
 				E5C9E96D1DE3E9CF00749919 /* PopoverViewController.m in Sources */,
 				E55AAD101DBF4B6F00DF2384 /* Constant.m in Sources */,
 			);
@@ -525,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K2V53K5849;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = StretchImageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -541,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K2V53K5849;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = StretchImageTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

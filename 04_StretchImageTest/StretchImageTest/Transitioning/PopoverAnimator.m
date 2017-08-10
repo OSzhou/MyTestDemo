@@ -9,10 +9,13 @@
 
 #import "PopoverAnimator.h"
 #import "PopoverPresentViewController.h"
+#import "CEHorizontalSwipeInteractionController.h"
 
 @interface PopoverAnimator () 
 /** 记录是否展开 */
 @property (nonatomic, assign) BOOL isPresent;
+
+@property (nonatomic, strong) CEHorizontalSwipeInteractionController *hv;
 
 @end
 
@@ -25,15 +28,22 @@
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    _hv = [[CEHorizontalSwipeInteractionController alloc] init];
+    [_hv wireToViewController:presented forOperation:CEInteractionOperationDismiss];
     _isPresent = YES;
     [[NSNotificationCenter defaultCenter] postNotificationName:FMPopoverAnimatorWillShow object:self];
     return self;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    NSLog(@"123 --- dismiss");
     _isPresent = NO;
      [[NSNotificationCenter defaultCenter] postNotificationName:FMPopoverAnimatorWillDismiss object:self];
     return self;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+    return _hv && _hv.interactionInProgress ? _hv : nil;
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -51,7 +61,7 @@
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             toView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
+            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     } else {
         NSLog(@"关闭");
@@ -59,7 +69,7 @@
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             fromView.transform = CGAffineTransformMakeScale(1.0, 0.000001);
         } completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
+            [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     }
 }

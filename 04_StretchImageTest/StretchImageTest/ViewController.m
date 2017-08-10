@@ -21,15 +21,25 @@
 @property (nonatomic, strong) FMTableView *tv;
 /**  */
 @property (nonatomic, strong) PopoverAnimator *animator;
+@property (nonatomic, strong) NSTimer *testTimer;
 @end
 
 @implementation ViewController
 - (IBAction)popoverBtnclick:(UIButton *)sender {
     [self popoverView];
+//    [self.testTimer invalidate];
+//    self.testTimer = nil;
+//    [self.testTimer setFireDate:[NSDate distantFuture]];
+}
+
+- (void)timerFunc {
+    NSLog(@"timer event fire!!!");
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.testTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timerFunc) userInfo:nil repeats:YES];
+    /*
     int i = 0;
     while (i++ < 5) {//打印5次（先判断再执行+1，最后执行语句）
         NSLog(@"test111 --- %zd", i);
@@ -39,7 +49,7 @@
     while (++j < 5) {//打印4次（先+1再执行判断，最后执行语句）
         NSLog(@"test222 --- %zd", j);
         //1 2 3 4
-    }
+    }*/
     /* _tv = [[FMTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _tv.alwaysBounceVertical = YES;
     _tv.delegate = self;
