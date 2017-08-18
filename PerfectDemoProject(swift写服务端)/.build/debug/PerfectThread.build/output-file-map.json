@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/master.swiftdeps"
+  },
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Thread.git-6541237758607105655/Sources/Promise.swift": {
+    "dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Promise.d",
+    "object": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Promise.swift.o",
+    "swiftmodule": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Promise~partial.swiftmodule",
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Promise.swiftdeps"
+  },
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Thread.git-6541237758607105655/Sources/Threading.swift": {
+    "dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Threading.d",
+    "object": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Threading.swift.o",
+    "swiftmodule": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Threading~partial.swiftmodule",
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/Threading.swiftdeps"
+  },
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Thread.git-6541237758607105655/Sources/ThreadQueue.swift": {
+    "dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/ThreadQueue.d",
+    "object": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/ThreadQueue.swift.o",
+    "swiftmodule": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/ThreadQueue~partial.swiftmodule",
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectThread.build/ThreadQueue.swiftdeps"
+  }
+}

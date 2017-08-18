@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/MySQL.build/master.swiftdeps"
+  },
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-MySQL.git-4976130768219902098/Sources/MySQL/MySQL.swift": {
+    "dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/MySQL.build/MySQL.d",
+    "object": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/MySQL.build/MySQL.swift.o",
+    "swiftmodule": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/MySQL.build/MySQL~partial.swiftmodule",
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/MySQL.build/MySQL.swiftdeps"
+  }
+}

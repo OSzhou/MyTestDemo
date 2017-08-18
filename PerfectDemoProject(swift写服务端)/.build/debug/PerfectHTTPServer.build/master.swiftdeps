@@ -1,0 +1,22 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "43ec8727c0698dfbaf817ed8e4317433"
+build_time: [556273910, 55887000]
+inputs:
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTPContentCompression.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTPMultiplexer.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTPServer.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTPServerEx.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTPServerExConfig.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP11/HTTP11Request.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP11/HTTP11Response.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HPACK.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2Client.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2Frame.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2FrameReader.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2FrameWriter.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2PrefaceValidator.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2Request.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2Response.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2Session.swift": [556271452, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-HTTPServer.git--6671958091389663080/Sources/PerfectHTTPServer/HTTP2/HTTP2SessionSettings.swift": [556271452, 0]

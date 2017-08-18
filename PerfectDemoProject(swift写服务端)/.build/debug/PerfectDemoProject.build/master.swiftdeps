@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "90230444ec2e7cbee6f357e12ec91fe7"
+build_time: [556273914, 485601000]
+inputs:
+  "/Users/cinyi-java5/PerfectDemoProject/Sources/main.swift": [556270219, 0]

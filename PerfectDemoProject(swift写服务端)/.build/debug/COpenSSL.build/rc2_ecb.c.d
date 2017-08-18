@@ -1,0 +1,7 @@
+dependencies: \
+  /Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/rc2_ecb.c \
+  /Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/include/module.modulemap \
+  /Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/rc2.h \
+  /Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/opensslconf.h \
+  /Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/rc2_locl.h \
+  /Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-COpenSSL.git--4744624199947727386/COpenSSL/opensslv.h

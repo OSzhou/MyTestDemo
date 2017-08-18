@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "00378ae01f5c0766ac47902d7853bc2a"
+build_time: [556271703, 226151000]
+inputs:
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/Algorithms.swift": [556271454, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/ByteIO.swift": [556271454, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/Extensions.swift": [556271454, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/JWT.swift": [556271454, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/Keys.swift": [556271454, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/OpenSSLInternal.swift": [556271454, 0]
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto.swift": [556271454, 0]

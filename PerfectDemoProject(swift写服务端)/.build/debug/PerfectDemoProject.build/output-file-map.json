@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectDemoProject.build/master.swiftdeps"
+  },
+  "/Users/cinyi-java5/PerfectDemoProject/Sources/main.swift": {
+    "dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectDemoProject.build/main.d",
+    "object": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectDemoProject.build/main.swift.o",
+    "swiftmodule": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectDemoProject.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/cinyi-java5/PerfectDemoProject/.build/debug/PerfectDemoProject.build/main.swiftdeps"
+  }
+}

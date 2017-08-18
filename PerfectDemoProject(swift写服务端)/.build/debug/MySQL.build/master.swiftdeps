@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "3f4eab821652c59c2279cae34a8331e2"
+build_time: [556273890, 161790000]
+inputs:
+  "/Users/cinyi-java5/PerfectDemoProject/.build/checkouts/Perfect-MySQL.git-4976130768219902098/Sources/MySQL/MySQL.swift": [556271455, 0]
