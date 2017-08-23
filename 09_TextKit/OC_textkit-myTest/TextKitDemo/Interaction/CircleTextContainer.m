@@ -6,7 +6,7 @@
 #import "CircleTextContainer.h"
 
 @implementation CircleTextContainer
-//设置段落句式的特殊排版
+//设置段落句式的特殊排版，注意：这是lineFragment
 - (CGRect)lineFragmentRectForProposedRect:(CGRect)proposedRect
                                   atIndex:(NSUInteger)characterIndex
                          writingDirection:(NSWritingDirection)baseWritingDirection

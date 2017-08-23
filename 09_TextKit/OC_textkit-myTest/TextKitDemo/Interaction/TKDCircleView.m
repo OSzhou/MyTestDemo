@@ -12,7 +12,7 @@
 
 - (void)drawRect:(CGRect)rect
 {
-	[self.tintColor setFill];
+	[self.tintColor setFill];//tintColor：系统默认的颜色（蓝色）
 	[[UIBezierPath bezierPathWithOvalInRect: self.bounds] fill];
 }
 
