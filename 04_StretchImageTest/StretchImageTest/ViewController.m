@@ -14,6 +14,7 @@
 #import "PopoverViewController.h"
 #import "PopoverAnimator.h"
 #import "UIImage+Circle.h"
+#import "FMTestLabel.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *circleImage;
@@ -65,7 +66,9 @@
 //    [self justTwoCornerRadius];
 //    [self labelTest];
 //    [self runtimeTest];
-    [self circleImageTest];
+//    [self circleImageTest];
+    FMTestLabel *testL = [[FMTestLabel alloc] initWithFrame:CGRectMake(10, 10, 50, 20)];
+//    [self.view addSubview:testL];
 }
 
 - (void)circleImageTest {
