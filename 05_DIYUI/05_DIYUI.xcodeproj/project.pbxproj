@@ -11,6 +11,8 @@
 		E52BEF661DFE743D00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF671DFE760B00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF681DFE760B00CFBC4E /* FrameworkTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5381DD01F8C9AF300DB2B04 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5381DCF1F8C9AF300DB2B04 /* FirstViewController.m */; };
+		E5381DD31F8C9B0000DB2B04 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5381DD21F8C9B0000DB2B04 /* SecondViewController.m */; };
 		E5B929711E305CDA00FFCE10 /* UIImage+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B9292F1E305CDA00FFCE10 /* UIImage+XLExtension.m */; };
 		E5B929721E305CDA00FFCE10 /* UIView+XLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B929311E305CDA00FFCE10 /* UIView+XLExtension.m */; };
 		E5B929731E305CDB00FFCE10 /* FSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B929351E305CDA00FFCE10 /* FSActionSheet.m */; };
@@ -101,6 +103,10 @@
 		E50BE6AC1E728AB8004B0F33 /* FMCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCoreTextView.h; sourceTree = "<group>"; };
 		E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCoreTextView.m; sourceTree = "<group>"; };
 		E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkTest.framework; sourceTree = "<group>"; };
+		E5381DCE1F8C9AF300DB2B04 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		E5381DCF1F8C9AF300DB2B04 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		E5381DD11F8C9B0000DB2B04 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		E5381DD21F8C9B0000DB2B04 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E5B9292E1E305CDA00FFCE10 /* UIImage+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XLExtension.h"; sourceTree = "<group>"; };
 		E5B9292F1E305CDA00FFCE10 /* UIImage+XLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XLExtension.m"; sourceTree = "<group>"; };
 		E5B929301E305CDA00FFCE10 /* UIView+XLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XLExtension.h"; sourceTree = "<group>"; };
@@ -242,6 +248,17 @@
 				E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */,
 			);
 			path = CoreText;
+			sourceTree = "<group>";
+		};
+		E5381DCD1F8C9A6A00DB2B04 /* NavKeepTest */ = {
+			isa = PBXGroup;
+			children = (
+				E5381DCE1F8C9AF300DB2B04 /* FirstViewController.h */,
+				E5381DCF1F8C9AF300DB2B04 /* FirstViewController.m */,
+				E5381DD11F8C9B0000DB2B04 /* SecondViewController.h */,
+				E5381DD21F8C9B0000DB2B04 /* SecondViewController.m */,
+			);
+			path = NavKeepTest;
 			sourceTree = "<group>";
 		};
 		E5B9292D1E305CDA00FFCE10 /* XLPhotoBrowser */ = {
@@ -408,6 +425,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				E5381DCD1F8C9A6A00DB2B04 /* NavKeepTest */,
 				E5D7EA871F2195FA00DA8133 /* BrightnessView */,
 				E5EAA54F1E7FD1BE00E870AF /* JDFilter */,
 				E50BE6AB1E728A91004B0F33 /* CoreText */,
@@ -655,6 +673,7 @@
 				E5CB24181E6CF1BC006B0045 /* FMVerticalButton.m in Sources */,
 				E5CC36CF1E5C1C5A00417E5D /* FMTitleHeaderView.m in Sources */,
 				E5B929731E305CDB00FFCE10 /* FSActionSheet.m in Sources */,
+				E5381DD01F8C9AF300DB2B04 /* FirstViewController.m in Sources */,
 				E5B9297A1E305CDB00FFCE10 /* TAAnimatedDotView.m in Sources */,
 				E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */,
 				E5D7EA8F1F2198BC00DA8133 /* UIApplication+FMExtension.m in Sources */,
@@ -671,6 +690,7 @@
 				E5DA12541DE4274A00A2C9A5 /* AppDelegate.m in Sources */,
 				E5DA12951DE44F9800A2C9A5 /* FMGridLayout.m in Sources */,
 				E5B9298E1E305CDB00FFCE10 /* XLProgressView.m in Sources */,
+				E5381DD31F8C9B0000DB2B04 /* SecondViewController.m in Sources */,
 				E5B929881E305CDB00FFCE10 /* UIImage+MultiFormat.m in Sources */,
 				E5B929861E305CDB00FFCE10 /* UIButton+WebCache.m in Sources */,
 				E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */,

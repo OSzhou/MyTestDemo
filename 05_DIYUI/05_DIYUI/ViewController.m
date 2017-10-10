@@ -17,6 +17,7 @@
 #import "FMVerticalButton.h"
 #import "FMCoreTextView.h"
 #import "FMJDViewController.h"
+#import "FirstViewController.h"
 
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
@@ -68,7 +69,14 @@ static NSString *const FMPhotoCellID = @"photo";
     
 }
 - (IBAction)buttonClick:(UIButton *)sender {
-    [self JDFilterTest];
+//    [self JDFilterTest];
+    [self keepVCTest];
+}
+
+- (void)keepVCTest {
+    FirstViewController *fvc = [FirstViewController new];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:fvc];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 - (void)JDFilterTest {
