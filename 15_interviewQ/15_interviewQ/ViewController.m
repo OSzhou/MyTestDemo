@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "UIButton+TestBtn.h"
 
+typedef void (^testBlock)(void);
 @interface ViewController ()
 
 @property (nonatomic, strong) UIView *v;
@@ -20,23 +22,62 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _v = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
-    _v.backgroundColor = [UIColor cyanColor];
-    _l = _v.layer;
-    [self.view addSubview:_v];
+    // layer 和 frame的关系测试
+//    _v = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+//    _v.backgroundColor = [UIColor cyanColor];
+//    _l = _v.layer;
+//    [self.view addSubview:_v];
 //    NSLog(@"v---%@ l---%@", NSStringFromCGRect(_v.frame),NSStringFromCGRect(_l.frame));
+    // 最大子数组测试
 //    NSArray * arr = @[@1, @2, @(-4), @4, @10, @(-3), @4, @(-5), @1];
 //    NSArray * arr = @[@1, @2, @(-4), @4, @10, @(-3)];
 //    NSArray * arr = @[@(-1), @(-2), @3];
 //    NSArray * arr = @[@(-2), @(-1), @(-3)];
-    NSArray * arr = @[@0, @1, @2, @4, @10];
-    NSArray *maxSubArr = [self maxSubArrayIn:arr];
-    NSLog(@" --- %@", maxSubArr);
-    UIView * polygonView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.view.frame) - 100, CGRectGetMidY(self.view.frame) - 100, 200, 200)];
-    polygonView.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:polygonView];
-    for (int i = 0; i < 100000; i++) {
-        [polygonView.layer addSublayer:[self createLayerWith:[UIColor colorWithRed:(arc4random() % 255/255.0) green:arc4random() % 255/255.0 blue:arc4random() % 255/255.0 alpha:1.0]]];
+//    NSArray * arr = @[@0, @1, @2, @4, @10];
+//    NSArray *maxSubArr = [self maxSubArrayIn:arr];
+//    NSLog(@" --- %@", maxSubArr);
+    // 十万个三角形
+//    UIView * polygonView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.view.frame) - 100, CGRectGetMidY(self.view.frame) - 100, 200, 200)];
+//    polygonView.backgroundColor = [UIColor orangeColor];
+//    [self.view addSubview:polygonView];
+//    for (int i = 0; i < 100000; i++) {
+//        [polygonView.layer addSublayer:[self createLayerWith:[UIColor colorWithRed:(arc4random() % 255/255.0) green:arc4random() % 255/255.0 blue:arc4random() % 255/255.0 alpha:1.0]]];
+//    }
+    NSLog(@"1111111111");
+    [self arrCountTest];
+    [self testBlock];
+}
+
+- (void)testBlock {
+    // block 不会立即执行，要等到testBlock这个函数加载完再回来执行
+    int a = 23;// 没用__block修饰，其之下的block中存储的值不会跟着改变
+    __block int b = 23;// 用__block修饰，其之下的block中存储的值会跟着改变
+    testBlock block1 = ^{
+        NSLog(@"---%d", a);
+    };
+    testBlock block2 = ^{
+        NSLog(@"---%d", b);
+    };
+    
+    a = 32;// 这里由于没有__block修饰，所以修改只对其之下的block起作用
+    b = 32;// 这里的有__block修饰，所以修改对全局有效
+    
+    testBlock block3 = ^{
+        NSLog(@"---%d", a);
+    };
+    testBlock block4 = ^{
+        NSLog(@"---%d", b);
+    };
+    block1();// 23
+    block2();// 32
+    block3();// 32
+    block4();// 32
+}
+
+- (void)arrCountTest {
+    NSArray *arr = @[@1, @2, @3];
+    if ((arr.count - 1) > 1) {
+        NSLog(@"可以执行！！！");
     }
 }
 

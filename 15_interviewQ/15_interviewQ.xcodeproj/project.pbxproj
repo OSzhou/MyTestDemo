@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E536AF2F206890C300FCAD31 /* UIButton+TestBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E536AF2E206890C300FCAD31 /* UIButton+TestBtn.m */; };
 		E56B9C0120576E84004DB7F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C0020576E84004DB7F5 /* AppDelegate.m */; };
 		E56B9C0420576E84004DB7F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C0320576E84004DB7F5 /* ViewController.m */; };
 		E56B9C0720576E84004DB7F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56B9C0520576E84004DB7F5 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E536AF2D206890C300FCAD31 /* UIButton+TestBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+TestBtn.h"; sourceTree = "<group>"; };
+		E536AF2E206890C300FCAD31 /* UIButton+TestBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TestBtn.m"; sourceTree = "<group>"; };
 		E56B9BFC20576E84004DB7F5 /* 15_interviewQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 15_interviewQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56B9BFF20576E84004DB7F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E56B9C0020576E84004DB7F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				E56B9C3120576F4B004DB7F5 /* !coding.h */,
 				E56B9C3320590A12004DB7F5 /* ImageCacheViewController.h */,
 				E56B9C3420590A12004DB7F5 /* ImageCacheViewController.m */,
+				E536AF2D206890C300FCAD31 /* UIButton+TestBtn.h */,
+				E536AF2E206890C300FCAD31 /* UIButton+TestBtn.m */,
 			);
 			path = 15_interviewQ;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56B9C0420576E84004DB7F5 /* ViewController.m in Sources */,
+				E536AF2F206890C300FCAD31 /* UIButton+TestBtn.m in Sources */,
 				E56B9C0F20576E84004DB7F5 /* main.m in Sources */,
 				E56B9C0120576E84004DB7F5 /* AppDelegate.m in Sources */,
 				E56B9C3520590A12004DB7F5 /* ImageCacheViewController.m in Sources */,
