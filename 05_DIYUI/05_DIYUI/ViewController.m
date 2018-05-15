@@ -18,6 +18,7 @@
 #import "FMCoreTextView.h"
 #import "FMJDViewController.h"
 #import "FirstViewController.h"
+#import "FMStarViewController.h"
 
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
@@ -70,7 +71,15 @@ static NSString *const FMPhotoCellID = @"photo";
 }
 - (IBAction)buttonClick:(UIButton *)sender {
 //    [self JDFilterTest];
-    [self keepVCTest];
+    //维持一个控制器
+//    [self keepVCTest];
+    // 评论的星星测试
+    [self starCellTest];
+}
+
+- (void)starCellTest {
+    FMStarViewController *sv = [[FMStarViewController alloc] init];
+    [self presentViewController:sv animated:YES completion:nil];
 }
 
 - (void)keepVCTest {
