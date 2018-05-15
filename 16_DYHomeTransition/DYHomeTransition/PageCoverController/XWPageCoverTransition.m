@@ -83,7 +83,16 @@
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 }
-
+/*
+ //对tempView做动画，避免bug;
+ UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+ tempView.frame = fromVC.view.frame;
+ UIView *containerView = [transitionContext containerView];
+ [containerView addSubview:tempView];
+ fromVC.view.hidden = YES;
+ [containerView addSubview:toView];
+ [containerView insertSubview:toView atIndex:0];
+ */
 /**
  *  执行push过渡动画
  */

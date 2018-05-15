@@ -9,11 +9,11 @@
 #import "XWPageCoverController.h"
 #import "XWPageCoverPushController.h"
 #import "XWInteractiveTransition.h"
+#import "FMLeftCoverPushViewController.h"
 #import "Masonry.h"
 
-@interface XWPageCoverController ()<XWPageCoverPushControllerDelegate>
+@interface XWPageCoverController ()<XWPageCoverPushControllerDelegate, FMPageCoverPushControllerDelegate>
 @property (nonatomic, strong) XWInteractiveTransition *interactiveTransitionPush;
-@property (nonatomic, strong) XWInteractiveTransition *test_interactiveTransitionPush;
 @end
 
 @implementation XWPageCoverController
@@ -34,11 +34,16 @@
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.top.equalTo(self.view.mas_top).offset(74);
     }];
-    _interactiveTransitionPush = [XWInteractiveTransition interactiveTransitionWithTransitionType:XWInteractiveTransitionTypePush GestureDirection:XWInteractiveTransitionGestureDirectionLeft];
-    _test_interactiveTransitionPush = [XWInteractiveTransition interactiveTransitionWithTransitionType:XWInteractiveTransitionTypePush GestureDirection:XWInteractiveTransitionGestureDirectionRight];
+    _interactiveTransitionPush = [XWInteractiveTransition interactiveTransitionWithTransitionType:XWInteractiveTransitionTypePush GestureDirection:XWInteractiveTransitionGestureDirectionLeftAndRight];
     typeof(self)weakSelf = self;
-    _interactiveTransitionPush.pushConifg = ^(){
+//    _interactiveTransitionPush.pushConifg = ^(){
+//        [weakSelf push];
+//    };
+    _interactiveTransitionPush.left_pushConifg = ^{
         [weakSelf push];
+    };
+    _interactiveTransitionPush.right_pushConifg = ^{
+        [weakSelf rightPush];
     };
     //此处传入self.navigationController， 不传入self，因为self.view要形变，否则手势百分比算不准确；
     [_interactiveTransitionPush addPanGestureForViewController:self];
@@ -59,7 +64,18 @@
     [self.navigationController pushViewController:pushVC animated:YES];
 }
 
+- (void)rightPush {
+    FMLeftCoverPushViewController *pushVC = [FMLeftCoverPushViewController new];
+    self.navigationController.delegate = pushVC;
+    pushVC.delegate = self;
+    [self.navigationController pushViewController:pushVC animated:YES];
+}
+
 - (id<UIViewControllerInteractiveTransitioning>)interactiveTransitionForPush{
+    return _interactiveTransitionPush;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)fm_interactiveTransitionForPush{
     return _interactiveTransitionPush;
 }
 

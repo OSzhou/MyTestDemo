@@ -38,6 +38,8 @@
 		7603213320A3F95100D684C1 /* JPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603213220A3F95100D684C1 /* JPHomeViewController.m */; };
 		7603213620A3FAD000D684C1 /* JPOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603213520A3FAD000D684C1 /* JPOneViewController.m */; };
 		7603213920A4594F00D684C1 /* JPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603213820A4594F00D684C1 /* JPScrollView.m */; };
+		76B7AB0320A9315800D02FA2 /* FMLeftToRightCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0220A9315800D02FA2 /* FMLeftToRightCoverTransition.m */; };
+		76B7AB0620A934D300D02FA2 /* FMLeftCoverPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0520A934D300D02FA2 /* FMLeftCoverPushViewController.m */; };
 		AF25DA420C7B2CF860E7B01D /* libPods-DYHomeTransition.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4FB81F52B217890E035F0D /* libPods-DYHomeTransition.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,10 @@
 		7603213520A3FAD000D684C1 /* JPOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPOneViewController.m; sourceTree = "<group>"; };
 		7603213720A4594F00D684C1 /* JPScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPScrollView.h; sourceTree = "<group>"; };
 		7603213820A4594F00D684C1 /* JPScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPScrollView.m; sourceTree = "<group>"; };
+		76B7AB0120A9315800D02FA2 /* FMLeftToRightCoverTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLeftToRightCoverTransition.h; sourceTree = "<group>"; };
+		76B7AB0220A9315800D02FA2 /* FMLeftToRightCoverTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLeftToRightCoverTransition.m; sourceTree = "<group>"; };
+		76B7AB0420A934D300D02FA2 /* FMLeftCoverPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLeftCoverPushViewController.h; sourceTree = "<group>"; };
+		76B7AB0520A934D300D02FA2 /* FMLeftCoverPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLeftCoverPushViewController.m; sourceTree = "<group>"; };
 		F18E68124C6B03632DBAA314 /* Pods-DYHomeTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYHomeTransition.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYHomeTransition/Pods-DYHomeTransition.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +231,10 @@
 				760320F220A2F32800D684C1 /* XWPageCoverPushController.m */,
 				760320F320A2F32800D684C1 /* XWPageCoverTransition.h */,
 				760320F420A2F32800D684C1 /* XWPageCoverTransition.m */,
+				76B7AB0120A9315800D02FA2 /* FMLeftToRightCoverTransition.h */,
+				76B7AB0220A9315800D02FA2 /* FMLeftToRightCoverTransition.m */,
+				76B7AB0420A934D300D02FA2 /* FMLeftCoverPushViewController.h */,
+				76B7AB0520A934D300D02FA2 /* FMLeftCoverPushViewController.m */,
 			);
 			path = PageCoverController;
 			sourceTree = "<group>";
@@ -505,6 +515,7 @@
 				7603212120A2F42F00D684C1 /* MASViewAttribute.m in Sources */,
 				760320BF20A2E4D500D684C1 /* ViewController.m in Sources */,
 				7603213920A4594F00D684C1 /* JPScrollView.m in Sources */,
+				76B7AB0620A934D300D02FA2 /* FMLeftCoverPushViewController.m in Sources */,
 				760320F520A2F32900D684C1 /* XWPageCoverController.m in Sources */,
 				760320F720A2F32900D684C1 /* XWPageCoverTransition.m in Sources */,
 				7603211D20A2F42F00D684C1 /* MASCompositeConstraint.m in Sources */,
@@ -513,6 +524,7 @@
 				7603212020A2F42F00D684C1 /* MASLayoutConstraint.m in Sources */,
 				7603212620A2F42F00D684C1 /* ViewController+MASAdditions.m in Sources */,
 				7603211E20A2F42F00D684C1 /* MASConstraint.m in Sources */,
+				76B7AB0320A9315800D02FA2 /* FMLeftToRightCoverTransition.m in Sources */,
 				7603210120A2F3EE00D684C1 /* UIView+anchorPoint.m in Sources */,
 				760320F620A2F32900D684C1 /* XWPageCoverPushController.m in Sources */,
 				7603212320A2F42F00D684C1 /* NSArray+MASAdditions.m in Sources */,

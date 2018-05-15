@@ -15,7 +15,10 @@
 @property (nonatomic, assign) XWInteractiveTransitionGestureDirection direction;
 /**手势类型*/
 @property (nonatomic, assign) XWInteractiveTransitionType type;
-
+/** push方向是左还是右 */
+@property (nonatomic, assign) BOOL isLeft;
+/** 同一次交互中是否改变了手势的方向 */
+@property (nonatomic, assign) CGFloat preDistance;
 @end
 
 @implementation XWInteractiveTransition
@@ -29,6 +32,7 @@
     if (self) {
         _direction = direction;
         _type = type;
+        _preDistance = -1000;
     }
     return self;
 }
@@ -46,26 +50,26 @@
     //手势百分比
     CGFloat percent = 0;
     CGPoint translation = [panGesture translationInView:panGesture.view];
-    NSLog(@" 方向 --- %.2f", translation.x);
-    NSLog(@" 方向 --- %zd", _direction);
+//    NSLog(@" 实际方向 --- %.2f", translation.x);
+//    NSLog(@" 接收方向 --- %zd", _direction);
     switch (_direction) {
         case XWInteractiveTransitionGestureDirectionLeft:{
             /** locationInView:获取到的是手指点击屏幕实时的坐标点；
              translationInView：获取到的是手指移动后，在相对坐标中的偏移量 */
             CGFloat transitionX = -[panGesture translationInView:panGesture.view].x;
             if (translation.x < 0) {
-                percent = transitionX / panGesture.view.frame.size.width;
+                percent = fabs(transitionX) / panGesture.view.frame.size.width;
             } else {
-                return;
+                percent = 0;
             }
         }
             break;
         case XWInteractiveTransitionGestureDirectionRight:{
             CGFloat transitionX = [panGesture translationInView:panGesture.view].x;
             if (translation.x > 0) {
-                percent = transitionX / panGesture.view.frame.size.width;
+                percent = fabs(transitionX) / panGesture.view.frame.size.width;
             } else {
-                return;
+                percent = 0;
             }
         }
             break;
@@ -74,7 +78,7 @@
             if (translation.y < 0) {
                 percent = transitionY / panGesture.view.frame.size.width;
             } else {
-                return;
+                percent = 0;
             }
         }
             break;
@@ -83,12 +87,30 @@
             if (translation.y > 0) {
                 percent = transitionY / panGesture.view.frame.size.width;
             } else {
-                return;
+                percent = 0;
             }
         }
             break;
+            // Mine
+        case XWInteractiveTransitionGestureDirectionLeftAndRight:{
+            CGFloat transitionX = [panGesture translationInView:panGesture.view].x;
+            _isLeft = transitionX > 0 ? NO : YES;
+            if (_preDistance == -1000) {
+                _preDistance = transitionX;
+            } else {
+                if (_preDistance < 0 && transitionX < 0) {
+                    percent = fabs(transitionX) / panGesture.view.frame.size.width;
+                } else if (_preDistance > 0 && transitionX > 0) {
+                    percent = fabs(transitionX) / panGesture.view.frame.size.width;
+                } else {
+                    percent = 0;
+                }
+            }
+        }
+            break;
+        default:
+            break;
     }
-    NSLog(@" 状态 --- %zd", panGesture.state);
     switch (panGesture.state) {
         case UIGestureRecognizerStateBegan:
             //手势开始的时候标记手势状态，并开始相应的事件
@@ -109,6 +131,7 @@
             }else{
                 [self cancelInteractiveTransition];
             }
+            _preDistance = -1000;
             break;
         }
         default:
@@ -117,21 +140,21 @@
 }
 
 - (void)startGesture{
-    NSLog(@"---退出");
     switch (_type) {
         case XWInteractiveTransitionTypePresent:{
-            if (_presentConifg) {
-                _presentConifg();
-            }
+            !_presentConifg ?: _presentConifg();
         }
             break;
-            
         case XWInteractiveTransitionTypeDismiss:
             [_vc dismissViewControllerAnimated:YES completion:nil];
             break;
         case XWInteractiveTransitionTypePush:{
-            if (_pushConifg) {
-                _pushConifg();
+            // 原来自带的push接口
+            !_pushConifg ?: _pushConifg();
+            if (_isLeft) {
+                !_left_pushConifg?:_left_pushConifg();
+            } else {
+                !_right_pushConifg?:_right_pushConifg();
             }
         }
             break;

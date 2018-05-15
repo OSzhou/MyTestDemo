@@ -27,9 +27,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame = CGRectMake(100, 100, 50, 50);
-    btn.backgroundColor = [UIColor cyanColor];
-    [btn setTitle:@"点我" forState:UIControlStateNormal];
+    btn.frame = CGRectMake((Screen_W - 100)/2, Screen_H - 150, 100, 50);
+    btn.backgroundColor = [UIColor lightGrayColor];
+    [btn setTitle:@"click me" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(pushToNextPage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 //    [self.view addSubview:self.horizontaSV];

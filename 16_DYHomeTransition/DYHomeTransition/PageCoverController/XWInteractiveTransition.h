@@ -14,7 +14,8 @@ typedef NS_ENUM(NSUInteger, XWInteractiveTransitionGestureDirection) {//手势�
     XWInteractiveTransitionGestureDirectionLeft = 0,
     XWInteractiveTransitionGestureDirectionRight,
     XWInteractiveTransitionGestureDirectionUp,
-    XWInteractiveTransitionGestureDirectionDown
+    XWInteractiveTransitionGestureDirectionDown,
+    XWInteractiveTransitionGestureDirectionLeftAndRight
 };
 
 typedef NS_ENUM(NSUInteger, XWInteractiveTransitionType) {//手势控制哪种转场
@@ -34,6 +35,8 @@ typedef NS_ENUM(NSUInteger, XWInteractiveTransitionType) {//手势控制哪种�
 
 /**促发手势push的时候的config，config中初始化并push需要弹出的控制器*/
 @property (nonatomic, copy) GestureConifg pushConifg;
+@property (nonatomic, copy) GestureConifg left_pushConifg;
+@property (nonatomic, copy) GestureConifg right_pushConifg;
 
 //初始化方法
 + (instancetype)interactiveTransitionWithTransitionType:(XWInteractiveTransitionType)type GestureDirection:(XWInteractiveTransitionGestureDirection)direction;
