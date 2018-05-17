@@ -19,6 +19,7 @@
 #import "FMJDViewController.h"
 #import "FirstViewController.h"
 #import "FMStarViewController.h"
+#import "SpliceImageController.h"
 
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
@@ -67,14 +68,43 @@ static NSString *const FMPhotoCellID = @"photo";
 //    [self labelTest];
 //    [self verticalButtonTest];
 //    [self coreTextTest];
-    
+    // 字体样式测试
+    [self fontFamilyTest];
 }
 - (IBAction)buttonClick:(UIButton *)sender {
 //    [self JDFilterTest];
     //维持一个控制器
 //    [self keepVCTest];
     // 评论的星星测试
-    [self starCellTest];
+//    [self starCellTest];
+    // 图片拼接的测试
+    [self imageSplice];
+}
+
+- (void)fontFamilyTest {
+    UILabel *origin = [UILabel new];
+    origin.frame = CGRectMake(0, Screen_H - 200, 375, 50);
+    origin.text = @"1234567890 Hello World 你好";
+    origin.font = [UIFont systemFontOfSize:36];
+    origin.textColor = [UIColor blackColor];
+    [self.view addSubview:origin];
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(15, Screen_H - 50, 61, 50);
+    label.text = @"08:50";
+    label.textColor = [UIColor purpleColor];
+    label.font = [UIFont fontWithName:@"DINEngschriftStd" size:36];
+    [self.view addSubview:label];
+    UILabel *l = [[UILabel alloc] init];
+    l.frame = CGRectMake(100, Screen_H - 50, 200, 50);
+    l.text = @"Hello World";
+    l.textColor = [UIColor blackColor];
+    l.font = [UIFont fontWithName:@"DINCond-Medium" size:36];
+    [self.view addSubview:l];
+}
+
+- (void)imageSplice {
+    SpliceImageController *sv = [[SpliceImageController  alloc] init];
+    [self presentViewController:sv animated:YES completion:nil];
 }
 
 - (void)starCellTest {

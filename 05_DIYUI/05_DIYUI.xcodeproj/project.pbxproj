@@ -12,6 +12,9 @@
 		76B7AB1620AA77AE00D02FA2 /* UIImage+Rend.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0F20AA77AE00D02FA2 /* UIImage+Rend.m */; };
 		76B7AB1720AA77AE00D02FA2 /* UIImageView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB1120AA77AE00D02FA2 /* UIImageView+Border.m */; };
 		76B7AB1820AA77AE00D02FA2 /* YLRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB1420AA77AE00D02FA2 /* YLRatingView.m */; };
+		76F1EC6C20AC34D300AA36FB /* SpliceImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */; };
+		76F1EC6E20AD2C9F00AA36FB /* DINEngschriftStd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */; };
+		76F1EC7020AD320700AA36FB /* DINCond-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */; };
 		E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */; };
 		E52BEF661DFE743D00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF671DFE760B00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
@@ -115,6 +118,10 @@
 		76B7AB1120AA77AE00D02FA2 /* UIImageView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Border.m"; sourceTree = "<group>"; };
 		76B7AB1320AA77AE00D02FA2 /* YLRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLRatingView.h; sourceTree = "<group>"; };
 		76B7AB1420AA77AE00D02FA2 /* YLRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLRatingView.m; sourceTree = "<group>"; };
+		76F1EC6A20AC34D300AA36FB /* SpliceImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpliceImageController.h; sourceTree = "<group>"; };
+		76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpliceImageController.m; sourceTree = "<group>"; };
+		76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINEngschriftStd.ttf; sourceTree = "<group>"; };
+		76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINCond-Medium.otf"; sourceTree = "<group>"; };
 		E50BE6AC1E728AB8004B0F33 /* FMCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCoreTextView.h; sourceTree = "<group>"; };
 		E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCoreTextView.m; sourceTree = "<group>"; };
 		E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkTest.framework; sourceTree = "<group>"; };
@@ -289,6 +296,15 @@
 			path = RatingView;
 			sourceTree = "<group>";
 		};
+		76F1EC6920AC349200AA36FB /* SpliceImage */ = {
+			isa = PBXGroup;
+			children = (
+				76F1EC6A20AC34D300AA36FB /* SpliceImageController.h */,
+				76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */,
+			);
+			path = SpliceImage;
+			sourceTree = "<group>";
+		};
 		E50BE6AB1E728A91004B0F33 /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +469,8 @@
 		E5DA12431DE4274A00A2C9A5 = {
 			isa = PBXGroup;
 			children = (
+				76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */,
+				76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */,
 				E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */,
 				E5DA12681DE4274A00A2C9A5 /* 05_DIYUITests */,
 				E5DA12731DE4274A00A2C9A5 /* 05_DIYUIUITests */,
@@ -473,6 +491,7 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				76F1EC6920AC349200AA36FB /* SpliceImage */,
 				76B7AB0720AA752C00D02FA2 /* StarUI */,
 				E5381DCD1F8C9A6A00DB2B04 /* NavKeepTest */,
 				E5D7EA871F2195FA00DA8133 /* BrightnessView */,
@@ -672,6 +691,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F1EC7020AD320700AA36FB /* DINCond-Medium.otf in Resources */,
+				76F1EC6E20AD2C9F00AA36FB /* DINEngschriftStd.ttf in Resources */,
 				E5DA125F1DE4274A00A2C9A5 /* LaunchScreen.storyboard in Resources */,
 				E5DA12881DE42D3C00A2C9A5 /* FMPhotoCell.xib in Resources */,
 				E5DA125C1DE4274A00A2C9A5 /* Assets.xcassets in Resources */,
@@ -728,6 +749,7 @@
 				E5381DD01F8C9AF300DB2B04 /* FirstViewController.m in Sources */,
 				E5B9297A1E305CDB00FFCE10 /* TAAnimatedDotView.m in Sources */,
 				E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */,
+				76F1EC6C20AC34D300AA36FB /* SpliceImageController.m in Sources */,
 				E5D7EA8F1F2198BC00DA8133 /* UIApplication+FMExtension.m in Sources */,
 				76B7AB1820AA77AE00D02FA2 /* YLRatingView.m in Sources */,
 				E5B929871E305CDB00FFCE10 /* UIImage+GIF.m in Sources */,
