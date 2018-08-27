@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIButton+TestBtn.h"
+#import "Dog.h"
 
 typedef void (^testBlock)(void);
 @interface ViewController ()
@@ -43,22 +44,40 @@ typedef void (^testBlock)(void);
 //    for (int i = 0; i < 100000; i++) {
 //        [polygonView.layer addSublayer:[self createLayerWith:[UIColor colorWithRed:(arc4random() % 255/255.0) green:arc4random() % 255/255.0 blue:arc4random() % 255/255.0 alpha:1.0]]];
 //    }
-    NSLog(@"1111111111");
-    [self arrCountTest];
-    [self testBlock];
+//    [self arrCountTest];
+//    [self testBlock];
+//    [self viewTagAndBoundTest];
+    [self superClassTest];
+}
+
+- (void)superClassTest {
+    Dog *dog = [[Dog alloc] init];
+}
+
+- (void)viewTagAndBoundTest {
+    UIView *testV = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 100, 100)];
+    testV.backgroundColor = [UIColor purpleColor];
+    // 中心点不变，整体缩小
+    testV.bounds = CGRectMake(50, 10, 10, 10);
+    NSLog(@"tag --- %ld", (long)testV.tag);
+    NSLog(@"frame --- %@", NSStringFromCGRect(testV.frame));
+    NSLog(@"bounds --- %@", NSStringFromCGRect(testV.bounds));
+    NSLog(@"layer frame --- %@", NSStringFromCGRect(testV.layer.frame));
+    NSLog(@"layer bounds --- %@", NSStringFromCGRect(testV.layer.bounds));
+    [self.view addSubview:testV];
 }
 
 - (void)testBlock {
-    // block 不会立即执行，要等到testBlock这个函数加载完再回来执行
-    int a = 23;// 没用__block修饰，其之下的block中存储的值不会跟着改变
-    __block int b = 23;// 用__block修饰，其之下的block中存储的值会跟着改变
+    int a = 23;// 没用__block修饰，其之下的block中存储的值不会跟着改变(值传递)
+    __block int b = 23;// 用__block修饰，其之下的block中存储的值会跟着改变(指针传递)
     testBlock block1 = ^{
         NSLog(@"---%d", a);
     };
     testBlock block2 = ^{
         NSLog(@"---%d", b);
     };
-    
+    block1();// 23
+    block2();// 23
     a = 32;// 这里由于没有__block修饰，所以修改只对其之下的block起作用
     b = 32;// 这里的有__block修饰，所以修改对全局有效
     
