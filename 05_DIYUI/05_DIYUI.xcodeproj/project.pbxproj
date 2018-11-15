@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76B7AB0A20AA758200D02FA2 /* FMStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0920AA758200D02FA2 /* FMStarViewController.m */; };
+		76B7AB1520AA77AE00D02FA2 /* CourseEvaluateListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0C20AA77AE00D02FA2 /* CourseEvaluateListCell.m */; };
+		76B7AB1620AA77AE00D02FA2 /* UIImage+Rend.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0F20AA77AE00D02FA2 /* UIImage+Rend.m */; };
+		76B7AB1720AA77AE00D02FA2 /* UIImageView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB1120AA77AE00D02FA2 /* UIImageView+Border.m */; };
+		76B7AB1820AA77AE00D02FA2 /* YLRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB1420AA77AE00D02FA2 /* YLRatingView.m */; };
+		76F1EC6C20AC34D300AA36FB /* SpliceImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */; };
+		76F1EC6E20AD2C9F00AA36FB /* DINEngschriftStd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */; };
+		76F1EC7020AD320700AA36FB /* DINCond-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */; };
 		E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */; };
 		E52BEF661DFE743D00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF671DFE760B00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
@@ -66,6 +74,9 @@
 		E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */; };
 		E5EAA5521E7FD1EE00E870AF /* FMFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5511E7FD1EE00E870AF /* FMFilterViewController.m */; };
 		E5EAA5551E7FD21E00E870AF /* FMJDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EAA5541E7FD21E00E870AF /* FMJDViewController.m */; };
+		FAB224D020AFE332001651CA /* FMTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB224CE20AFE332001651CA /* FMTestView.xib */; };
+		FAB224D120AFE332001651CA /* FMTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB224CF20AFE332001651CA /* FMTestView.m */; };
+		FAB224D420AFE3FF001651CA /* FMSafeAreaController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB224D320AFE3FF001651CA /* FMSafeAreaController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +111,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76B7AB0820AA758200D02FA2 /* FMStarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMStarViewController.h; sourceTree = "<group>"; };
+		76B7AB0920AA758200D02FA2 /* FMStarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMStarViewController.m; sourceTree = "<group>"; };
+		76B7AB0B20AA77AD00D02FA2 /* CourseEvaluateListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseEvaluateListCell.h; sourceTree = "<group>"; };
+		76B7AB0C20AA77AE00D02FA2 /* CourseEvaluateListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseEvaluateListCell.m; sourceTree = "<group>"; };
+		76B7AB0E20AA77AE00D02FA2 /* UIImage+Rend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rend.h"; sourceTree = "<group>"; };
+		76B7AB0F20AA77AE00D02FA2 /* UIImage+Rend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rend.m"; sourceTree = "<group>"; };
+		76B7AB1020AA77AE00D02FA2 /* UIImageView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Border.h"; sourceTree = "<group>"; };
+		76B7AB1120AA77AE00D02FA2 /* UIImageView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Border.m"; sourceTree = "<group>"; };
+		76B7AB1320AA77AE00D02FA2 /* YLRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLRatingView.h; sourceTree = "<group>"; };
+		76B7AB1420AA77AE00D02FA2 /* YLRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLRatingView.m; sourceTree = "<group>"; };
+		76F1EC6A20AC34D300AA36FB /* SpliceImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpliceImageController.h; sourceTree = "<group>"; };
+		76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpliceImageController.m; sourceTree = "<group>"; };
+		76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINEngschriftStd.ttf; sourceTree = "<group>"; };
+		76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINCond-Medium.otf"; sourceTree = "<group>"; };
 		E50BE6AC1E728AB8004B0F33 /* FMCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCoreTextView.h; sourceTree = "<group>"; };
 		E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCoreTextView.m; sourceTree = "<group>"; };
 		E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkTest.framework; sourceTree = "<group>"; };
@@ -212,6 +237,11 @@
 		E5EAA5511E7FD1EE00E870AF /* FMFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFilterViewController.m; sourceTree = "<group>"; };
 		E5EAA5531E7FD21E00E870AF /* FMJDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMJDViewController.h; sourceTree = "<group>"; };
 		E5EAA5541E7FD21E00E870AF /* FMJDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMJDViewController.m; sourceTree = "<group>"; };
+		FAB224CD20AFE332001651CA /* FMTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTestView.h; sourceTree = "<group>"; };
+		FAB224CE20AFE332001651CA /* FMTestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMTestView.xib; sourceTree = "<group>"; };
+		FAB224CF20AFE332001651CA /* FMTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTestView.m; sourceTree = "<group>"; };
+		FAB224D220AFE3FF001651CA /* FMSafeAreaController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMSafeAreaController.h; sourceTree = "<group>"; };
+		FAB224D320AFE3FF001651CA /* FMSafeAreaController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMSafeAreaController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +271,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B7AB0720AA752C00D02FA2 /* StarUI */ = {
+			isa = PBXGroup;
+			children = (
+				76B7AB0820AA758200D02FA2 /* FMStarViewController.h */,
+				76B7AB0920AA758200D02FA2 /* FMStarViewController.m */,
+				76B7AB0B20AA77AD00D02FA2 /* CourseEvaluateListCell.h */,
+				76B7AB0C20AA77AE00D02FA2 /* CourseEvaluateListCell.m */,
+				76B7AB0D20AA77AE00D02FA2 /* image */,
+				76B7AB1220AA77AE00D02FA2 /* RatingView */,
+			);
+			path = StarUI;
+			sourceTree = "<group>";
+		};
+		76B7AB0D20AA77AE00D02FA2 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				76B7AB0E20AA77AE00D02FA2 /* UIImage+Rend.h */,
+				76B7AB0F20AA77AE00D02FA2 /* UIImage+Rend.m */,
+				76B7AB1020AA77AE00D02FA2 /* UIImageView+Border.h */,
+				76B7AB1120AA77AE00D02FA2 /* UIImageView+Border.m */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		76B7AB1220AA77AE00D02FA2 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				76B7AB1320AA77AE00D02FA2 /* YLRatingView.h */,
+				76B7AB1420AA77AE00D02FA2 /* YLRatingView.m */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
+		76F1EC6920AC349200AA36FB /* SpliceImage */ = {
+			isa = PBXGroup;
+			children = (
+				76F1EC6A20AC34D300AA36FB /* SpliceImageController.h */,
+				76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */,
+			);
+			path = SpliceImage;
+			sourceTree = "<group>";
+		};
 		E50BE6AB1E728A91004B0F33 /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +477,8 @@
 		E5DA12431DE4274A00A2C9A5 = {
 			isa = PBXGroup;
 			children = (
+				76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */,
+				76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */,
 				E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */,
 				E5DA12681DE4274A00A2C9A5 /* 05_DIYUITests */,
 				E5DA12731DE4274A00A2C9A5 /* 05_DIYUIUITests */,
@@ -425,6 +499,9 @@
 		E5DA124E1DE4274A00A2C9A5 /* 05_DIYUI */ = {
 			isa = PBXGroup;
 			children = (
+				FAB224CC20AFE2D6001651CA /* SafeAreaTest */,
+				76F1EC6920AC349200AA36FB /* SpliceImage */,
+				76B7AB0720AA752C00D02FA2 /* StarUI */,
 				E5381DCD1F8C9A6A00DB2B04 /* NavKeepTest */,
 				E5D7EA871F2195FA00DA8133 /* BrightnessView */,
 				E5EAA54F1E7FD1BE00E870AF /* JDFilter */,
@@ -517,6 +594,18 @@
 				E5EAA5511E7FD1EE00E870AF /* FMFilterViewController.m */,
 			);
 			path = JDFilter;
+			sourceTree = "<group>";
+		};
+		FAB224CC20AFE2D6001651CA /* SafeAreaTest */ = {
+			isa = PBXGroup;
+			children = (
+				FAB224CD20AFE332001651CA /* FMTestView.h */,
+				FAB224CF20AFE332001651CA /* FMTestView.m */,
+				FAB224CE20AFE332001651CA /* FMTestView.xib */,
+				FAB224D220AFE3FF001651CA /* FMSafeAreaController.h */,
+				FAB224D320AFE3FF001651CA /* FMSafeAreaController.m */,
+			);
+			path = SafeAreaTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,6 +712,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F1EC7020AD320700AA36FB /* DINCond-Medium.otf in Resources */,
+				76F1EC6E20AD2C9F00AA36FB /* DINEngschriftStd.ttf in Resources */,
 				E5DA125F1DE4274A00A2C9A5 /* LaunchScreen.storyboard in Resources */,
 				E5DA12881DE42D3C00A2C9A5 /* FMPhotoCell.xib in Resources */,
 				E5DA125C1DE4274A00A2C9A5 /* Assets.xcassets in Resources */,
@@ -630,6 +721,7 @@
 				E5B929781E305CDB00FFCE10 /* FSActionSheet_cancel@3x.png in Resources */,
 				E5B929771E305CDB00FFCE10 /* FSActionSheet_cancel@2x.png in Resources */,
 				E5D7EA8C1F21976800DA8133 /* FMSources.bundle in Resources */,
+				FAB224D020AFE332001651CA /* FMTestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,19 +746,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB224D420AFE3FF001651CA /* FMSafeAreaController.m in Sources */,
 				E5B9298C1E305CDB00FFCE10 /* UIView+WebCacheOperation.m in Sources */,
 				E5B929751E305CDB00FFCE10 /* FSActionSheetConfig.m in Sources */,
 				E5B929791E305CDB00FFCE10 /* TAAbstractDotView.m in Sources */,
 				E5B9298A1E305CDB00FFCE10 /* UIImageView+HighlightedWebCache.m in Sources */,
 				E5B929721E305CDA00FFCE10 /* UIView+XLExtension.m in Sources */,
+				76B7AB1520AA77AE00D02FA2 /* CourseEvaluateListCell.m in Sources */,
 				E5EAA5551E7FD21E00E870AF /* FMJDViewController.m in Sources */,
 				E5DA12571DE4274A00A2C9A5 /* ViewController.m in Sources */,
 				E5B929741E305CDB00FFCE10 /* FSActionSheetCell.m in Sources */,
 				E5B929841E305CDB00FFCE10 /* SDWebImageManager.m in Sources */,
 				E5CC36D21E5C216700417E5D /* FMTitleLabel.m in Sources */,
 				E5EAA5521E7FD1EE00E870AF /* FMFilterViewController.m in Sources */,
+				76B7AB1620AA77AE00D02FA2 /* UIImage+Rend.m in Sources */,
 				E5B929811E305CDB00FFCE10 /* SDWebImageDecoder.m in Sources */,
 				E5DA128F1DE436E100A2C9A5 /* FMLineLayout.m in Sources */,
+				76B7AB0A20AA758200D02FA2 /* FMStarViewController.m in Sources */,
 				E5DA129B1DE54ABD00A2C9A5 /* FMWaterflowLayout.m in Sources */,
 				E5B929851E305CDB00FFCE10 /* SDWebImagePrefetcher.m in Sources */,
 				E5B9298B1E305CDB00FFCE10 /* UIImageView+WebCache.m in Sources */,
@@ -676,7 +772,10 @@
 				E5381DD01F8C9AF300DB2B04 /* FirstViewController.m in Sources */,
 				E5B9297A1E305CDB00FFCE10 /* TAAnimatedDotView.m in Sources */,
 				E5DA12871DE42D3C00A2C9A5 /* FMPhotoCell.m in Sources */,
+				76F1EC6C20AC34D300AA36FB /* SpliceImageController.m in Sources */,
 				E5D7EA8F1F2198BC00DA8133 /* UIApplication+FMExtension.m in Sources */,
+				FAB224D120AFE332001651CA /* FMTestView.m in Sources */,
+				76B7AB1820AA77AE00D02FA2 /* YLRatingView.m in Sources */,
 				E5B929871E305CDB00FFCE10 /* UIImage+GIF.m in Sources */,
 				E5B929891E305CDB00FFCE10 /* UIImage+WebP.m in Sources */,
 				E5B9297E1E305CDB00FFCE10 /* NSData+ImageContentType.m in Sources */,
@@ -697,6 +796,7 @@
 				E5DA12981DE52C3500A2C9A5 /* FMCircleLayout.m in Sources */,
 				E5B9297D1E305CDB00FFCE10 /* MKAnnotationView+WebCache.m in Sources */,
 				E5B929831E305CDB00FFCE10 /* SDWebImageDownloaderOperation.m in Sources */,
+				76B7AB1720AA77AE00D02FA2 /* UIImageView+Border.m in Sources */,
 				E5B9298F1E305CDB00FFCE10 /* XLZoomingScrollView.m in Sources */,
 				E5B9297B1E305CDB00FFCE10 /* TADotView.m in Sources */,
 				E5DA12511DE4274A00A2C9A5 /* main.m in Sources */,
@@ -851,7 +951,7 @@
 				);
 				GCC_PREFIX_HEADER = 05_DIYUI/Others/DIYUI.pch;
 				INFOPLIST_FILE = 05_DIYUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senyint.-5-DIYUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -868,7 +968,7 @@
 				);
 				GCC_PREFIX_HEADER = 05_DIYUI/Others/DIYUI.pch;
 				INFOPLIST_FILE = 05_DIYUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senyint.-5-DIYUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";

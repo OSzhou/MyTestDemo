@@ -67,10 +67,18 @@
 //    [self labelTest];
 //    [self runtimeTest];
 //    [self circleImageTest];
-    FMTestLabel *testL = [[FMTestLabel alloc] initWithFrame:CGRectMake(10, 10, 50, 20)];
+//    FMTestLabel *testL = [[FMTestLabel alloc] initWithFrame:CGRectMake(10, 10, 50, 20)];
 //    [self.view addSubview:testL];
 }
 
+- (void)anchorPointTest {
+    UIView *t1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [self.view addSubview:t1];
+    [t1.layer setPosition:CGPointMake(0, 0)];
+    t1.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    t1.backgroundColor = [UIColor purpleColor];
+    NSLog(@" position --- %@", NSStringFromCGPoint(t1.layer.position));
+}
 - (void)circleImageTest {
 //    UIImage *image = [UIImage circleImage:[UIImage imageNamed:@"阿狸头像"] withParam:30.0f borderWidth:60.0 borderColor:[UIColor purpleColor]];
 //    UIImage *img = [UIImage imageNamed:@"阿狸头像"];

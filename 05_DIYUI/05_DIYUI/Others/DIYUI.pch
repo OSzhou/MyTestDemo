@@ -15,4 +15,7 @@
 #define FMLog(...) 
 #endif
 
+#define Screen_W [UIScreen mainScreen].bounds.size.width
+#define Screen_H [UIScreen mainScreen].bounds.size.height
+
 #endif /* DIYUI_pch */

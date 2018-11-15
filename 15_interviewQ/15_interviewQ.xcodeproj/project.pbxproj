@@ -17,6 +17,8 @@
 		E56B9C1920576E85004DB7F5 /* _5_interviewQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C1820576E85004DB7F5 /* _5_interviewQTests.m */; };
 		E56B9C2420576E85004DB7F5 /* _5_interviewQUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C2320576E85004DB7F5 /* _5_interviewQUITests.m */; };
 		E56B9C3520590A12004DB7F5 /* ImageCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C3420590A12004DB7F5 /* ImageCacheViewController.m */; };
+		FA5B7E9E21338D1F00B5715D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B7E9D21338D1F00B5715D /* Person.m */; };
+		FA5B7EA121338D2C00B5715D /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B7EA021338D2C00B5715D /* Dog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		E56B9C3120576F4B004DB7F5 /* !coding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "!coding.h"; sourceTree = "<group>"; };
 		E56B9C3320590A12004DB7F5 /* ImageCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCacheViewController.h; sourceTree = "<group>"; };
 		E56B9C3420590A12004DB7F5 /* ImageCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCacheViewController.m; sourceTree = "<group>"; };
+		FA5B7E9C21338D1F00B5715D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FA5B7E9D21338D1F00B5715D /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		FA5B7E9F21338D2C00B5715D /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		FA5B7EA021338D2C00B5715D /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		E56B9BFE20576E84004DB7F5 /* 15_interviewQ */ = {
 			isa = PBXGroup;
 			children = (
+				FA5B7E9B21338D0B00B5715D /* SuperClassTest */,
 				E56B9BFF20576E84004DB7F5 /* AppDelegate.h */,
 				E56B9C0020576E84004DB7F5 /* AppDelegate.m */,
 				E56B9C0220576E84004DB7F5 /* ViewController.h */,
@@ -142,6 +149,17 @@
 				E56B9C2520576E85004DB7F5 /* Info.plist */,
 			);
 			path = 15_interviewQUITests;
+			sourceTree = "<group>";
+		};
+		FA5B7E9B21338D0B00B5715D /* SuperClassTest */ = {
+			isa = PBXGroup;
+			children = (
+				FA5B7E9C21338D1F00B5715D /* Person.h */,
+				FA5B7E9D21338D1F00B5715D /* Person.m */,
+				FA5B7E9F21338D2C00B5715D /* Dog.h */,
+				FA5B7EA021338D2C00B5715D /* Dog.m */,
+			);
+			path = SuperClassTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5B7E9E21338D1F00B5715D /* Person.m in Sources */,
 				E56B9C0420576E84004DB7F5 /* ViewController.m in Sources */,
 				E536AF2F206890C300FCAD31 /* UIButton+TestBtn.m in Sources */,
 				E56B9C0F20576E84004DB7F5 /* main.m in Sources */,
+				FA5B7EA121338D2C00B5715D /* Dog.m in Sources */,
 				E56B9C0120576E84004DB7F5 /* AppDelegate.m in Sources */,
 				E56B9C3520590A12004DB7F5 /* ImageCacheViewController.m in Sources */,
 			);

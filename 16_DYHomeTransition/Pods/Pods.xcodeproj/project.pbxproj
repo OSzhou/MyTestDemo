@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DA241E8952D3935647727692A545440 /* JPWarpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214B9E73098AA664D323C4BAC9581292 /* JPWarpViewController.m */; };
+		17E581B0B593E213EE1D3F720C001C44 /* UINavigationBar+HitTest.h in Headers */ = {isa = PBXBuildFile; fileRef = B098FC7A6302C741FC803FAE22776A9B /* UINavigationBar+HitTest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		23BD89BD253E0D3CE785C14C93C47960 /* UINavigationController+FulllScreenPopPush.h in Headers */ = {isa = PBXBuildFile; fileRef = E19EEDF9A3B516F0ECB9275DB3D1AF08 /* UINavigationController+FulllScreenPopPush.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2599B2F2A66C3DC9EF1ED4E496A13FF4 /* JPNavigationControllerTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D7814D7FCDBA526788C7BC86480BD7F /* JPNavigationControllerTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2979C72D64564F7F84559BC8F0B5C699 /* JPNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F1A0F81D5B70F115A122C4B65901309 /* JPNavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2DCC468C9F5FB9F7B069A42DF3FACFDC /* UIViewController+ViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE13AE7A9485447D10C3092A1BF2F69 /* UIViewController+ViewControllers.m */; };
+		3C864055379F6F1C3DF4E1CAA70E664F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		55CA77DDE6601E8C3F9DD7309BF4B939 /* JPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556ABBFBBE62E4A321E2E51BA7FEF314 /* JPNavigationController.m */; };
+		56132F3774B488813F223B4BE5801B41 /* UIColor+ImageGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = F62DF44C5B1FC87F090937A0AF11182A /* UIColor+ImageGenerate.m */; };
+		5F6CAD0CC83537FF1BDEF4D75EA5E495 /* JPNavigationControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C04C7DA56A8A2F6A4C7581D97CA36 /* JPNavigationControllerTransition.m */; };
+		70A494C29B5ED81D82DF27A3A4BD6F5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		74525B62ECBE3B0D5675861949F67226 /* JPBaseAnimationTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = E81D59866D297BC34DEC605D096FFD10 /* JPBaseAnimationTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7C55ED1DF121B65C06583B3EC2C7D7E4 /* JPWarpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5B49DA9ECFBD3AFCA3C3F63D56DB86 /* JPWarpViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		82490935B9257E43E6E59E69E9DE671D /* JPTransitionShadowView.h in Headers */ = {isa = PBXBuildFile; fileRef = D38486FA10E7A1FA6EB0749C334E5C92 /* JPTransitionShadowView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		84A7BBF1976C23A694A6D1EAAA5362F2 /* JPNavigationControllerCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = F76771709F6A4F31200174F31F948520 /* JPNavigationControllerCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8AEE183C6FD9C0BDD0B24880D4D53C18 /* JPNavigationControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = CB15DF79499EA2390D572F26436FAAF9 /* JPNavigationControllerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1319CBCB9A6720AD86DEA1FC914776C /* JPPushAnimationTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C7E1DFA505A0E1655F3E8AA123BB21C /* JPPushAnimationTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8CC13C53CAAAB14DCC8D5DEC770C600 /* JPBaseAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D2A5B8B2F56DB657FB61C0BA949784 /* JPBaseAnimationTransition.m */; };
+		A91AB02A6CB011E18DC06BA255A51A67 /* JPNavigationControllerGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = E671CE415B51483261C1B213B2AFF4E9 /* JPNavigationControllerGestureRecognizer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A976D39E424FA5E9BA765C5F87378F8D /* JPNavigationController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CFCE68FF5A2F036112D93BAB5D3352 /* JPNavigationController-dummy.m */; };
+		AC6F1E816209A1D340EFA25550F76B7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		AF04AECD0EFC0500E6B665E0AA928580 /* UIColor+ImageGenerate.h in Headers */ = {isa = PBXBuildFile; fileRef = 12E3085FF02039111FCD9EAB2EF8D5B2 /* UIColor+ImageGenerate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B21E2C3FB2240B7C55A090082FE0C72C /* Pods-DYHomeTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CADAB1E3206602305A0D6A3D22F1F3C9 /* Pods-DYHomeTransition-dummy.m */; };
+		B5AF6E6F1EE59531C2FAFBE83CD0B5AB /* UIView+ScreenCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 64701DE59CE83B01487BC08804B4A7AA /* UIView+ScreenCapture.m */; };
+		B62C685EB8952A504322BE9FEC06F811 /* UINavigationBar+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F26AA03016D0A71DAEE93F271AEDCB7 /* UINavigationBar+HitTest.m */; };
+		B9C24BDF6774B8D7FDC8110BCDECD946 /* UIViewController+ViewControllers.h in Headers */ = {isa = PBXBuildFile; fileRef = 63F1A248336691DFCEEF3AB94B6CE3F0 /* UIViewController+ViewControllers.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BD222343236F3F660CFBD8656FCF6009 /* JPWarpNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5A71E4AD5F45CFDAF26AABC86EA3 /* JPWarpNavigationController.m */; };
+		BDBF8D4BF0D3765F9B15BA096AED3380 /* JPNavigationControllerGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B27FEA91C3FBC9A75A8F49F2FB5D4FC /* JPNavigationControllerGestureRecognizer.m */; };
+		C0DD56D63FF2651C196CD6271F4B2681 /* JPNavigationControllerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B59D9EDD32E5CD2169BCE087AB85B4FF /* JPNavigationControllerKit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C3E6D51F694C7527FAF4E7D5AEEEE8E8 /* JPTransitionShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD3726DAE3DF7BA48A6408106F54C5 /* JPTransitionShadowView.m */; };
+		C8D3A254FE851019F067778765531B18 /* UIView+ScreenCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B9B4420536BED8EEB277574ABAAFA4 /* UIView+ScreenCapture.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CC69C87E8D6AE2804648827B78656FB0 /* JPPushAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A5443760E7317933C26799F5EC9F3A47 /* JPPushAnimationTransition.m */; };
+		CFA28418F3C975A58415B3C51612E713 /* JPWarpNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = FFC722B795787D45287DF5512EF5A9C3 /* JPWarpNavigationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE8AF65B91EE489DB624DC5041157C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 915E8FEADDA0644106187EA8CE7B2E00;
+			remoteInfo = JPNavigationController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BDDEF2DF14D40CE93DA6B5F3752769A /* JPNavigationController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPNavigationController.xcconfig; sourceTree = "<group>"; };
+		12E3085FF02039111FCD9EAB2EF8D5B2 /* UIColor+ImageGenerate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ImageGenerate.h"; path = "JPNavigationController/UIColor+ImageGenerate.h"; sourceTree = "<group>"; };
+		17BAD51EB0B5F2A7BB2B2109A10061C6 /* Pods-DYHomeTransition-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DYHomeTransition-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1F1A0F81D5B70F115A122C4B65901309 /* JPNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPNavigationController.h; path = JPNavigationController/JPNavigationController.h; sourceTree = "<group>"; };
+		1FC2068CEA4827EC431157795423964F /* Pods-DYHomeTransition-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DYHomeTransition-acknowledgements.plist"; sourceTree = "<group>"; };
+		208C04C7DA56A8A2F6A4C7581D97CA36 /* JPNavigationControllerTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPNavigationControllerTransition.m; path = JPNavigationController/JPNavigationControllerTransition.m; sourceTree = "<group>"; };
+		214B9E73098AA664D323C4BAC9581292 /* JPWarpViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPWarpViewController.m; path = JPNavigationController/JPWarpViewController.m; sourceTree = "<group>"; };
+		21A1C7352A37A6781F6C438279E4FF22 /* Pods-DYHomeTransition-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DYHomeTransition-frameworks.sh"; sourceTree = "<group>"; };
+		2A8BCCF5FA2BEAEFDD03A248FB305631 /* libJPNavigationController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJPNavigationController.a; path = libJPNavigationController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FCD3726DAE3DF7BA48A6408106F54C5 /* JPTransitionShadowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPTransitionShadowView.m; path = JPNavigationController/JPTransitionShadowView.m; sourceTree = "<group>"; };
+		314156877005423694DACFF1FD705D42 /* JPNavigationController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPNavigationController-prefix.pch"; sourceTree = "<group>"; };
+		471FCB780B3B9375F415D96288F82940 /* JPNavigationController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = JPNavigationController.bundle; path = JPNavigationController/JPNavigationController.bundle; sourceTree = "<group>"; };
+		4C7E1DFA505A0E1655F3E8AA123BB21C /* JPPushAnimationTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPPushAnimationTransition.h; path = JPNavigationController/JPPushAnimationTransition.h; sourceTree = "<group>"; };
+		4F26AA03016D0A71DAEE93F271AEDCB7 /* UINavigationBar+HitTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+HitTest.m"; path = "JPNavigationController/UINavigationBar+HitTest.m"; sourceTree = "<group>"; };
+		556ABBFBBE62E4A321E2E51BA7FEF314 /* JPNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPNavigationController.m; path = JPNavigationController/JPNavigationController.m; sourceTree = "<group>"; };
+		63F1A248336691DFCEEF3AB94B6CE3F0 /* UIViewController+ViewControllers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ViewControllers.h"; path = "JPNavigationController/UIViewController+ViewControllers.h"; sourceTree = "<group>"; };
+		64701DE59CE83B01487BC08804B4A7AA /* UIView+ScreenCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ScreenCapture.m"; path = "JPNavigationController/UIView+ScreenCapture.m"; sourceTree = "<group>"; };
+		6E9603F9D7FA67FBC11C43DC878EE07E /* Pods-DYHomeTransition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYHomeTransition.debug.xcconfig"; sourceTree = "<group>"; };
+		79EB5A71E4AD5F45CFDAF26AABC86EA3 /* JPWarpNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPWarpNavigationController.m; path = JPNavigationController/JPWarpNavigationController.m; sourceTree = "<group>"; };
+		7CE13AE7A9485447D10C3092A1BF2F69 /* UIViewController+ViewControllers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ViewControllers.m"; path = "JPNavigationController/UIViewController+ViewControllers.m"; sourceTree = "<group>"; };
+		7D7814D7FCDBA526788C7BC86480BD7F /* JPNavigationControllerTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPNavigationControllerTransition.h; path = JPNavigationController/JPNavigationControllerTransition.h; sourceTree = "<group>"; };
+		7E5B49DA9ECFBD3AFCA3C3F63D56DB86 /* JPWarpViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPWarpViewController.h; path = JPNavigationController/JPWarpViewController.h; sourceTree = "<group>"; };
+		86CFCE68FF5A2F036112D93BAB5D3352 /* JPNavigationController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JPNavigationController-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B27FEA91C3FBC9A75A8F49F2FB5D4FC /* JPNavigationControllerGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPNavigationControllerGestureRecognizer.m; path = JPNavigationController/JPNavigationControllerGestureRecognizer.m; sourceTree = "<group>"; };
+		A5443760E7317933C26799F5EC9F3A47 /* JPPushAnimationTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPPushAnimationTransition.m; path = JPNavigationController/JPPushAnimationTransition.m; sourceTree = "<group>"; };
+		B098FC7A6302C741FC803FAE22776A9B /* UINavigationBar+HitTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+HitTest.h"; path = "JPNavigationController/UINavigationBar+HitTest.h"; sourceTree = "<group>"; };
+		B4D2A5B8B2F56DB657FB61C0BA949784 /* JPBaseAnimationTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JPBaseAnimationTransition.m; path = JPNavigationController/JPBaseAnimationTransition.m; sourceTree = "<group>"; };
+		B59D9EDD32E5CD2169BCE087AB85B4FF /* JPNavigationControllerKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPNavigationControllerKit.h; path = JPNavigationController/JPNavigationControllerKit.h; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C0B9B4420536BED8EEB277574ABAAFA4 /* UIView+ScreenCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ScreenCapture.h"; path = "JPNavigationController/UIView+ScreenCapture.h"; sourceTree = "<group>"; };
+		CADAB1E3206602305A0D6A3D22F1F3C9 /* Pods-DYHomeTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DYHomeTransition-dummy.m"; sourceTree = "<group>"; };
+		CB15DF79499EA2390D572F26436FAAF9 /* JPNavigationControllerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPNavigationControllerProtocol.h; path = JPNavigationController/JPNavigationControllerProtocol.h; sourceTree = "<group>"; };
+		D2D8AB54E877913AD165292875648343 /* libPods-DYHomeTransition.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-DYHomeTransition.a"; path = "libPods-DYHomeTransition.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38486FA10E7A1FA6EB0749C334E5C92 /* JPTransitionShadowView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPTransitionShadowView.h; path = JPNavigationController/JPTransitionShadowView.h; sourceTree = "<group>"; };
+		D3F86C08F04C5D7503434F4AF805C084 /* Pods-DYHomeTransition-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DYHomeTransition-resources.sh"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E19EEDF9A3B516F0ECB9275DB3D1AF08 /* UINavigationController+FulllScreenPopPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FulllScreenPopPush.h"; path = "JPNavigationController/UINavigationController+FulllScreenPopPush.h"; sourceTree = "<group>"; };
+		E671CE415B51483261C1B213B2AFF4E9 /* JPNavigationControllerGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPNavigationControllerGestureRecognizer.h; path = JPNavigationController/JPNavigationControllerGestureRecognizer.h; sourceTree = "<group>"; };
+		E81D59866D297BC34DEC605D096FFD10 /* JPBaseAnimationTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPBaseAnimationTransition.h; path = JPNavigationController/JPBaseAnimationTransition.h; sourceTree = "<group>"; };
+		ED8A93951E804E4730B67A3FAEBE4E2F /* Pods-DYHomeTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DYHomeTransition.release.xcconfig"; sourceTree = "<group>"; };
+		F62DF44C5B1FC87F090937A0AF11182A /* UIColor+ImageGenerate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ImageGenerate.m"; path = "JPNavigationController/UIColor+ImageGenerate.m"; sourceTree = "<group>"; };
+		F76771709F6A4F31200174F31F948520 /* JPNavigationControllerCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPNavigationControllerCompat.h; path = JPNavigationController/JPNavigationControllerCompat.h; sourceTree = "<group>"; };
+		FFC722B795787D45287DF5512EF5A9C3 /* JPWarpNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JPWarpNavigationController.h; path = JPNavigationController/JPWarpNavigationController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12B18B6297268E06B83228ED6DFBF049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C864055379F6F1C3DF4E1CAA70E664F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85446CBBF8C5C615A8E2134786B05923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6F1E816209A1D340EFA25550F76B7C /* Foundation.framework in Frameworks */,
+				70A494C29B5ED81D82DF27A3A4BD6F5C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41E1AD0208A3BB1C4936DA85104BF848 /* Pods-DYHomeTransition */ = {
+			isa = PBXGroup;
+			children = (
+				17BAD51EB0B5F2A7BB2B2109A10061C6 /* Pods-DYHomeTransition-acknowledgements.markdown */,
+				1FC2068CEA4827EC431157795423964F /* Pods-DYHomeTransition-acknowledgements.plist */,
+				CADAB1E3206602305A0D6A3D22F1F3C9 /* Pods-DYHomeTransition-dummy.m */,
+				21A1C7352A37A6781F6C438279E4FF22 /* Pods-DYHomeTransition-frameworks.sh */,
+				D3F86C08F04C5D7503434F4AF805C084 /* Pods-DYHomeTransition-resources.sh */,
+				6E9603F9D7FA67FBC11C43DC878EE07E /* Pods-DYHomeTransition.debug.xcconfig */,
+				ED8A93951E804E4730B67A3FAEBE4E2F /* Pods-DYHomeTransition.release.xcconfig */,
+			);
+			name = "Pods-DYHomeTransition";
+			path = "Target Support Files/Pods-DYHomeTransition";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4BB70C382E108D8DA6553022D68C781B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BDDEF2DF14D40CE93DA6B5F3752769A /* JPNavigationController.xcconfig */,
+				86CFCE68FF5A2F036112D93BAB5D3352 /* JPNavigationController-dummy.m */,
+				314156877005423694DACFF1FD705D42 /* JPNavigationController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JPNavigationController";
+			sourceTree = "<group>";
+		};
+		7656AFD5CA82CD089B86F94E1EB0AFF5 /* JPNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E81D59866D297BC34DEC605D096FFD10 /* JPBaseAnimationTransition.h */,
+				B4D2A5B8B2F56DB657FB61C0BA949784 /* JPBaseAnimationTransition.m */,
+				1F1A0F81D5B70F115A122C4B65901309 /* JPNavigationController.h */,
+				556ABBFBBE62E4A321E2E51BA7FEF314 /* JPNavigationController.m */,
+				F76771709F6A4F31200174F31F948520 /* JPNavigationControllerCompat.h */,
+				E671CE415B51483261C1B213B2AFF4E9 /* JPNavigationControllerGestureRecognizer.h */,
+				9B27FEA91C3FBC9A75A8F49F2FB5D4FC /* JPNavigationControllerGestureRecognizer.m */,
+				B59D9EDD32E5CD2169BCE087AB85B4FF /* JPNavigationControllerKit.h */,
+				CB15DF79499EA2390D572F26436FAAF9 /* JPNavigationControllerProtocol.h */,
+				7D7814D7FCDBA526788C7BC86480BD7F /* JPNavigationControllerTransition.h */,
+				208C04C7DA56A8A2F6A4C7581D97CA36 /* JPNavigationControllerTransition.m */,
+				4C7E1DFA505A0E1655F3E8AA123BB21C /* JPPushAnimationTransition.h */,
+				A5443760E7317933C26799F5EC9F3A47 /* JPPushAnimationTransition.m */,
+				D38486FA10E7A1FA6EB0749C334E5C92 /* JPTransitionShadowView.h */,
+				2FCD3726DAE3DF7BA48A6408106F54C5 /* JPTransitionShadowView.m */,
+				FFC722B795787D45287DF5512EF5A9C3 /* JPWarpNavigationController.h */,
+				79EB5A71E4AD5F45CFDAF26AABC86EA3 /* JPWarpNavigationController.m */,
+				7E5B49DA9ECFBD3AFCA3C3F63D56DB86 /* JPWarpViewController.h */,
+				214B9E73098AA664D323C4BAC9581292 /* JPWarpViewController.m */,
+				12E3085FF02039111FCD9EAB2EF8D5B2 /* UIColor+ImageGenerate.h */,
+				F62DF44C5B1FC87F090937A0AF11182A /* UIColor+ImageGenerate.m */,
+				B098FC7A6302C741FC803FAE22776A9B /* UINavigationBar+HitTest.h */,
+				4F26AA03016D0A71DAEE93F271AEDCB7 /* UINavigationBar+HitTest.m */,
+				E19EEDF9A3B516F0ECB9275DB3D1AF08 /* UINavigationController+FulllScreenPopPush.h */,
+				C0B9B4420536BED8EEB277574ABAAFA4 /* UIView+ScreenCapture.h */,
+				64701DE59CE83B01487BC08804B4A7AA /* UIView+ScreenCapture.m */,
+				63F1A248336691DFCEEF3AB94B6CE3F0 /* UIViewController+ViewControllers.h */,
+				7CE13AE7A9485447D10C3092A1BF2F69 /* UIViewController+ViewControllers.m */,
+				9ED737AE094936A622DAEC1440B23227 /* Resources */,
+				4BB70C382E108D8DA6553022D68C781B /* Support Files */,
+			);
+			name = JPNavigationController;
+			path = JPNavigationController;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				D4A2A835C17BE3D453384DCE4F222515 /* Pods */,
+				EBA1D5E9A0024E0B165B1441DBD719F5 /* Products */,
+				8AF006C7F767B5B056084CB5CA62E1C9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8AF006C7F767B5B056084CB5CA62E1C9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41E1AD0208A3BB1C4936DA85104BF848 /* Pods-DYHomeTransition */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9ED737AE094936A622DAEC1440B23227 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				471FCB780B3B9375F415D96288F82940 /* JPNavigationController.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D4A2A835C17BE3D453384DCE4F222515 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7656AFD5CA82CD089B86F94E1EB0AFF5 /* JPNavigationController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBA1D5E9A0024E0B165B1441DBD719F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A8BCCF5FA2BEAEFDD03A248FB305631 /* libJPNavigationController.a */,
+				D2D8AB54E877913AD165292875648343 /* libPods-DYHomeTransition.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BD57B6324F43233C1BF5CE9B1833955C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74525B62ECBE3B0D5675861949F67226 /* JPBaseAnimationTransition.h in Headers */,
+				2979C72D64564F7F84559BC8F0B5C699 /* JPNavigationController.h in Headers */,
+				84A7BBF1976C23A694A6D1EAAA5362F2 /* JPNavigationControllerCompat.h in Headers */,
+				A91AB02A6CB011E18DC06BA255A51A67 /* JPNavigationControllerGestureRecognizer.h in Headers */,
+				C0DD56D63FF2651C196CD6271F4B2681 /* JPNavigationControllerKit.h in Headers */,
+				8AEE183C6FD9C0BDD0B24880D4D53C18 /* JPNavigationControllerProtocol.h in Headers */,
+				2599B2F2A66C3DC9EF1ED4E496A13FF4 /* JPNavigationControllerTransition.h in Headers */,
+				A1319CBCB9A6720AD86DEA1FC914776C /* JPPushAnimationTransition.h in Headers */,
+				82490935B9257E43E6E59E69E9DE671D /* JPTransitionShadowView.h in Headers */,
+				CFA28418F3C975A58415B3C51612E713 /* JPWarpNavigationController.h in Headers */,
+				7C55ED1DF121B65C06583B3EC2C7D7E4 /* JPWarpViewController.h in Headers */,
+				AF04AECD0EFC0500E6B665E0AA928580 /* UIColor+ImageGenerate.h in Headers */,
+				17E581B0B593E213EE1D3F720C001C44 /* UINavigationBar+HitTest.h in Headers */,
+				23BD89BD253E0D3CE785C14C93C47960 /* UINavigationController+FulllScreenPopPush.h in Headers */,
+				C8D3A254FE851019F067778765531B18 /* UIView+ScreenCapture.h in Headers */,
+				B9C24BDF6774B8D7FDC8110BCDECD946 /* UIViewController+ViewControllers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		696DDF5A0C6CDD297EC3A12A602DE488 /* Pods-DYHomeTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 698721CB8ECD71705E08DDFC7A92E7E8 /* Build configuration list for PBXNativeTarget "Pods-DYHomeTransition" */;
+			buildPhases = (
+				E692F709ED440DBA0FD727326D6D0907 /* Sources */,
+				12B18B6297268E06B83228ED6DFBF049 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74593A57F0BBDE34872919E287D5357A /* PBXTargetDependency */,
+			);
+			name = "Pods-DYHomeTransition";
+			productName = "Pods-DYHomeTransition";
+			productReference = D2D8AB54E877913AD165292875648343 /* libPods-DYHomeTransition.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		915E8FEADDA0644106187EA8CE7B2E00 /* JPNavigationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FB5B57C46CCC7929EA289FD249302BF /* Build configuration list for PBXNativeTarget "JPNavigationController" */;
+			buildPhases = (
+				A2B657B6966DB54024DC78BB2DD6EE4B /* Sources */,
+				85446CBBF8C5C615A8E2134786B05923 /* Frameworks */,
+				BD57B6324F43233C1BF5CE9B1833955C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPNavigationController;
+			productName = JPNavigationController;
+			productReference = 2A8BCCF5FA2BEAEFDD03A248FB305631 /* libJPNavigationController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EBA1D5E9A0024E0B165B1441DBD719F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				915E8FEADDA0644106187EA8CE7B2E00 /* JPNavigationController */,
+				696DDF5A0C6CDD297EC3A12A602DE488 /* Pods-DYHomeTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2B657B6966DB54024DC78BB2DD6EE4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8CC13C53CAAAB14DCC8D5DEC770C600 /* JPBaseAnimationTransition.m in Sources */,
+				A976D39E424FA5E9BA765C5F87378F8D /* JPNavigationController-dummy.m in Sources */,
+				55CA77DDE6601E8C3F9DD7309BF4B939 /* JPNavigationController.m in Sources */,
+				BDBF8D4BF0D3765F9B15BA096AED3380 /* JPNavigationControllerGestureRecognizer.m in Sources */,
+				5F6CAD0CC83537FF1BDEF4D75EA5E495 /* JPNavigationControllerTransition.m in Sources */,
+				CC69C87E8D6AE2804648827B78656FB0 /* JPPushAnimationTransition.m in Sources */,
+				C3E6D51F694C7527FAF4E7D5AEEEE8E8 /* JPTransitionShadowView.m in Sources */,
+				BD222343236F3F660CFBD8656FCF6009 /* JPWarpNavigationController.m in Sources */,
+				0DA241E8952D3935647727692A545440 /* JPWarpViewController.m in Sources */,
+				56132F3774B488813F223B4BE5801B41 /* UIColor+ImageGenerate.m in Sources */,
+				B62C685EB8952A504322BE9FEC06F811 /* UINavigationBar+HitTest.m in Sources */,
+				B5AF6E6F1EE59531C2FAFBE83CD0B5AB /* UIView+ScreenCapture.m in Sources */,
+				2DCC468C9F5FB9F7B069A42DF3FACFDC /* UIViewController+ViewControllers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E692F709ED440DBA0FD727326D6D0907 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21E2C3FB2240B7C55A090082FE0C72C /* Pods-DYHomeTransition-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74593A57F0BBDE34872919E287D5357A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JPNavigationController;
+			target = 915E8FEADDA0644106187EA8CE7B2E00 /* JPNavigationController */;
+			targetProxy = AE8AF65B91EE489DB624DC5041157C96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B46DAB71C1C29A96ECC5B68354FD09F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED8A93951E804E4730B67A3FAEBE4E2F /* Pods-DYHomeTransition.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8F155CA547B5A60E3917F0604B5EBEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BDDEF2DF14D40CE93DA6B5F3752769A /* JPNavigationController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JPNavigationController/JPNavigationController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JPNavigationController;
+				PRODUCT_NAME = JPNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF48C1D123F22D84C0DF38AC10935377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BDDEF2DF14D40CE93DA6B5F3752769A /* JPNavigationController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JPNavigationController/JPNavigationController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JPNavigationController;
+				PRODUCT_NAME = JPNavigationController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFADB958F428EF0C0BF37FC257C7973E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E9603F9D7FA67FBC11C43DC878EE07E /* Pods-DYHomeTransition.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		698721CB8ECD71705E08DDFC7A92E7E8 /* Build configuration list for PBXNativeTarget "Pods-DYHomeTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFADB958F428EF0C0BF37FC257C7973E /* Debug */,
+				B46DAB71C1C29A96ECC5B68354FD09F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FB5B57C46CCC7929EA289FD249302BF /* Build configuration list for PBXNativeTarget "JPNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF48C1D123F22D84C0DF38AC10935377 /* Debug */,
+				D8F155CA547B5A60E3917F0604B5EBEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
