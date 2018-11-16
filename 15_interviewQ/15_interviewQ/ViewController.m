@@ -184,6 +184,19 @@ int i = 0;
     maxSum = maxSumSoFar;
     return subArr;
 }
+
+/*
+ 1 : 1
+ 2 : 1
+ 3 : 1
+ 4 : 1                                             - 1
+ 5 : 1                                - 1          - 1
+ 6 : 1                   - 1         - 1          - 1
+ 7 : 1           - 1     - 1         - 1          - 1 - 1
+ 8 : 1       - 1 - 1     - 1         - 1 - 1       - 1 - 1 - 1
+ 9 : 1 - 1 - 1 - 1     - 1 - 1    - 1 - 1 - 1  - 1 - 1 - 1 - 1
+ */
+
 // 小兔子繁殖问题 - 三个月 繁殖一次
 - (void)testPro {
     [self sumFunc:90];
@@ -211,7 +224,7 @@ static NSInteger sum = 0;
     if (months >= 0) {// 以为是递减，所以减到等于0时才是完全递归完毕
         sum += new;
         [self recursiveWith:months - 1];
-    } 
+    }
     return -1;
 }
 
