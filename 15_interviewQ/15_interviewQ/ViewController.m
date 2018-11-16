@@ -184,5 +184,37 @@ int i = 0;
     maxSum = maxSumSoFar;
     return subArr;
 }
+// 小兔子繁殖问题 - 三个月 繁殖一次
+- (void)testPro {
+    [self sumFunc:90];
+}
+static NSInteger sum = 0;
+- (void)sumFunc:(NSInteger)n {
+    if ( n <= 3) {// 处理前三个月
+        sum =  1;
+        return;
+    }
+    // 第一只新出生的前三个月不会 繁殖 所以 - 3
+    [self recursiveWith:n - 3];
+}
+// 递归
+- (NSInteger)recursiveWith:(NSInteger)months {
+    if (months < 0) {
+        return sum;
+    }
+    NSInteger new = 0;
+    if ( months <= 3) {// 小于三个月的
+        new =  1;
+    } else {// 已成年的 直接（父子关系） 繁殖数量
+        new =  months - 3 + 1;
+    }
+    if (months >= 0) {// 以为是递减，所以减到等于0时才是完全递归完毕
+        sum += new;
+        [self recursiveWith:months - 1];
+    } 
+    return -1;
+}
+
+
 
 @end
