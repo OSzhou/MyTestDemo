@@ -50,6 +50,55 @@ typedef void (^testBlock)(void);
     [self superClassTest];
 }
 
+// 输出4，1。主线程被while循环阻塞，所以任务2无法执行，任务3要等任务2执行完毕才能执行，而任务2无法执行，所以任务3无法执行
+- (void)test2 {
+    
+    dispatch_async(dispatch_get_global_queue(0,0),^{
+        
+        NSLog(@"1");// 任务1
+        
+        dispatch_sync(dispatch_get_main_queue(),^{
+            
+            NSLog(@"2");// 任务2
+            
+        });
+        
+        NSLog(@"3");// 任务3
+        
+    });
+    NSLog(@"4");// 任务4
+    while(1){
+        //        NSLog(@"while --- circle");
+    }
+    NSLog(@"5");// 任务5
+    
+}
+
+// 死锁 - ⭐️只有同一个串行队列的情况下才可能出现死锁⭐️
+- (void)test1 {
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue",DISPATCH_QUEUE_SERIAL);
+    
+    NSLog(@"1");// 任务1
+    
+    dispatch_async(queue,^{
+        
+        NSLog(@"2");// 任务2
+        
+        dispatch_sync(queue,^{
+            
+            NSLog(@"3");// 任务3
+            
+        });
+        
+        NSLog(@"4");// 任务4
+        
+    });
+    
+    NSLog(@"5");// 任务5
+    
+}
+
 - (void)superClassTest {
     Dog *dog = [[Dog alloc] init];
 }
