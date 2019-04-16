@@ -21,6 +21,8 @@
 #import "FMStarViewController.h"
 #import "SpliceImageController.h"
 
+#import "TULineLayout.h"
+
 #define View_W [UIScreen mainScreen].bounds.size.width
 #define View_H [UIScreen mainScreen].bounds.size.height
 
@@ -41,13 +43,13 @@ static NSString *const FMPhotoCellID = @"photo";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
+   
     //<1>line
-    FMLineLayout *layout = [[FMLineLayout alloc] init];
-    layout.itemSize = CGSizeMake(100, 100);
-    CGFloat collection_w = self.view.frame.size.width;
-    CGFloat collection_h = 200;
-    CGRect frame =  CGRectMake(0, self.view.frame.size.height - 200, collection_w, collection_h);
+//    FMLineLayout *layout = [[FMLineLayout alloc] init];
+//    layout.itemSize = CGSizeMake(100, 100);
+//    CGFloat collection_w = self.view.frame.size.width;
+//    CGFloat collection_h = 200;
+//    CGRect frame =  CGRectMake(0, self.view.frame.size.height - 200, collection_w, collection_h);
     //<2>
 //    FMGridLayout *layout = [[FMGridLayout alloc] init];
 //    CGRect frame = self.view.bounds;
@@ -60,8 +62,18 @@ static NSString *const FMPhotoCellID = @"photo";
 //    FMWaterflowLayout *layout = [[FMWaterflowLayout alloc] init];
 //    layout.delegate = self;
 //    CGRect frame = self.view.bounds;
-    [self DIYUIWithLayout:layout andFrame:frame]; 
-     */
+    
+    
+    //<5>tata release 仿 Instagram 发布
+    
+    TULineLayout *layout = [[TULineLayout alloc] init];
+    layout.itemSize = CGSizeMake(100, 100);
+    CGFloat collection_w = self.view.frame.size.width;
+    CGFloat collection_h = 200;
+    CGRect frame =  CGRectMake(0, self.view.frame.size.height - 200, collection_w, collection_h);
+    
+    [self DIYUIWithLayout:layout andFrame:frame];
+    
 //    [self autoResizingTest];
 //    [self photoBrowserTest];
 //    [self scrollTitleViewTest];
@@ -69,7 +81,7 @@ static NSString *const FMPhotoCellID = @"photo";
 //    [self verticalButtonTest];
 //    [self coreTextTest];
     // 字体样式测试
-    [self fontFamilyTest];
+//    [self fontFamilyTest];
 }
 - (IBAction)buttonClick:(UIButton *)sender {
 //    [self JDFilterTest];
@@ -194,12 +206,53 @@ static NSString *const FMPhotoCellID = @"photo";
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
+    collectionView.clipsToBounds = NO;
 //    collectionView.contentInset = UIEdgeInsetsMake(100, 0, 100, 0);
 
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
+    [collectionView addGestureRecognizer:longPressGesture];
+    
     self.collectionView = collectionView;
     [self.view addSubview:collectionView];
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([FMPhotoCell class]) bundle:nil] forCellWithReuseIdentifier:FMPhotoCellID];
 }
+
+- (void)longPressAction:(UILongPressGestureRecognizer *)longPress {
+    //获取此次点击的坐标，根据坐标获取cell对应的indexPath
+    CGPoint point = [longPress locationInView:_collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
+    //根据长按手势的状态进行处理。
+    switch (longPress.state) {
+        case UIGestureRecognizerStateBegan:
+            //当没有点击到cell的时候不进行处理
+            if (!indexPath) {
+                break;
+            }
+            //开始移动
+            [_collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+            break;
+        case UIGestureRecognizerStateChanged:
+            //移动过程中更新位置坐标
+            [_collectionView updateInteractiveMovementTargetPosition:point];
+            break;
+        case UIGestureRecognizerStateEnded:
+            //停止移动调用此方法
+            [_collectionView endInteractiveMovement];
+            break;
+        default:
+            //取消移动
+            [_collectionView cancelInteractiveMovement];
+            break;
+    }
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+}
+
 /*
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if ([self.collectionView.collectionViewLayout isKindOfClass:[FMLineLayout class]]) {
@@ -236,9 +289,11 @@ static NSString *const FMPhotoCellID = @"photo";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FMPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FMPhotoCellID forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor purpleColor];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%zd", indexPath.item + 1]];
     return cell;
 }
+
 //#line 1000
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 //    FMLog(@" --- %zd", indexPath.item);

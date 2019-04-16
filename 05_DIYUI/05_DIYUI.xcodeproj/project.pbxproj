@@ -15,6 +15,7 @@
 		76F1EC6C20AC34D300AA36FB /* SpliceImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */; };
 		76F1EC6E20AD2C9F00AA36FB /* DINEngschriftStd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */; };
 		76F1EC7020AD320700AA36FB /* DINCond-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */; };
+		97BA3AC9225B597F004FB56C /* TULineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BA3AC8225B597F004FB56C /* TULineLayout.m */; };
 		E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */; };
 		E52BEF661DFE743D00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
 		E52BEF671DFE760B00CFBC4E /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */; };
@@ -125,6 +126,8 @@
 		76F1EC6B20AC34D300AA36FB /* SpliceImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpliceImageController.m; sourceTree = "<group>"; };
 		76F1EC6D20AD2C9E00AA36FB /* DINEngschriftStd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DINEngschriftStd.ttf; sourceTree = "<group>"; };
 		76F1EC6F20AD320700AA36FB /* DINCond-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINCond-Medium.otf"; sourceTree = "<group>"; };
+		97BA3AC7225B597F004FB56C /* TULineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TULineLayout.h; sourceTree = "<group>"; };
+		97BA3AC8225B597F004FB56C /* TULineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TULineLayout.m; sourceTree = "<group>"; };
 		E50BE6AC1E728AB8004B0F33 /* FMCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCoreTextView.h; sourceTree = "<group>"; };
 		E50BE6AD1E728AB8004B0F33 /* FMCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCoreTextView.m; sourceTree = "<group>"; };
 		E52BEF651DFE743D00CFBC4E /* FrameworkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameworkTest.framework; sourceTree = "<group>"; };
@@ -572,6 +575,8 @@
 				E5DA12971DE52C3500A2C9A5 /* FMCircleLayout.m */,
 				E5DA12991DE54ABD00A2C9A5 /* FMWaterflowLayout.h */,
 				E5DA129A1DE54ABD00A2C9A5 /* FMWaterflowLayout.m */,
+				97BA3AC7225B597F004FB56C /* TULineLayout.h */,
+				97BA3AC8225B597F004FB56C /* TULineLayout.m */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 				TargetAttributes = {
 					E5DA124B1DE4274A00A2C9A5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6AS4N82Q9E;
 					};
 					E5DA12641DE4274A00A2C9A5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -794,6 +800,7 @@
 				E5B929861E305CDB00FFCE10 /* UIButton+WebCache.m in Sources */,
 				E50BE6AE1E728AB8004B0F33 /* FMCoreTextView.m in Sources */,
 				E5DA12981DE52C3500A2C9A5 /* FMCircleLayout.m in Sources */,
+				97BA3AC9225B597F004FB56C /* TULineLayout.m in Sources */,
 				E5B9297D1E305CDB00FFCE10 /* MKAnnotationView+WebCache.m in Sources */,
 				E5B929831E305CDB00FFCE10 /* SDWebImageDownloaderOperation.m in Sources */,
 				76B7AB1720AA77AE00D02FA2 /* UIImageView+Border.m in Sources */,
@@ -945,6 +952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/05_DIYUI",
@@ -962,6 +970,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/05_DIYUI",
