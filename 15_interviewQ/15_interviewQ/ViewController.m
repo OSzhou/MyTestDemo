@@ -9,12 +9,15 @@
 #import "ViewController.h"
 #import "UIButton+TestBtn.h"
 #import "Dog.h"
+#import "FMProxy_nsobject.h"
+#import "FMProxy.h"
 
 typedef void (^testBlock)(void);
 @interface ViewController ()
 
 @property (nonatomic, strong) UIView *v;
 @property (nonatomic, strong) CALayer *l;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -47,7 +50,26 @@ typedef void (^testBlock)(void);
 //    [self arrCountTest];
 //    [self testBlock];
 //    [self viewTagAndBoundTest];
-    [self superClassTest];
+//    [self superClassTest];
+    [self timerCircle];
+}
+
+- (void)timerCircle {
+    // (1
+//    FMProxy_nsobject *proxy = [FMProxy_nsobject proxyWithTarget:self];
+    
+    //(2
+    FMProxy *proxy = [FMProxy proxyWithTarget:self];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:proxy selector:@selector(msgSend) userInfo:nil repeats:YES];
+}
+
+- (void)msgSend {
+    NSLog(@"timer circle --- test");
+}
+
+- (void)dealloc {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 // 输出4，1。主线程被while循环阻塞，所以任务2无法执行，任务3要等任务2执行完毕才能执行，而任务2无法执行，所以任务3无法执行
