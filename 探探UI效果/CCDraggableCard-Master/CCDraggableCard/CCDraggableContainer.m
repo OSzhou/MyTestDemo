@@ -47,59 +47,24 @@
 
 - (void)firstInAnimation {
     CGPoint cardCenter = CGPointMake(CCWidth * 1.5, self.cardCenter.y);
-    CGFloat flag = 1;
     __block int j = 0;
     for (int i = 0; i < self.currentCards.count; i ++) {
         CCDraggableCardView *cardView = self.currentCards[i];
         
         cardView.transform = CGAffineTransformIdentity;//transform还原到初始化状态
-        __block CGRect frame = self.firstCardFrame;
-        CGFloat Y = 0;
-        switch (i) {
-            case 0: {
-                cardView.frame = frame;
-                
-                CGAffineTransform translate = CGAffineTransformTranslate(CGAffineTransformIdentity, flag * 20, 0);
-                cardView.transform = CGAffineTransformRotate(translate, flag * M_PI_4 / 4);
-    
-            }
-                break;
-            case 1: {
-                frame.origin.y = frame.origin.y + kCardEdage;//Y递加
-                cardView.frame = frame;
-                CGAffineTransform translate = CGAffineTransformTranslate(CGAffineTransformIdentity, flag * 20, 0);
-                CGAffineTransform rotate = CGAffineTransformRotate(translate, flag * M_PI_4 / 4);
-                //X方向缩小
-                cardView.transform = CGAffineTransformScale(rotate, kSecondCardScale, 1);
-            }
-                break;
-            case 2: {
-                frame.origin.y = frame.origin.y + kCardEdage * 2;
-                cardView.frame = frame;
-                CGAffineTransform translate = CGAffineTransformTranslate(CGAffineTransformIdentity, flag * 20, 0);
-                CGAffineTransform rotate = CGAffineTransformRotate(translate, flag * M_PI_4 / 4);
-                cardView.transform = CGAffineTransformScale(rotate, kTherdCardScale, 1);
-
-                NSLog(@"第三个Card距容器视图底部：%f", CGRectGetHeight(self.frame) - CGRectGetMaxY(cardView.frame));
-                /** 给lastFrame 及 lastFrameTransform赋值 */
-                if (CGRectIsEmpty(self.lastCardFrame)) {
-                    self.lastCardFrame = frame;
-                    self.lastCardTransform = cardView.transform;
-                }
-            }
-                break;
-            default:
-                break;
-        }
-        cardView.originalTransform = cardView.transform;
+        CGRect frame = self.firstCardFrame;
+        frame.origin.y = frame.origin.y + kCardEdage * i;//Y递加
+        cardView.frame = frame;
+        CGAffineTransform translate = CGAffineTransformTranslate(CGAffineTransformIdentity, 20, 0);
+        CGAffineTransform rotate = CGAffineTransformRotate(translate, M_PI_4 / 4);
+        //X方向缩小
+        cardView.transform = rotate;//CGAffineTransformScale(rotate, kSecondCardScale, 1);
         cardView.center = cardCenter;
-         Y = cardView.frame.origin.y;
         
         [UIView animateWithDuration:0.5 * (self.currentCards.count - i) animations:^{
-            CGAffineTransform translate = CGAffineTransformTranslate(cardView.transform, -(flag * 20), 0);
-            cardView.transform = CGAffineTransformRotate(translate, -(flag * M_PI_4) / 4);
+            CGAffineTransform translate = CGAffineTransformTranslate(cardView.transform, -20, 0);
+            cardView.transform = CGAffineTransformRotate(translate, -M_PI_4 / 4);
             cardView.center = self.center;
-            frame.origin.y = frame.origin.y + Y;
             cardView.frame = frame;
             
         } completion:^(BOOL finished) {
@@ -181,7 +146,12 @@
                 
                 [self addSubview:cardView];
                 [self sendSubviewToBack:cardView]; // addSubview后添加sendSubviewToBack, 使Card的显示顺序倒置
-
+                // 解决新加card时整体闪动
+                CGRect frame = self.firstCardFrame;
+                frame.origin.y = frame.origin.y + kCardEdage * 2;
+                cardView.frame = frame;
+                cardView.transform = CGAffineTransformScale(CGAffineTransformIdentity, kTherdCardScale, 1);
+                
                 // 添加新元素
                 [self.currentCards addObject:cardView];
                 
