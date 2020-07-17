@@ -66,4 +66,17 @@ extension HETool {
                                                             contentMode: contentMode,
                                                             options: options, resultHandler:  resultHandler)
     }
+    
+    // data: image data, bool: 是否小于2kb
+    public static func heRequestImageData(_ asset: PHAsset, resultHandler: @escaping (Data?, Bool) -> Void){
+        //图片大小: 过滤 小于 2kb的图片
+        PHCachingImageManager.default().requestImageData(for: asset, options: nil) { (imageData, _, _, _) in
+            if let data = imageData, data.count < 2048 {
+                resultHandler(imageData, true)
+                print("image data length less than 2kb --- \(data.count)")
+            } else {
+                resultHandler(nil, false)
+            }
+        }
+    }
 }

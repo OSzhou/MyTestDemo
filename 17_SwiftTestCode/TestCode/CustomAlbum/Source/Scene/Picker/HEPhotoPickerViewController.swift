@@ -456,12 +456,29 @@ public class HEPhotoPickerViewController: HEBaseViewController {
     }
     private func fetchPhotoModels(photos:PHFetchResult<PHAsset>){
         models =  [HEPhotoAsset]()
-        photos.enumerateObjects {[weak self] (asset, index, ff) in
-            let model = HEPhotoAsset.init(asset: asset)
-            self?.checkIsSingle(model: model)
-            model.index = index
-            self?.models.append(model)
-            self?.collectionView.reloadData()
+        
+        let queue = DispatchQueue.global()
+        let group = DispatchGroup()
+        
+        photos.enumerateObjects { [weak self] (asset, index, ff) in
+            group.enter()
+            let item = DispatchWorkItem {
+                HETool.heRequestImageData(asset) { (_, flag) in
+                    if !flag {
+                        let model = HEPhotoAsset.init(asset: asset)
+                        self?.checkIsSingle(model: model)
+                        model.index = index
+                        self?.models.append(model)
+                    }
+                    group.leave()
+                }
+                
+            }
+            queue.async(group: group, execute: item)
+        }
+        
+        group.notify(queue: DispatchQueue.main) {
+            self.collectionView.reloadData()
         }
     }
     private func fetchAlbumsListModels(albums:PHFetchResult<PHAssetCollection>){
