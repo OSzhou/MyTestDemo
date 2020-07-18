@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <FrameworkTest/FrameworkTest.h>
 @interface AppDelegate ()
-
+@property (nonatomic, strong) UIVisualEffectView *visualEffectView;
 @end
 
 @implementation AppDelegate
@@ -31,6 +31,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    self.visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    self.visualEffectView.alpha = 1;
+    self.visualEffectView.frame = self.window.frame;
+    [self.window addSubview:self.visualEffectView];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.visualEffectView.alpha = 1;
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -39,6 +47,11 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [UIView animateWithDuration:0.2 animations:^{
+        self.visualEffectView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.visualEffectView removeFromSuperview];
+    }];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
