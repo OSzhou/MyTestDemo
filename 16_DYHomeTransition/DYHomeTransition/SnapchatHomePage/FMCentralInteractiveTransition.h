@@ -1,0 +1,53 @@
+//
+//  FMCentralInteractiveTransition.h
+//  DYHomeTransition
+//
+//  Created by Zhouheng on 2019/1/17.
+//  Copyright © 2019年 Smile. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^GestureConifg)(void);
+
+typedef NS_ENUM(NSUInteger, XWInteractiveTransitionGestureDirection) {//手势的方向
+    XWInteractiveTransitionGestureDirectionLeft = 0,
+    XWInteractiveTransitionGestureDirectionRight,
+    XWInteractiveTransitionGestureDirectionUp,
+    XWInteractiveTransitionGestureDirectionDown,
+    XWInteractiveTransitionGestureDirectionLeftAndRight
+};
+
+typedef NS_ENUM(NSUInteger, XWInteractiveTransitionType) {//手势控制哪种转场
+    XWInteractiveTransitionTypePresent = 0,
+    XWInteractiveTransitionTypeDismiss,
+    XWInteractiveTransitionTypePush,
+    XWInteractiveTransitionTypePop,
+};
+
+@interface FMCentralInteractiveTransition : UIPercentDrivenInteractiveTransition
+
+/**记录是否开始手势，判断pop操作是 手势触发 还是 返回键 触发*/
+@property (nonatomic, assign) BOOL interation;
+
+/**促发手势present的时候的config，config中初始化并present需要弹出的控制器*/
+@property (nonatomic, copy) GestureConifg presentConifg;
+
+/**促发手势push的时候的config，config中初始化并push需要弹出的控制器*/
+@property (nonatomic, copy) GestureConifg pushConifg;
+@property (nonatomic, copy) GestureConifg left_pushConifg;
+@property (nonatomic, copy) GestureConifg right_pushConifg;
+
+//初始化方法
++ (instancetype)interactiveTransitionWithTransitionType:(XWInteractiveTransitionType)type GestureDirection:(XWInteractiveTransitionGestureDirection)direction;
+
+- (instancetype)initWithTransitionType:(XWInteractiveTransitionType)type GestureDirection:(XWInteractiveTransitionGestureDirection)direction;
+
+/** 给传入的控制器添加手势*/
+- (void)addPanGestureForViewController:(UIViewController *)viewController;
+
+@end
+
+NS_ASSUME_NONNULL_END

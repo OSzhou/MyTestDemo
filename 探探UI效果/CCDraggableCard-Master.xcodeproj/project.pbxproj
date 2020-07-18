@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971D3F4924346414002FC3E2 /* TwoSidedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D3F4724346414002FC3E2 /* TwoSidedView.m */; };
 		C539A4D91D30DD41005E0701 /* userInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = C539A4CD1D30DD41005E0701 /* userInfo.png */; };
 		C539A4DA1D30DD41005E0701 /* liked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C539A4CE1D30DD41005E0701 /* liked@2x.png */; };
 		C539A4DB1D30DD41005E0701 /* nope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C539A4CF1D30DD41005E0701 /* nope@2x.png */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		971D3F4724346414002FC3E2 /* TwoSidedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoSidedView.m; sourceTree = "<group>"; };
+		971D3F4824346414002FC3E2 /* TwoSidedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoSidedView.h; sourceTree = "<group>"; };
 		C539A4CD1D30DD41005E0701 /* userInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userInfo.png; sourceTree = "<group>"; };
 		C539A4CE1D30DD41005E0701 /* liked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "liked@2x.png"; sourceTree = "<group>"; };
 		C539A4CF1D30DD41005E0701 /* nope@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nope@2x.png"; sourceTree = "<group>"; };
@@ -120,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		971D3F4624346414002FC3E2 /* TwoSidedView */ = {
+			isa = PBXGroup;
+			children = (
+				971D3F4724346414002FC3E2 /* TwoSidedView.m */,
+				971D3F4824346414002FC3E2 /* TwoSidedView.h */,
+			);
+			path = TwoSidedView;
+			sourceTree = "<group>";
+		};
 		C54763DD1D2CA13100736B09 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 		C54763E81D2CA13100736B09 /* CCDraggableCard-Master */ = {
 			isa = PBXGroup;
 			children = (
+				971D3F4624346414002FC3E2 /* TwoSidedView */,
 				C55A22761DE7DDB500446E06 /* Class */,
 				C55C9F571D2CDBA90014447A /* Resources */,
 				C547641C1D2CA18500736B09 /* CCDraggableCard */,
@@ -200,13 +213,13 @@
 			children = (
 				C55A22771DE7DDB500446E06 /* CustomCardView.h */,
 				C55A22781DE7DDB500446E06 /* CustomCardView.m */,
-				C57B7F911E02366D00372A07 /* XibViewController.h */,
-				C57B7F921E02366D00372A07 /* XibViewController.m */,
-				C57B7F931E02366D00372A07 /* XibViewController.xib */,
 				C55A227D1DE7DEC800446E06 /* MainViewController.h */,
 				C55A227E1DE7DEC800446E06 /* MainViewController.m */,
 				C55A22801DE7E11000446E06 /* CodeViewController.h */,
 				C55A22811DE7E11000446E06 /* CodeViewController.m */,
+				C57B7F911E02366D00372A07 /* XibViewController.h */,
+				C57B7F921E02366D00372A07 /* XibViewController.m */,
+				C57B7F931E02366D00372A07 /* XibViewController.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -297,7 +310,7 @@
 				TargetAttributes = {
 					C54763E51D2CA13100736B09 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = X4U9VCM9CZ;
+						DevelopmentTeam = 6AS4N82Q9E;
 						ProvisioningStyle = Automatic;
 					};
 					C54763FE1D2CA13100736B09 = {
@@ -315,6 +328,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -383,6 +397,7 @@
 				C55A227B1DE7DDB500446E06 /* CustomCardView.m in Sources */,
 				C55C9F701D2CDE910014447A /* CCDraggableCardView.m in Sources */,
 				C57B7F941E02366D00372A07 /* XibViewController.m in Sources */,
+				971D3F4924346414002FC3E2 /* TwoSidedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,11 +546,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = X4U9VCM9CZ;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = "CCDraggableCard-Master/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liuzechen.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuzechen.demo123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -547,11 +562,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = X4U9VCM9CZ;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = "CCDraggableCard-Master/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liuzechen.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuzechen.demo123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

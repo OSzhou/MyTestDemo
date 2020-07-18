@@ -13,7 +13,6 @@
 
 @class CCDraggableContainer;
 
-
 /**
  Delegate
  */

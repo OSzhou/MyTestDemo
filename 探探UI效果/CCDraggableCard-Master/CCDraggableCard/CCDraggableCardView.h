@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "CCDraggableConfig.h"
+#import "TwoSidedView.h"
 
 @interface CCDraggableCardView : UIView
 
 @property (nonatomic) CGAffineTransform originalTransform;
+
+@property (nonatomic, strong) TwoSidedView *twoSidedView;
 
 - (void)cc_layoutSubviews;
 

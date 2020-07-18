@@ -66,7 +66,7 @@
 //    [self justTwoCornerRadius];
 //    [self labelTest];
 //    [self runtimeTest];
-//    [self circleImageTest];
+    [self circleImageTest];
 //    FMTestLabel *testL = [[FMTestLabel alloc] initWithFrame:CGRectMake(10, 10, 50, 20)];
 //    [self.view addSubview:testL];
 }
@@ -87,7 +87,8 @@
     [arr addObject:@"0"];
     [arr addObject:@"1"];
     [arr addObject:@"2"];
-    [arr insertObject:@"3" atIndex:2];
+    // index == arr count 时相当于 addObject:
+    [arr insertObject:@"3" atIndex:3];
     NSLog(@" --- %@ --- %zd", arr[3], arr.count);
     UIImage *image = [UIImage imageWithClipImage:[UIImage imageNamed:@"阿狸头像"] borderWidth:0 borderColor:nil];
     self.circleImage.image = image;

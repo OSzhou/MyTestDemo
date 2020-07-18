@@ -40,6 +40,17 @@
 		7603213920A4594F00D684C1 /* JPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603213820A4594F00D684C1 /* JPScrollView.m */; };
 		76B7AB0320A9315800D02FA2 /* FMLeftToRightCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0220A9315800D02FA2 /* FMLeftToRightCoverTransition.m */; };
 		76B7AB0620A934D300D02FA2 /* FMLeftCoverPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B7AB0520A934D300D02FA2 /* FMLeftCoverPushViewController.m */; };
+		97F21A0F21D0AEC600BDE40A /* TUPopInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F21A0E21D0AEC600BDE40A /* TUPopInteractiveTransition.m */; };
+		97F21A1221D0BA9300BDE40A /* FMPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F21A1121D0BA9300BDE40A /* FMPhotoBrowserViewController.m */; };
+		97F21A1521D0BAE000BDE40A /* FMPhotoPreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F21A1421D0BAE000BDE40A /* FMPhotoPreViewController.m */; };
+		97F21A1821D0BD4500BDE40A /* TUPopCoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F21A1721D0BD4500BDE40A /* TUPopCoverTransition.m */; };
+		97FD01FB21F098EF00A52BD6 /* FMMiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD01FA21F098EF00A52BD6 /* FMMiddleViewController.m */; };
+		97FD01FE21F09A4700A52BD6 /* FMCentralInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD01FD21F09A4700A52BD6 /* FMCentralInteractiveTransition.m */; };
+		97FD020121F09A9100A52BD6 /* FMLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD020021F09A9100A52BD6 /* FMLeftViewController.m */; };
+		97FD020421F09A9D00A52BD6 /* FMRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD020321F09A9D00A52BD6 /* FMRightViewController.m */; };
+		97FD020721F17C3200A52BD6 /* FMLToRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD020621F17C3200A52BD6 /* FMLToRTransition.m */; };
+		97FD020A21F17C7700A52BD6 /* FMRToLTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD020921F17C7700A52BD6 /* FMRToLTransition.m */; };
+		97FD021A21F6D6C400A52BD6 /* FMContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FD021921F6D6C400A52BD6 /* FMContainerViewController.m */; };
 		AF25DA420C7B2CF860E7B01D /* libPods-DYHomeTransition.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4FB81F52B217890E035F0D /* libPods-DYHomeTransition.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +141,28 @@
 		76B7AB0220A9315800D02FA2 /* FMLeftToRightCoverTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLeftToRightCoverTransition.m; sourceTree = "<group>"; };
 		76B7AB0420A934D300D02FA2 /* FMLeftCoverPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLeftCoverPushViewController.h; sourceTree = "<group>"; };
 		76B7AB0520A934D300D02FA2 /* FMLeftCoverPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLeftCoverPushViewController.m; sourceTree = "<group>"; };
+		97F21A0D21D0AEC600BDE40A /* TUPopInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUPopInteractiveTransition.h; sourceTree = "<group>"; };
+		97F21A0E21D0AEC600BDE40A /* TUPopInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUPopInteractiveTransition.m; sourceTree = "<group>"; };
+		97F21A1021D0BA9300BDE40A /* FMPhotoBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPhotoBrowserViewController.h; sourceTree = "<group>"; };
+		97F21A1121D0BA9300BDE40A /* FMPhotoBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		97F21A1321D0BAE000BDE40A /* FMPhotoPreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPhotoPreViewController.h; sourceTree = "<group>"; };
+		97F21A1421D0BAE000BDE40A /* FMPhotoPreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPhotoPreViewController.m; sourceTree = "<group>"; };
+		97F21A1621D0BD4500BDE40A /* TUPopCoverTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUPopCoverTransition.h; sourceTree = "<group>"; };
+		97F21A1721D0BD4500BDE40A /* TUPopCoverTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUPopCoverTransition.m; sourceTree = "<group>"; };
+		97FD01F921F098EF00A52BD6 /* FMMiddleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMMiddleViewController.h; sourceTree = "<group>"; };
+		97FD01FA21F098EF00A52BD6 /* FMMiddleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMMiddleViewController.m; sourceTree = "<group>"; };
+		97FD01FC21F09A4700A52BD6 /* FMCentralInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCentralInteractiveTransition.h; sourceTree = "<group>"; };
+		97FD01FD21F09A4700A52BD6 /* FMCentralInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCentralInteractiveTransition.m; sourceTree = "<group>"; };
+		97FD01FF21F09A9100A52BD6 /* FMLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLeftViewController.h; sourceTree = "<group>"; };
+		97FD020021F09A9100A52BD6 /* FMLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLeftViewController.m; sourceTree = "<group>"; };
+		97FD020221F09A9D00A52BD6 /* FMRightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRightViewController.h; sourceTree = "<group>"; };
+		97FD020321F09A9D00A52BD6 /* FMRightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRightViewController.m; sourceTree = "<group>"; };
+		97FD020521F17C3200A52BD6 /* FMLToRTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLToRTransition.h; sourceTree = "<group>"; };
+		97FD020621F17C3200A52BD6 /* FMLToRTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLToRTransition.m; sourceTree = "<group>"; };
+		97FD020821F17C7700A52BD6 /* FMRToLTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRToLTransition.h; sourceTree = "<group>"; };
+		97FD020921F17C7700A52BD6 /* FMRToLTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRToLTransition.m; sourceTree = "<group>"; };
+		97FD021821F6D6C400A52BD6 /* FMContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMContainerViewController.h; sourceTree = "<group>"; };
+		97FD021921F6D6C400A52BD6 /* FMContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMContainerViewController.m; sourceTree = "<group>"; };
 		F18E68124C6B03632DBAA314 /* Pods-DYHomeTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYHomeTransition.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYHomeTransition/Pods-DYHomeTransition.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +217,8 @@
 		760320B920A2E4D500D684C1 /* DYHomeTransition */ = {
 			isa = PBXGroup;
 			children = (
+				97FD01F821F0987900A52BD6 /* SnapchatHomePage */,
+				97F21A0C21D0AE4800BDE40A /* PhotoBrowserPopAnimation */,
 				7603213020A3F8EC00D684C1 /* JPNacController */,
 				760320EE20A2F32800D684C1 /* PageCoverController */,
 				760320BA20A2E4D500D684C1 /* AppDelegate.h */,
@@ -320,6 +355,42 @@
 				6A4FB81F52B217890E035F0D /* libPods-DYHomeTransition.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97F21A0C21D0AE4800BDE40A /* PhotoBrowserPopAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				97F21A0D21D0AEC600BDE40A /* TUPopInteractiveTransition.h */,
+				97F21A0E21D0AEC600BDE40A /* TUPopInteractiveTransition.m */,
+				97F21A1021D0BA9300BDE40A /* FMPhotoBrowserViewController.h */,
+				97F21A1121D0BA9300BDE40A /* FMPhotoBrowserViewController.m */,
+				97F21A1321D0BAE000BDE40A /* FMPhotoPreViewController.h */,
+				97F21A1421D0BAE000BDE40A /* FMPhotoPreViewController.m */,
+				97F21A1621D0BD4500BDE40A /* TUPopCoverTransition.h */,
+				97F21A1721D0BD4500BDE40A /* TUPopCoverTransition.m */,
+			);
+			path = PhotoBrowserPopAnimation;
+			sourceTree = "<group>";
+		};
+		97FD01F821F0987900A52BD6 /* SnapchatHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				97FD01F921F098EF00A52BD6 /* FMMiddleViewController.h */,
+				97FD01FA21F098EF00A52BD6 /* FMMiddleViewController.m */,
+				97FD01FC21F09A4700A52BD6 /* FMCentralInteractiveTransition.h */,
+				97FD01FD21F09A4700A52BD6 /* FMCentralInteractiveTransition.m */,
+				97FD020521F17C3200A52BD6 /* FMLToRTransition.h */,
+				97FD020621F17C3200A52BD6 /* FMLToRTransition.m */,
+				97FD01FF21F09A9100A52BD6 /* FMLeftViewController.h */,
+				97FD020021F09A9100A52BD6 /* FMLeftViewController.m */,
+				97FD020821F17C7700A52BD6 /* FMRToLTransition.h */,
+				97FD020921F17C7700A52BD6 /* FMRToLTransition.m */,
+				97FD020221F09A9D00A52BD6 /* FMRightViewController.h */,
+				97FD020321F09A9D00A52BD6 /* FMRightViewController.m */,
+				97FD021821F6D6C400A52BD6 /* FMContainerViewController.h */,
+				97FD021921F6D6C400A52BD6 /* FMContainerViewController.m */,
+			);
+			path = SnapchatHomePage;
 			sourceTree = "<group>";
 		};
 		D2E8120397DEAF994D0F2302 /* Pods */ = {
@@ -509,7 +580,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F21A1521D0BAE000BDE40A /* FMPhotoPreViewController.m in Sources */,
 				7603213620A3FAD000D684C1 /* JPOneViewController.m in Sources */,
+				97FD020421F09A9D00A52BD6 /* FMRightViewController.m in Sources */,
 				7603212220A2F42F00D684C1 /* MASViewConstraint.m in Sources */,
 				760320FA20A2F36000D684C1 /* XWInteractiveTransition.m in Sources */,
 				7603212120A2F42F00D684C1 /* MASViewAttribute.m in Sources */,
@@ -523,16 +596,25 @@
 				7603212520A2F42F00D684C1 /* View+MASAdditions.m in Sources */,
 				7603212020A2F42F00D684C1 /* MASLayoutConstraint.m in Sources */,
 				7603212620A2F42F00D684C1 /* ViewController+MASAdditions.m in Sources */,
+				97FD020121F09A9100A52BD6 /* FMLeftViewController.m in Sources */,
 				7603211E20A2F42F00D684C1 /* MASConstraint.m in Sources */,
 				76B7AB0320A9315800D02FA2 /* FMLeftToRightCoverTransition.m in Sources */,
+				97FD021A21F6D6C400A52BD6 /* FMContainerViewController.m in Sources */,
 				7603210120A2F3EE00D684C1 /* UIView+anchorPoint.m in Sources */,
 				760320F620A2F32900D684C1 /* XWPageCoverPushController.m in Sources */,
 				7603212320A2F42F00D684C1 /* NSArray+MASAdditions.m in Sources */,
+				97F21A0F21D0AEC600BDE40A /* TUPopInteractiveTransition.m in Sources */,
 				7603213320A3F95100D684C1 /* JPHomeViewController.m in Sources */,
 				7603212420A2F42F00D684C1 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				7603210020A2F3EE00D684C1 /* UIView+ FrameChange.m in Sources */,
 				760320CA20A2E4D500D684C1 /* main.m in Sources */,
 				760320BC20A2E4D500D684C1 /* AppDelegate.m in Sources */,
+				97FD020A21F17C7700A52BD6 /* FMRToLTransition.m in Sources */,
+				97FD01FB21F098EF00A52BD6 /* FMMiddleViewController.m in Sources */,
+				97FD020721F17C3200A52BD6 /* FMLToRTransition.m in Sources */,
+				97F21A1221D0BA9300BDE40A /* FMPhotoBrowserViewController.m in Sources */,
+				97FD01FE21F09A4700A52BD6 /* FMCentralInteractiveTransition.m in Sources */,
+				97F21A1821D0BD4500BDE40A /* TUPopCoverTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,7 +779,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = DYHomeTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.52cx.DYHomeTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,7 +795,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = DYHomeTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.52cx.DYHomeTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -34,7 +34,7 @@
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.top.equalTo(self.view.mas_top).offset(74);
     }];
-    _interactiveTransitionPush = [XWInteractiveTransition interactiveTransitionWithTransitionType:XWInteractiveTransitionTypePush GestureDirection:XWInteractiveTransitionGestureDirectionLeftAndRight];
+    _interactiveTransitionPush = [XWInteractiveTransition interactiveTransitionWithTransitionType:XWInteractiveTransitionTypePush GestureDirection:XWInteractiveTransitionGestureDirectionDown];
     typeof(self)weakSelf = self;
 //    _interactiveTransitionPush.pushConifg = ^(){
 //        [weakSelf push];
@@ -58,6 +58,7 @@
 }
 
 - (void)push{
+    
     XWPageCoverPushController *pushVC = [XWPageCoverPushController new];
     self.navigationController.delegate = pushVC;
     pushVC.delegate = self;

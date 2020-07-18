@@ -9,12 +9,15 @@
 #import "ViewController.h"
 #import "UIButton+TestBtn.h"
 #import "Dog.h"
+#import "FMProxy_nsobject.h"
+#import "FMProxy.h"
 
 typedef void (^testBlock)(void);
 @interface ViewController ()
 
 @property (nonatomic, strong) UIView *v;
 @property (nonatomic, strong) CALayer *l;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -47,7 +50,75 @@ typedef void (^testBlock)(void);
 //    [self arrCountTest];
 //    [self testBlock];
 //    [self viewTagAndBoundTest];
-    [self superClassTest];
+//    [self superClassTest];
+    [self timerCircle];
+}
+
+- (void)timerCircle {
+    // (1
+//    FMProxy_nsobject *proxy = [FMProxy_nsobject proxyWithTarget:self];
+    
+    //(2
+    FMProxy *proxy = [FMProxy proxyWithTarget:self];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:proxy selector:@selector(msgSend) userInfo:nil repeats:YES];
+}
+
+- (void)msgSend {
+    NSLog(@"timer circle --- test");
+}
+
+- (void)dealloc {
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+// 输出4，1。主线程被while循环阻塞，所以任务2无法执行，任务3要等任务2执行完毕才能执行，而任务2无法执行，所以任务3无法执行
+- (void)test2 {
+    
+    dispatch_async(dispatch_get_global_queue(0,0),^{
+        
+        NSLog(@"1");// 任务1
+        
+        dispatch_sync(dispatch_get_main_queue(),^{
+            
+            NSLog(@"2");// 任务2
+            
+        });
+        
+        NSLog(@"3");// 任务3
+        
+    });
+    NSLog(@"4");// 任务4
+    while(1){
+        //        NSLog(@"while --- circle");
+    }
+    NSLog(@"5");// 任务5
+    
+}
+
+// 死锁 - ⭐️只有同一个串行队列的情况下才可能出现死锁⭐️
+- (void)test1 {
+    
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue",DISPATCH_QUEUE_SERIAL);
+    
+    NSLog(@"1");// 任务1
+    
+    dispatch_async(queue,^{
+        
+        NSLog(@"2");// 任务2
+        
+        dispatch_sync(queue,^{
+            
+            NSLog(@"3");// 任务3
+            
+        });
+        
+        NSLog(@"4");// 任务4
+        
+    });
+    
+    NSLog(@"5");// 任务5
+    
 }
 
 - (void)superClassTest {
@@ -184,5 +255,53 @@ int i = 0;
     maxSum = maxSumSoFar;
     return subArr;
 }
+
+/*
+ 1 : 1
+ 2 : 1
+ 3 : 1
+ 4 : 1                                             - 1
+ 5 : 1                                - 1          - 1
+ 6 : 1                   - 1         - 1          - 1
+ 7 : 1           - 1     - 1         - 1          - 1 - 1
+ 8 : 1       - 1 - 1     - 1         - 1 - 1       - 1 - 1 - 1
+ 9 : 1 - 1 - 1 - 1     - 1 - 1    - 1 - 1 - 1  - 1 - 1 - 1 - 1
+ */
+
+// 小兔子繁殖问题 - 三个月 繁殖一次
+// 问题描述：
+// 一对小兔兔，出生后第3个月起每个月都生一对兔子，等小兔子长到第3个月后每个月又可以生一对兔子，
+// 如果兔子都长生不死，请问每个月的兔子总数是多少？(3 -> 2)
+- (void)testPro {
+    [self sumFunc:90];
+}
+static NSInteger sum = 0;
+- (void)sumFunc:(NSInteger)n {
+    if ( n <= 3) {// 处理前三个月
+        sum =  1;
+        return;
+    }
+    // 第一只新出生的前三个月不会 繁殖 所以 - 3
+    [self recursiveWith:n - 3];
+}
+// 递归
+- (NSInteger)recursiveWith:(NSInteger)months {
+    if (months < 0) {
+        return sum;
+    }
+    NSInteger new = 0;
+    if ( months <= 3) {// 小于三个月的
+        new =  1;
+    } else {// 已成年的 直接（父子关系） 繁殖数量
+        new =  months - 3 + 1;
+    }
+    if (months >= 0) {// 以为是递减，所以减到等于0时才是完全递归完毕
+        sum += new;
+        [self recursiveWith:months - 1];
+    }
+    return -1;
+}
+
+
 
 @end

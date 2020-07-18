@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97112C8E22892B400084DCC4 /* FMProxy_nsobject.m in Sources */ = {isa = PBXBuildFile; fileRef = 97112C8D22892B400084DCC4 /* FMProxy_nsobject.m */; };
+		97112C9122892E190084DCC4 /* FMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97112C9022892E190084DCC4 /* FMProxy.m */; };
 		E536AF2F206890C300FCAD31 /* UIButton+TestBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E536AF2E206890C300FCAD31 /* UIButton+TestBtn.m */; };
 		E56B9C0120576E84004DB7F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C0020576E84004DB7F5 /* AppDelegate.m */; };
 		E56B9C0420576E84004DB7F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56B9C0320576E84004DB7F5 /* ViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97112C8C22892B400084DCC4 /* FMProxy_nsobject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMProxy_nsobject.h; sourceTree = "<group>"; };
+		97112C8D22892B400084DCC4 /* FMProxy_nsobject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMProxy_nsobject.m; sourceTree = "<group>"; };
+		97112C8F22892E190084DCC4 /* FMProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMProxy.h; sourceTree = "<group>"; };
+		97112C9022892E190084DCC4 /* FMProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMProxy.m; sourceTree = "<group>"; };
 		E536AF2D206890C300FCAD31 /* UIButton+TestBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+TestBtn.h"; sourceTree = "<group>"; };
 		E536AF2E206890C300FCAD31 /* UIButton+TestBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TestBtn.m"; sourceTree = "<group>"; };
 		E56B9BFC20576E84004DB7F5 /* 15_interviewQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 15_interviewQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +97,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97112C8B2289290C0084DCC4 /* TimerCircle */ = {
+			isa = PBXGroup;
+			children = (
+				97112C8C22892B400084DCC4 /* FMProxy_nsobject.h */,
+				97112C8D22892B400084DCC4 /* FMProxy_nsobject.m */,
+				97112C8F22892E190084DCC4 /* FMProxy.h */,
+				97112C9022892E190084DCC4 /* FMProxy.m */,
+			);
+			path = TimerCircle;
+			sourceTree = "<group>";
+		};
 		E56B9BF320576E83004DB7F5 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +131,7 @@
 		E56B9BFE20576E84004DB7F5 /* 15_interviewQ */ = {
 			isa = PBXGroup;
 			children = (
+				97112C8B2289290C0084DCC4 /* TimerCircle */,
 				FA5B7E9B21338D0B00B5715D /* SuperClassTest */,
 				E56B9BFF20576E84004DB7F5 /* AppDelegate.h */,
 				E56B9C0020576E84004DB7F5 /* AppDelegate.m */,
@@ -296,12 +314,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5B7E9E21338D1F00B5715D /* Person.m in Sources */,
+				97112C8E22892B400084DCC4 /* FMProxy_nsobject.m in Sources */,
 				E56B9C0420576E84004DB7F5 /* ViewController.m in Sources */,
 				E536AF2F206890C300FCAD31 /* UIButton+TestBtn.m in Sources */,
 				E56B9C0F20576E84004DB7F5 /* main.m in Sources */,
 				FA5B7EA121338D2C00B5715D /* Dog.m in Sources */,
 				E56B9C0120576E84004DB7F5 /* AppDelegate.m in Sources */,
 				E56B9C3520590A12004DB7F5 /* ImageCacheViewController.m in Sources */,
+				97112C9122892E190084DCC4 /* FMProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = 15_interviewQ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senyint.-5-interviewQ";
@@ -478,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = 15_interviewQ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senyint.-5-interviewQ";

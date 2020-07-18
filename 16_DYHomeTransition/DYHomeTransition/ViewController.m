@@ -14,6 +14,8 @@
 #import <JPNavigationControllerKit.h>
 #import "JPHomeViewController.h"
 #import "JPScrollView.h"
+#import "FMPhotoBrowserViewController.h"
+#import "FMMiddleViewController.h"
 
 @interface ViewController ()<UIScrollViewDelegate, JPNavigationControllerDelegate, UIGestureRecognizerDelegate>
 
@@ -36,9 +38,18 @@
 }
 
 - (void)pushToNextPage {
-    XWPageCoverController *xv = [[XWPageCoverController alloc] init];
-    xv.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:xv animated:YES];
+    FMMiddleViewController *fv = [[FMMiddleViewController alloc] init];
+//    fv.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:fv animated:YES];
+    // 抖音
+//    XWPageCoverController *xv = [[XWPageCoverController alloc] init];
+//    xv.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:xv animated:YES];
+    
+//    FMPhotoBrowserViewController *fv = [[FMPhotoBrowserViewController alloc] init];
+//    fv.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:fv animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

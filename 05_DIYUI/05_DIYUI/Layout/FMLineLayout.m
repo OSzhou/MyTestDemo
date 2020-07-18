@@ -33,11 +33,14 @@
 }
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
+    
     CGRect rect;
     rect.origin.y = 0;
     rect.origin.x = proposedContentOffset.x;
     rect.size = self.collectionView.frame.size;
+    // 获取rect这个范围内，可视的item有几个
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
+//    NSLog(@"111 --- %ld proposedContentOffset.x --- %f", (long)array.count, proposedContentOffset.x);
     CGFloat centerX = proposedContentOffset.x + self.collectionView.frame.size.width * 0.5;
     CGFloat minRelative = MAXFLOAT;
     for (UICollectionViewLayoutAttributes *attrs in array) {
@@ -45,6 +48,7 @@
             minRelative = attrs.center.x - centerX;
         }
     }
+//    NSLog(@"minRelative --- %f", minRelative);
     proposedContentOffset.x += minRelative;
     return proposedContentOffset;
 }

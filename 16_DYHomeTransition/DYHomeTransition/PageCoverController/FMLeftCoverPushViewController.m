@@ -52,14 +52,17 @@
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
     _operation = operation;
     //分pop和push两种情况分别返回动画过渡代理相应不同的动画操作
+    NSLog(@"111 ---");
     return [FMLeftToRightCoverTransition transitionWithType:operation == UINavigationControllerOperationPush ? XWPageCoverTransitionTypePush : XWPageCoverTransitionTypePop];
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
     if (_operation == UINavigationControllerOperationPush) {
         XWInteractiveTransition *interactiveTransitionPush = [_delegate fm_interactiveTransitionForPush];
+        NSLog(@"222 ---");
         return interactiveTransitionPush.interation ? interactiveTransitionPush : nil;
     }else{
+        NSLog(@"333 ---");
         return _interactiveTransitionPop.interation ? _interactiveTransitionPop : nil;
     }
 }

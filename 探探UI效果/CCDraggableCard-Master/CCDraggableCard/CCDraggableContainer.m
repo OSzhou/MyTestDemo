@@ -37,15 +37,52 @@
 
 // 每次执行reloadData, UI、数据进行刷新
 - (void)reloadData {
+    
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self defaultConfig];
     [self installNextItem];
-    [self resetVisibleCards];
+    [self firstInAnimation];
+    [self resetVisibleCards:nil];
 }
 
-//- (void)layoutSubviews {
-//    [self reloadData];
-//}
+- (void)firstInAnimation {
+    CGPoint cardCenter = CGPointMake(CCWidth * 1.5, self.cardCenter.y);
+    __block int j = 0;
+    for (int i = 0; i < self.currentCards.count; i ++) {
+        CCDraggableCardView *cardView = self.currentCards[i];
+        
+        cardView.transform = CGAffineTransformIdentity;//transform还原到初始化状态
+        CGRect frame = self.firstCardFrame;
+        frame.origin.y = frame.origin.y + kCardEdage * i;//Y递加
+        cardView.frame = frame;
+        CGAffineTransform translate = CGAffineTransformTranslate(CGAffineTransformIdentity, 20, 0);
+        CGAffineTransform rotate = CGAffineTransformRotate(translate, M_PI_4 / 4);
+        //X方向缩小
+        cardView.transform = rotate;//CGAffineTransformScale(rotate, kSecondCardScale, 1);
+        cardView.center = cardCenter;
+        
+        [UIView animateWithDuration:0.5 * (self.currentCards.count - i) animations:^{
+            CGAffineTransform translate = CGAffineTransformTranslate(cardView.transform, -20, 0);
+            cardView.transform = CGAffineTransformRotate(translate, -M_PI_4 / 4);
+            cardView.center = self.center;
+            cardView.frame = frame;
+            
+        } completion:^(BOOL finished) {
+            j += 1;
+            if (finished && j == self.currentCards.count) {
+
+                CCDraggableCardView *cardView = self.currentCards.firstObject;
+                if (cardView) {
+                    [cardView.twoSidedView turnWithDuration:1 completion:^{
+                        NSLog(@"翻转完成");
+                    }];
+                }
+            }
+
+        }];
+    }
+
+}
 
 - (void)defaultConfig {
     self.currentCards = [NSMutableArray array];
@@ -109,7 +146,12 @@
                 
                 [self addSubview:cardView];
                 [self sendSubviewToBack:cardView]; // addSubview后添加sendSubviewToBack, 使Card的显示顺序倒置
-
+                // 解决新加card时整体闪动
+                CGRect frame = self.firstCardFrame;
+                frame.origin.y = frame.origin.y + kCardEdage * 2;
+                cardView.frame = frame;
+                cardView.transform = CGAffineTransformScale(CGAffineTransformIdentity, kTherdCardScale, 1);
+                
                 // 添加新元素
                 [self.currentCards addObject:cardView];
                 
@@ -222,7 +264,7 @@
                 self.loadedIndex = lastView.tag;
             }
             [self setMoving:NO];
-            [self resetVisibleCards];
+            [self resetVisibleCards:nil];
         }
     } else {
         
@@ -243,7 +285,7 @@
                          }];
         [self.currentCards removeObject:cardView];
         [self setMoving:NO];
-        [self resetVisibleCards];
+        [self resetVisibleCards:nil];
     }
 }
 
@@ -283,13 +325,21 @@
             [self.currentCards removeObject:firstView];
             
             [self installNextItem];
-            [self resetVisibleCards];
+            [self resetVisibleCards:^{
+                // 翻转动画
+                 CCDraggableCardView *cardView = self.currentCards.firstObject;
+                 if (cardView) {
+                     [cardView.twoSidedView turnWithDuration:1 completion:^{
+                         NSLog(@"翻转完成");
+                     }];
+                 }
+            }];
         }];
     }
 }
 
 
-- (void)resetVisibleCards {
+- (void)resetVisibleCards:(void (^)(void))callBack {
     
     __weak CCDraggableContainer *weakself = self;
     //弹簧效果
@@ -308,6 +358,10 @@
                          ...写在originalLayout里会出现CardView里面的子视图出现动画效果
                          用户移除最后一个CardView除非的方法
                          */
+                         
+                         if (callBack) {
+                             callBack();
+                         }
                          
                          if (weakself.delegate && [weakself.delegate respondsToSelector:@selector(draggableContainer:finishedDraggableLastCard:)]) {
                              if (weakself.currentCards.count == 0) {
@@ -369,6 +423,7 @@
             case 0: {
                 cardView.frame = frame;
                 NSLog(@"第一个Card的Y：%f", CGRectGetMinY(cardView.frame));
+                
             }
                 break;
             case 1: {
