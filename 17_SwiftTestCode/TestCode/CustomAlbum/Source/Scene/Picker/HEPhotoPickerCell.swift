@@ -30,8 +30,8 @@ class HEPhotoPickerCell: UICollectionViewCell {
     /// 选择器配置
     public var pickerOptions : HEPickerOptions!{
         didSet{
-//            checkBtn.setImage(pickerOptions.selectedImage, for: .selected)
-//            checkBtn.setImage(pickerOptions.unselectedImage, for: .normal)
+            //            checkBtn.setImage(pickerOptions.selectedImage, for: .selected)
+            //            checkBtn.setImage(pickerOptions.unselectedImage, for: .normal)
             normalIcon.image = pickerOptions.unselectedImage
         }
     }
@@ -44,11 +44,12 @@ class HEPhotoPickerCell: UICollectionViewCell {
     var checkBtnnClickClosure : HEPhotoPickerCellClosure?
     var topViewClickBlock : HEPhotoPickerCellAlter?
     var representedAssetIdentifier : String!
+    var imageRequestID: PHImageRequestID = 0
     var model : HEPhotoAsset!{
         didSet{
             imageView.image = UIImage()
-//            checkBtn.isHidden =  !model.isEnableSelected
-//            checkBtn.isSelected =  model.isSelected
+            //            checkBtn.isHidden =  !model.isEnableSelected
+            //            checkBtn.isSelected =  model.isSelected
             
             selectedContainer.isHidden = !model.isEnableSelected
             selectButton.isSelected = model.isSelected
@@ -60,18 +61,37 @@ class HEPhotoPickerCell: UICollectionViewCell {
             let scale = UIScreen.main.scale / 2
             self.representedAssetIdentifier = model.asset.localIdentifier
             
-            let   thumbnailSize = CGSize(width: self.bounds.size.width * scale, height: self.bounds.size.height  * scale )
+            let thumbnailSize = CGSize(width: self.bounds.size.width * scale, height: self.bounds.size.height  * scale)
             imageView.image = nil
-            HETool.heRequestImage(for: model.asset,
-                                                  targetSize:thumbnailSize,
-                                                  contentMode: .aspectFill)
-            { (image, nil) in
+//            HETool.heRequestImage(for: model.asset,
+//                                  targetSize:thumbnailSize,
+//                                  contentMode: .aspectFill)
+//            { (image, nil) in
+//                DispatchQueue.main.async {
+//                    if self.representedAssetIdentifier == self.model.asset.localIdentifier{
+//                        self.imageView.image = image
+//                    }
+//                }
+//            }
+            let cModel = model.asset
+            let imageRequestID = HETool.wb_GetPostPhotoWithAsset(cModel, targetSize: thumbnailSize) { (image, _, flag) in
                 DispatchQueue.main.async {
-                    if self.representedAssetIdentifier == self.model.asset.localIdentifier{
+                    if self.representedAssetIdentifier == cModel.localIdentifier {
                         self.imageView.image = image
+                    } else {
+                        PHImageManager.default().cancelImageRequest(self.imageRequestID)
+                    }
+                    if !flag {
+                        self.imageRequestID = 0
                     }
                 }
             }
+            
+            if imageRequestID != 0, self.imageRequestID != 0, imageRequestID != self.imageRequestID {
+                PHImageManager.default().cancelImageRequest(self.imageRequestID)
+            }
+            
+            self.imageRequestID = imageRequestID
             
             if model.asset.mediaType == .video{
                 durationBackView.isHidden = false
@@ -82,11 +102,11 @@ class HEPhotoPickerCell: UICollectionViewCell {
                 durationLab.text = time
                 self.layoutSubviews()
             }else{
-                 durationBackView.isHidden = true
+                durationBackView.isHidden = true
             }
         }
     }
-   
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.gray
@@ -95,9 +115,9 @@ class HEPhotoPickerCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         contentView.addSubview(imageView)
         
-//        checkBtn = UIButton.init(type: .custom)
-//        checkBtn.addTarget(self, action: #selector(selectedBtnClick(_:)), for: .touchUpInside)
-//        contentView.addSubview(checkBtn)
+        //        checkBtn = UIButton.init(type: .custom)
+        //        checkBtn.addTarget(self, action: #selector(selectedBtnClick(_:)), for: .touchUpInside)
+        //        contentView.addSubview(checkBtn)
         
         contentView.addSubview(selectedContainer)
         selectedContainer.addSubview(normalIcon)
@@ -127,9 +147,9 @@ class HEPhotoPickerCell: UICollectionViewCell {
         durationLab = UILabel()
         durationLab.font = UIFont.systemFont(ofSize: 10)
         durationLab.textColor = UIColor.white
-    
+        
         durationBackView.addSubview(durationLab)
-       
+        
     }
     
     @objc func topViewClick() {
@@ -141,7 +161,7 @@ class HEPhotoPickerCell: UICollectionViewCell {
         super.layoutSubviews()
         imageView.frame = self.bounds
         let btnW : CGFloat = 25
-//        checkBtn.frame = CGRect.init(x: self.bounds.width - 3 - btnW, y: 3, width: btnW, height: btnW)
+        //        checkBtn.frame = CGRect.init(x: self.bounds.width - 3 - btnW, y: 3, width: btnW, height: btnW)
         selectedContainer.frame = CGRect(x: self.bounds.width - 50, y: 0, width: 50, height: 50)
         normalIcon.frame = CGRect(x: selectedContainer.frame.width - 3 - btnW, y: 3, width: btnW, height: btnW)
         selectedNum.frame = normalIcon.frame

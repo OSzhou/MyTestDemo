@@ -455,7 +455,19 @@ public class HEPhotoPickerViewController: HEBaseViewController {
         fetchAlbumsListModels(albums: smartAlbums)
     }
     private func fetchPhotoModels(photos:PHFetchResult<PHAsset>){
-        models =  [HEPhotoAsset]()
+       
+        var models =  [HEPhotoAsset]()
+        
+        photos.enumerateObjects {[weak self] (asset, index, ff) in
+            let model = HEPhotoAsset.init(asset: asset)
+            self?.checkIsSingle(model: model)
+            model.index = index
+            models.append(model)
+        }
+        self.models = models
+        self.collectionView.reloadData()
+        
+        /*models =  [HEPhotoAsset]()
         
         let queue = DispatchQueue.global()
         let group = DispatchGroup()
@@ -463,12 +475,12 @@ public class HEPhotoPickerViewController: HEBaseViewController {
         photos.enumerateObjects { [weak self] (asset, index, ff) in
             group.enter()
             let item = DispatchWorkItem {
-                HETool.heRequestImageData(asset) { (_, flag) in
+                HETool.wb_RequestImageData(asset, options: nil) { (imageData, flag) in
                     if !flag {
                         let model = HEPhotoAsset.init(asset: asset)
                         self?.checkIsSingle(model: model)
                         model.index = index
-                        self?.models.append(model)
+                        models.append(model)
                     }
                     group.leave()
                 }
@@ -479,7 +491,7 @@ public class HEPhotoPickerViewController: HEBaseViewController {
         
         group.notify(queue: DispatchQueue.main) {
             self.collectionView.reloadData()
-        }
+        }*/
     }
     private func fetchAlbumsListModels(albums:PHFetchResult<PHAssetCollection>){
         albumModels = [HEAlbum]()
