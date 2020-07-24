@@ -11,6 +11,6 @@ import EventKit
 
 class GGRminderManager: NSObject {
     static let shared: GGRminderManager = GGRminderManager()
-    let eventDB = EKEventStore()
+    let eventStore = EKEventStore()
     
 }
