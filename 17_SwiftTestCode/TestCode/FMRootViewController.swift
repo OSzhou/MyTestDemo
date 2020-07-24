@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 // MARK: 屏幕高度
 let screenHeight: CGFloat = UIScreen.main.bounds.height
@@ -14,6 +15,8 @@ let screenHeight: CGFloat = UIScreen.main.bounds.height
 let screenWidth: CGFloat = UIScreen.main.bounds.width
 
 class FMRootViewController: UIViewController {
+    
+    let reminderManager = GGRminderManager()
     
     var selectedModel = [HEPhotoAsset]()
     var visibleImages = [UIImage](){
@@ -39,6 +42,7 @@ class FMRootViewController: UIViewController {
         view.addSubview(albumButton)
         view.addSubview(otherButton)
         view.addSubview(popButton)
+        view.addSubview(reminderButton)
     }
 
     /// MARK: --- action
@@ -91,11 +95,15 @@ class FMRootViewController: UIViewController {
                                                detail: detail,
                                                confirmTitle: confirmTitle,
                                                cancelTitle: "取消")
-        view.confirmClick = { [weak self] in
-            guard let self = self else { return }
-        }
+//        view.confirmClick = { [weak self] in
+//            guard let self = self else { return }
+//        }
         
         view.show()
+    }
+    
+    @objc private func reminderAction(_ sender: UIButton) {
+        self.navigationController?.pushViewController(FMCalendarAndReminderViewController(), animated: true)
     }
     
     /// MARK: --- lazy loading
@@ -135,6 +143,14 @@ class FMRootViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: (screenWidth - 200) / 2, y: 88 + 290, width: 200, height: 50))
         button.setTitle("弹框", for: .normal)
         button.addTarget(self, action: #selector(popAction(_:)), for: .touchUpInside)
+        button.backgroundColor = .gray
+        return button
+    }()
+    
+    lazy var reminderButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: (screenWidth - 200) / 2, y: 88 + 360, width: 200, height: 50))
+        button.setTitle("提醒", for: .normal)
+        button.addTarget(self, action: #selector(reminderAction(_:)), for: .touchUpInside)
         button.backgroundColor = .gray
         return button
     }()
