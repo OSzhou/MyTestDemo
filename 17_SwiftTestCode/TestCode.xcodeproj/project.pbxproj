@@ -61,7 +61,7 @@
 		97DC8BD324C04334005A9E16 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC8BD024C04334005A9E16 /* UIDevice.swift */; };
 		97DC8BD424C04334005A9E16 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC8BD124C04334005A9E16 /* UITableViewCell.swift */; };
 		97DC8BD624C04361005A9E16 /* UITableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC8BD524C04361005A9E16 /* UITableViewHeaderFooterView.swift */; };
-		97DC8BDD24CA99B8005A9E16 /* GGRminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC8BDC24CA99B8005A9E16 /* GGRminderManager.swift */; };
+		97DC8BDD24CA99B8005A9E16 /* GGReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC8BDC24CA99B8005A9E16 /* GGReminderManager.swift */; };
 		97DC8BDF24CAB835005A9E16 /* FMCalendarAndReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC8BDE24CAB835005A9E16 /* FMCalendarAndReminderViewController.swift */; };
 		9B71A6233C862AC390ACDE4E /* Pods_TestCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AACF44A4CB1F4400703B3E /* Pods_TestCodeTests.framework */; };
 /* End PBXBuildFile section */
@@ -150,7 +150,7 @@
 		97DC8BD024C04334005A9E16 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		97DC8BD124C04334005A9E16 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		97DC8BD524C04361005A9E16 /* UITableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterView.swift; sourceTree = "<group>"; };
-		97DC8BDC24CA99B8005A9E16 /* GGRminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGRminderManager.swift; sourceTree = "<group>"; };
+		97DC8BDC24CA99B8005A9E16 /* GGReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGReminderManager.swift; sourceTree = "<group>"; };
 		97DC8BDE24CAB835005A9E16 /* FMCalendarAndReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMCalendarAndReminderViewController.swift; sourceTree = "<group>"; };
 		F0247802C9F5D2F719E75119 /* Pods_TestCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -428,7 +428,7 @@
 		97DC8BDB24CA9997005A9E16 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
-				97DC8BDC24CA99B8005A9E16 /* GGRminderManager.swift */,
+				97DC8BDC24CA99B8005A9E16 /* GGReminderManager.swift */,
 				97DC8BDE24CAB835005A9E16 /* FMCalendarAndReminderViewController.swift */,
 			);
 			path = Reminder;
@@ -684,7 +684,7 @@
 				971B4AE424AAE93C00672331 /* WBCameraManager.swift in Sources */,
 				97D43E0524AD96E1007EB3AD /* Bundle+HE.swift in Sources */,
 				97C2A5342487561000158D9E /* AppDelegate.swift in Sources */,
-				97DC8BDD24CA99B8005A9E16 /* GGRminderManager.swift in Sources */,
+				97DC8BDD24CA99B8005A9E16 /* GGReminderManager.swift in Sources */,
 				971B4AE024A9E02B00672331 /* WBMotionManager.swift in Sources */,
 				975D2D4524A84A6800A4F697 /* FMMagnifyViewController.swift in Sources */,
 				97D43E0724AD96E1007EB3AD /* NSObject+HE.swift in Sources */,

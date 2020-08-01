@@ -9,9 +9,9 @@
 import UIKit
 import EventKit
 
-class GGRminderManager: NSObject {
+class GGReminderManager: NSObject {
     
-    static let shared: GGRminderManager = GGRminderManager()
+    static let shared: GGReminderManager = GGRminderManager()
     let eventStore = EKEventStore()
     var currentCalendar: EKCalendar?
     
