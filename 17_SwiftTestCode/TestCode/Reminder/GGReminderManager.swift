@@ -11,7 +11,7 @@ import EventKit
 
 class GGReminderManager: NSObject {
     
-    static let shared: GGReminderManager = GGRminderManager()
+    static let shared: GGReminderManager = GGReminderManager()
     let eventStore = EKEventStore()
     var currentCalendar: EKCalendar?
     
