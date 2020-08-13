@@ -14,7 +14,7 @@ import EventKit
 
 class FMCalendarAndReminderViewController: UIViewController {
     
-    let reminderManager = GGRminderManager()
+    let reminderManager = GGReminderManager()
 
     var currentCalendar: EKCalendar?
     override func viewDidLoad() {

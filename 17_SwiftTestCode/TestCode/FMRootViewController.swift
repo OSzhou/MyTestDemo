@@ -16,7 +16,7 @@ let screenWidth: CGFloat = UIScreen.main.bounds.width
 
 class FMRootViewController: UIViewController {
     
-    let reminderManager = GGRminderManager()
+    let reminderManager = GGReminderManager()
     
     var selectedModel = [HEPhotoAsset]()
     var visibleImages = [UIImage](){
