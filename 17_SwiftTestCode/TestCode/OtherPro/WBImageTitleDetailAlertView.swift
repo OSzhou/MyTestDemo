@@ -36,7 +36,9 @@ class WBImageTitleDetailAlertView: UIView {
             midLabelLayout(title, detail: detail, markView: icon, offset: 12)
             
         } else {
-            midLabelLayout(title, detail: detail, markView: contentView, offset: 30)
+            let placeholder = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth - 105, height: 1))
+            contentView.addSubview(placeholder)
+            midLabelLayout(title, detail: detail, markView: placeholder, offset: 30)
         }
         
         contentView.addSubview(confirmButton)
