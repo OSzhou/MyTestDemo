@@ -27,6 +27,10 @@
 		9722C8DC24DD6E8E00562F40 /* FMSynchronizeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9722C8DB24DD6E8E00562F40 /* FMSynchronizeDemo.swift */; };
 		9722C8DE24DD711B00562F40 /* FMConditionLockDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9722C8DD24DD711B00562F40 /* FMConditionLockDemo.swift */; };
 		FA1EB9F824DFB937007AF278 /* FMConditionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB9F724DFB937007AF278 /* FMConditionDemo.swift */; };
+		FA1FFC87257E470000CF48BE /* FMTimerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1FFC83257E470000CF48BE /* FMTimerHelper.m */; };
+		FA1FFC88257E470000CF48BE /* FMTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1FFC84257E470000CF48BE /* FMTimerProxy.m */; };
+		FA1FFC8B257E47F600CF48BE /* MJPermenantThread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1FFC89257E47F600CF48BE /* MJPermenantThread.m */; };
+		FA1FFC8E257E480700CF48BE /* MJTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1FFC8D257E480700CF48BE /* MJTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,15 @@
 		9722C8DB24DD6E8E00562F40 /* FMSynchronizeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMSynchronizeDemo.swift; sourceTree = "<group>"; };
 		9722C8DD24DD711B00562F40 /* FMConditionLockDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMConditionLockDemo.swift; sourceTree = "<group>"; };
 		FA1EB9F724DFB937007AF278 /* FMConditionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMConditionDemo.swift; sourceTree = "<group>"; };
+		FA1FFC80257E470000CF48BE /* FMTimerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTimerHelper.h; sourceTree = "<group>"; };
+		FA1FFC81257E470000CF48BE /* FMTimerProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTimerProxy.h; sourceTree = "<group>"; };
+		FA1FFC82257E470000CF48BE /* GCD_Test-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCD_Test-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA1FFC83257E470000CF48BE /* FMTimerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTimerHelper.m; sourceTree = "<group>"; };
+		FA1FFC84257E470000CF48BE /* FMTimerProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTimerProxy.m; sourceTree = "<group>"; };
+		FA1FFC89257E47F600CF48BE /* MJPermenantThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPermenantThread.m; sourceTree = "<group>"; };
+		FA1FFC8A257E47F600CF48BE /* MJPermenantThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPermenantThread.h; sourceTree = "<group>"; };
+		FA1FFC8C257E480700CF48BE /* MJTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTimer.h; sourceTree = "<group>"; };
+		FA1FFC8D257E480700CF48BE /* MJTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +166,9 @@
 		9722C8B924DAAEB300562F40 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FA1FFC7F257E470000CF48BE /* Proxy */,
+				FA1FFC85257E470000CF48BE /* Thread */,
+				FA1FFC86257E470000CF48BE /* GCDTimer */,
 				9722C8CC24DD2A0000562F40 /* LockDemo */,
 				9722C8BA24DAAED000562F40 /* FMRootViewController.swift */,
 				9722C8BC24DAB5F500562F40 /* FMQuestionsViewController.swift */,
@@ -178,6 +194,36 @@
 				9722C8DD24DD711B00562F40 /* FMConditionLockDemo.swift */,
 			);
 			path = LockDemo;
+			sourceTree = "<group>";
+		};
+		FA1FFC7F257E470000CF48BE /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				FA1FFC80257E470000CF48BE /* FMTimerHelper.h */,
+				FA1FFC81257E470000CF48BE /* FMTimerProxy.h */,
+				FA1FFC82257E470000CF48BE /* GCD_Test-Bridging-Header.h */,
+				FA1FFC83257E470000CF48BE /* FMTimerHelper.m */,
+				FA1FFC84257E470000CF48BE /* FMTimerProxy.m */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		FA1FFC85257E470000CF48BE /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				FA1FFC8A257E47F600CF48BE /* MJPermenantThread.h */,
+				FA1FFC89257E47F600CF48BE /* MJPermenantThread.m */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		FA1FFC86257E470000CF48BE /* GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				FA1FFC8C257E480700CF48BE /* MJTimer.h */,
+				FA1FFC8D257E480700CF48BE /* MJTimer.m */,
+			);
+			path = GCDTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +294,7 @@
 				TargetAttributes = {
 					9722C88524DAAE4800562F40 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1160;
 					};
 					9722C89B24DAAE4900562F40 = {
 						CreatedOnToolsVersion = 11.5;
@@ -318,11 +365,15 @@
 				9722C8D824DD4CE000562F40 /* FMMutexDemo.swift in Sources */,
 				9722C8D124DD2A0000562F40 /* FMSemaphoreDemo.swift in Sources */,
 				9722C8C924DC0B9D00562F40 /* FMBarrierViewController.swift in Sources */,
+				FA1FFC8B257E47F600CF48BE /* MJPermenantThread.m in Sources */,
+				FA1FFC87257E470000CF48BE /* FMTimerHelper.m in Sources */,
+				FA1FFC88257E470000CF48BE /* FMTimerProxy.m in Sources */,
 				9722C88A24DAAE4800562F40 /* AppDelegate.swift in Sources */,
 				9722C8D424DD2A0000562F40 /* FMBaseDemo.swift in Sources */,
 				9722C8BF24DAC3F300562F40 /* FMPrintViewController.swift in Sources */,
 				9722C8BD24DAB5F500562F40 /* FMQuestionsViewController.swift in Sources */,
 				9722C8C124DBEE0400562F40 /* FMGroupViewController.swift in Sources */,
+				FA1FFC8E257E480700CF48BE /* MJTimer.m in Sources */,
 				9722C8DE24DD711B00562F40 /* FMConditionLockDemo.swift in Sources */,
 				9722C8BB24DAAED000562F40 /* FMRootViewController.swift in Sources */,
 				FA1EB9F824DFB937007AF278 /* FMConditionDemo.swift in Sources */,
@@ -490,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = GCD_Test/Info.plist;
@@ -500,6 +552,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ufo.GCD-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCD_Test/Proxy/GCD_Test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -509,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AS4N82Q9E;
 				INFOPLIST_FILE = GCD_Test/Info.plist;
@@ -519,6 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ufo.GCD-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCD_Test/Proxy/GCD_Test-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
