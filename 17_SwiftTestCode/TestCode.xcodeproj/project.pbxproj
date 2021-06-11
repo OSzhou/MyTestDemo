@@ -257,7 +257,6 @@
 				97DC8BCE24C04334005A9E16 /* Extension */,
 				97DC8BBB24C034FA005A9E16 /* Base */,
 				97DC8BAC24BDA811005A9E16 /* OtherPro */,
-				97DC8B6624BDA7C7005A9E16 /* ThirdLib */,
 				97D43DE324AD96E0007EB3AD /* CustomAlbum */,
 				971B4AD824A8526F00672331 /* CustomCamera */,
 				9738C0132489F2F1006346B7 /* SuspensionWidget */,
@@ -378,13 +377,6 @@
 				97D43E0224AD96E1007EB3AD /* HEAlbum.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		97DC8B6624BDA7C7005A9E16 /* ThirdLib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdLib;
 			sourceTree = "<group>";
 		};
 		97DC8BAC24BDA811005A9E16 /* OtherPro */ = {
