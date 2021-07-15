@@ -1,0 +1,1 @@
+curl -H "Host: api.testing8.hetao101.com" -H "Content-Type: Application/json" -H "Accept: */*" -H "User-Agent: Rested/2009 CFNetwork/1237 Darwin/20.4.0" -H "Accept-Language: zh-cn" --data-binary "[]" --compressed "https://api.testing8.hetao101.com/parents-app/v1/app/manyTypeVideo?userId=10086"

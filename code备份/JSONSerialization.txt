@@ -1,0 +1,29 @@
+init(from JSON: [String: Any], decoder: JSONDecoder = JSONDecoder()) throws {
+        let data = try JSONSerialization.data(withJSONObject: JSON
+            , options: JSONSerialization.WritingOptions.init(rawValue: 0))
+
+        do {
+            self = try decoder.decode(Self.self, from: data)
+        } catch {
+            if let decodingError = error as? DecodingError {
+                var debugMessage: String = ""
+                #if DEBUG
+                debugMessage = "\(String(describing: Self.self)), \(decodingError)"
+                #endif
+                throw DecodeError(error: decodingError, debugMsg: debugMessage)
+            }
+            throw error
+        }
+    }
+
+
+
+--- ---
+
+
+private func convertDictionaryToJSONString(_ dict: Any) -> String? {
+        guard JSONSerialization.isValidJSONObject(dict) else { return nil }
+        guard let data = try? JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.init(rawValue: 0)) else { return nil }
+        guard let jsonStr = String(data: data, encoding: .utf8) else { return nil }
+        return jsonStr
+    }
