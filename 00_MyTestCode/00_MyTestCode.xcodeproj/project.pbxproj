@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B8289BB27DA1CE200869CAB /* PixelFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8289BA27DA1CE200869CAB /* PixelFinder.swift */; };
 		693E9E515D5DC44DB27D3D8A /* Pods_00_MyTestCodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BC51D732EDA014BFA62669 /* Pods_00_MyTestCodeTests.framework */; };
 		97B96BCF2304184200427B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B96BCE2304184200427B21 /* AppDelegate.m */; };
 		97B96BD22304184200427B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B96BD12304184200427B21 /* ViewController.m */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		05FEC3ACC2D002FC2999D751 /* Pods_00_MyTestCodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_00_MyTestCodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FE99DA00705CCB0BEC01C0 /* Pods-00_MyTestCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-00_MyTestCode.debug.xcconfig"; path = "Target Support Files/Pods-00_MyTestCode/Pods-00_MyTestCode.debug.xcconfig"; sourceTree = "<group>"; };
+		2B8289BA27DA1CE200869CAB /* PixelFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixelFinder.swift; sourceTree = "<group>"; };
 		2D53EF5C0A70EA4C624EE4A9 /* Pods-00_MyTestCodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-00_MyTestCodeTests.debug.xcconfig"; path = "Target Support Files/Pods-00_MyTestCodeTests/Pods-00_MyTestCodeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C959FA1D58820471CE88FD5 /* Pods_00_MyTestCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_00_MyTestCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891394151060EDF7301DDA6C /* Pods-00_MyTestCodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-00_MyTestCodeTests.release.xcconfig"; path = "Target Support Files/Pods-00_MyTestCodeTests/Pods-00_MyTestCodeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B8289B927DA1CE200869CAB /* PixelFinder */ = {
+			isa = PBXGroup;
+			children = (
+				2B8289BA27DA1CE200869CAB /* PixelFinder.swift */,
+			);
+			path = PixelFinder;
+			sourceTree = "<group>";
+		};
 		58C1263467FBC82A280BD154 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +113,6 @@
 				FCF06AECF19A3BF304490B54 /* Pods-00_MyTestCodeUITests.debug.xcconfig */,
 				C51F571FBFA0EC64C3B04CB5 /* Pods-00_MyTestCodeUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +141,7 @@
 		97B96BCC2304184200427B21 /* 00_MyTestCode */ = {
 			isa = PBXGroup;
 			children = (
+				2B8289B927DA1CE200869CAB /* PixelFinder */,
 				97B96BCD2304184200427B21 /* AppDelegate.h */,
 				97B96BCE2304184200427B21 /* AppDelegate.m */,
 				97B96BD02304184200427B21 /* ViewController.h */,
@@ -395,6 +405,7 @@
 			files = (
 				97B96BD22304184200427B21 /* ViewController.m in Sources */,
 				97B96BDD2304184400427B21 /* main.m in Sources */,
+				2B8289BB27DA1CE200869CAB /* PixelFinder.swift in Sources */,
 				97B96BCF2304184200427B21 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D53EF5C0A70EA4C624EE4A9 /* Pods-00_MyTestCodeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 00_MyTestCodeTests/Info.plist;
@@ -619,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 891394151060EDF7301DDA6C /* Pods-00_MyTestCodeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 00_MyTestCodeTests/Info.plist;
@@ -638,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCF06AECF19A3BF304490B54 /* Pods-00_MyTestCodeUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 00_MyTestCodeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -656,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C51F571FBFA0EC64C3B04CB5 /* Pods-00_MyTestCodeUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = 00_MyTestCodeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
